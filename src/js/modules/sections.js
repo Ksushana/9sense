@@ -39,6 +39,7 @@ $(() => {
   function animate() {
     animateTexts();
     animatePictures();
+    window.animateBackground(lastScroll);
     ticking = false;
   }
 
