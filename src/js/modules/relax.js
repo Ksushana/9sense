@@ -19,4 +19,4 @@
 // // var rellaxes = document.querySelectorAll('.rellax');
 
 // $(`.text-block--rellax`).visible(true);
-let rellax = new Rellax(`.rellax`);
+// let rellax = new Rellax(`.rellax`);

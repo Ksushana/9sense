@@ -20,8 +20,6 @@ $(() => {
   function scrollHandler() {
     lastScroll = $(window).scrollTop();
     requestTick();
-    // animatePictures();
-    // window.requestAnimationFrame(scrollHandler);
   }
 
   function requestTick() {
@@ -44,7 +42,7 @@ $(() => {
     ticking = false;
   }
 
-  function calculateScaleRelative(element) {
+  function calculateScale(element) {
     const scrollTop = lastScroll;
     const windowHeight = $(window).height();
 
@@ -56,13 +54,8 @@ $(() => {
 
     const position = (scrollTop - startOffset) / (finishOffset - startOffset);
     const relative = Math.max(0, Math.min(1, position));
-
-    return relative;
-  }
-
-  function calculateScale(element) {
-    const relative = calculateScaleRelative(element);
     const scale = minScale + (maxScale - minScale) * relative;
+
     return scale;
   }
 });
