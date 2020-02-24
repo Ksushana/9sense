@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Nine Sense Clinic </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="fonts/HelveticaRegular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/HelveticaItalic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/HelveticaBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__logo"><svg width="120" height="120" aria-hidden="true">
+        <use xlink:href="img/sprite.svg#logo"></use>
+      </svg></div><button class="header__open"></button>
+    <nav class="header__links">
+      <ul>
+        <li><a class="link-text header__link" href="#about"><span>Омар Газаев</span></a></li>
+        <li><a class="link-text header__link" href="#lab"><span>Лаборатория</span></a></li>
+        <li><a class="link-text header__link" href="#vinir"><span>Виниры</span></a></li>
+        <li><a class="link-text header__link" href="#location"><span>Локация</span></a></li>
+      </ul><button class="header__lang">En</button>
+    </nav>
+    <p class="header__turn"><span>Клиника эстетической стоматологии в Москве</span></p>
+    <p class="header__phrase rellax" data-rellax-speed="1">Природа начинает, <span class="header__phrase--italics">искусство</span> направляет, опыт совершенствует.</p>
+  </header>
+  <main>
+    <div class="container">
+      <h1 class="visually-hidden">Nine Sense Clinic</h1>
+      <div class="shadow"></div>
+      <section class="about scale scale--big" id="about target">
+        <div class="about__block">
+          <h2>Омар Газаев</h2>
+          <h3>Специализация</h3>
+          <ul>
+            <li>Dr. Domenico Massironi, Италия</li>
+            <li>Dr. Christian Lex, Германия</li>
+            <li>Dr. Domenico Massironi, Италия</li>
+            <li>Dr. Christian Lex, Германия</li>
+          </ul>
+          <h3>Публикации</h3>
+          <ul class="about__works">
+            <li><a class="link-text header__link" href="#about"><span>Ein Konzept der dentalen Kommunikationskultur So fern und doch so nah Alexander Miranskij, Omar Gazaev</span></a></li>
+            <li><a class="link-text header__link" href="#about"><span>Herstellung geschichteter Veneers bei inkongruenter Ausgangssituation Alexander Miranskij, Omar Gazaev</span></a></li>
+          </ul>
+          <div class="about__signature"><img src="img/sign.png" width="155" height="64" alt="signature"></div>
+        </div>
+        <div class="about__mobile">
+          <p>Омар Газаев, стоматолог</p><button>Специализация и публикации<svg width="20" height="10" aria-hidden="true">
+              <use xlink:href="img/sprite.svg#arrow-1"></use>
+            </svg></button>
+        </div>
+      </section>
+      <section class="text-block text-block--tech text-block--rellax rellax" data-rellax-speed="1">
+        <h2 class="visually-hidden">Технологии</h2>
+        <p>Технологии не стоят на месте, вместо просто белого &ndash; контролируемая яркость</p>
+      </section>
+      <section class="lab scale scale--big" id="lab">
+        <h2 class="visually-hidden"></h2><img src="img/lab@1x.jpg" srcset="img/lab@2x.jpg 2x" width="1312" height="772" alt="lab">
+        <div class="lab__text">
+          <p>Партнерство с немецкими и швейцарскими лабораториями.</p><svg width="17" height="12" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#swiss"></use>
+          </svg><svg width="17" height="12" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#german"></use>
+          </svg>
+        </div>
+      </section>
+      <section class="text-block text-block--dark text-block--smile rellax" data-rellax-speed="1">
+        <h2 class="visually-hidden">Улыбайся</h2>
+        <p>Улыбайся &ndash; это символ твоей <span class="text-block--italics">уверенности</span>.</p>
+      </section>
+      <section class="smile scale scale--big" id="vinir"><img src="img/face@1x.jpg" srcset="img/face@2x.jpg 2x" width="1312" height="772" alt="Марина">
+        <p class="smile__text">Марина, успела до свадьбы</p>
+      </section>
+      <section class="text-block text-block--dark text-block--bright rellax" data-rellax-speed="1">
+        <h2 class="visually-hidden">Ярко</h2>
+        <p>Ярко, натурально, <span class="text-block--italics">персонально</span>.</p>
+      </section>
+      <section class="slider scale scale--big">
+        <div class="swiper-container slider-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide slider__slide"><img src="img/smile@1x.jpg" srcset="img/smile@2x.jpg 2x" width="1312" height="772" alt="Марина">
+              <p>Подпись к фото</p>
+            </div>
+            <div class="swiper-slide slider__slide"><img src="img/face@1x.jpg" srcset="img/face@2x.jpg 2x" width="1312" height="772" alt="Марина">
+              <p>Подпись к фото</p>
+            </div>
+            <div class="swiper-slide slider__slide"><img src="img/smile@1x.jpg" srcset="img/smile@2x.jpg 2x" width="1312" height="772" alt="Марина">
+              <p>Подпись к фото</p>
+            </div>
+          </div><button><svg width="24" height="24" aria-hidden="true">
+              <use xlink:href="img/sprite.svg#arrow-2"></use>
+            </svg></button>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev slider__button slider-prev"><svg width="20" height="10" aria-hidden="true">
+              <use xlink:href="img/sprite.svg#arrow-prev"></use>
+            </svg></div>
+          <div class="swiper-button-next slider__button slider-next"><svg width="20" height="10" aria-hidden="true">
+              <use xlink:href="img/sprite.svg#arrow-1"></use>
+            </svg></div>
+        </div>
+      </section>
+      <section class="location location--dark rellax" id="location" data-rellax-speed="1">
+        <h2 class="visually-hidden">Адрес</h2>
+        <p>Локация &ndash; <a class="location--italics" href="#">Патрики</a>.<br> Есть бесплатная парковка.</p><a href="#">Посмотреть на карте<svg width="20" height="10" aria-hidden="true">
+              <use xlink:href="img/sprite.svg#arrow-1"></use>
+            </svg></a><img src="img/map@1x.png" srcset="img/map@2x.png 2x" width="378" height="425" alt="map">
+      </section>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>2020, all rights reserved</p>
+    <p>Design: <a class="footer--italics" href="#">genue.ru</a></p>
+  </footer>
+  <script src="js/script.min.js"></script>
+</body>
+
+</html>

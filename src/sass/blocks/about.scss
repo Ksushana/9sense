@@ -1,0 +1,127 @@
+.about {
+  padding: size(60px) size(97px) 0;
+  // margin: size(79px) size(96px);
+  background-image: url("../img/omar@1x.jpg");
+  background-size: 97%;
+  background-repeat: no-repeat;
+
+  @media (-webkit-min-device-pixel-ratio: $retina-dppx), (min-resolution: $retina-dpi) {
+    background-image: url("../img/omar@2x.jpg");
+  }
+
+  @include mobile {
+    transform: translateY(size(-145px));
+    padding: size(10px) size(16px) 0;
+    background-size: 194%;
+    background-position-y: top;
+    background-position-x: 72%;
+    z-index: 101;
+    height: size(560px);
+    transform: translateY(size(-145px));
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.about__block {
+  width: size(312px);
+  height: size(730px);
+
+  h2 {
+    font-weight: 600;
+    font-size: size(24px);
+    line-height: size(24px);
+    letter-spacing: 0.01em;
+    margin-bottom: size(40px);
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: size(16px);
+    line-height: size(24px);
+    margin-bottom: size(14px);
+  }
+
+  ul {
+    @include list-reset;
+    padding-bottom: size(8px);
+  }
+
+  li {
+    font-weight: 500;
+    font-size: size(16px);
+    line-height: size(24px);
+    letter-spacing: 0.01em;
+
+    a {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    }
+  }
+
+  img {
+    width: size(277px);
+    height: size(119px);
+  }
+
+  @include mobile {
+    height: 0;
+    display: none;
+    bottom: 0;
+  }
+}
+
+
+.about__works {
+  li {
+    margin-bottom: size(14px);
+  }
+}
+
+.about__signature {
+  margin-top: size(50px);
+  position: relative;
+  left: size(-35px);
+}
+
+.about__mobile {
+  display: none;
+
+  @include mobile {
+    display: block;
+    font-size: size(16px);
+    line-height: size(31px);
+    margin-top: auto;
+    margin-bottom: size(10px);
+    letter-spacing: 0.02em;
+
+    p {
+      color: $color-grey-text;
+      margin: 0;
+      letter-spacing: 0.02em;
+      line-height: size(21px);
+    }
+
+    button {
+      border: none;
+      background-color: transparent;
+      padding: 0;
+      letter-spacing: 0.01em;
+      color: $color-grey-link;
+      outline: none;
+      transition: opacity 0.4s;
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+      svg {
+        transform: rotate(-45deg);
+        width: size(15px);
+        height: size(8px);
+        padding: 0 size(5px);
+        fill: $color-grey-link;
+      }
+    }
+  }
+}
+

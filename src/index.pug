@@ -1,0 +1,125 @@
+include pug/mixins
+
+block variables
+- let mainTitle = "Nine Sense Clinic";
+
+doctype html
+html( lang="ru" )
+  head
+    meta( charset="UTF-8" )
+    title #{mainTitle} !{title && "| " + title}
+    meta( name="viewport" content="width=device-width, initial-scale=1.0" )
+    link( rel="preload" href="fonts/HelveticaRegular.woff2" as="font" type="font/woff2" crossorigin )
+    link( rel="preload" href="fonts/HelveticaItalic.woff2" as="font" type="font/woff2" crossorigin )
+    link( rel="preload" href="fonts/HelveticaBold.woff2" as="font" type="font/woff2" crossorigin )
+    link( rel="stylesheet" href="css/style.min.css" )
+
+  body
+    header.header
+      .header__logo
+        +svg( "logo", 120, 120 )
+
+      button.header__open
+      //- button.header__close
+
+      nav.header__links
+        ul
+          li: +link-text( "Омар Газаев", "#about", "header__link" )
+          li: +link-text( "Лаборатория", "#lab", "header__link" )
+          li: +link-text( "Виниры", "#vinir", "header__link" )
+          li: +link-text( "Локация", "#location", "header__link" )
+        button.header__lang En
+
+      p.header__turn
+        span Клиника эстетической стоматологии в Москве
+      p.header__phrase.rellax( data-rellax-speed="1" ) Природа начинает, #[span.header__phrase--italics искусство] направляет, опыт совершенствует.
+
+    main
+      .container
+        h1.visually-hidden #{mainTitle}
+        .shadow
+
+        section.about.scale.scale--big( id="about target" )
+          .about__block
+            h2 Омар Газаев
+
+            h3 Специализация
+            ul
+              li Dr. Domenico Massironi, Италия
+              li Dr. Christian Lex, Германия
+              li Dr. Domenico Massironi, Италия
+              li Dr. Christian Lex, Германия
+
+            h3 Публикации
+            ul.about__works
+              li: +link-text( "Ein Konzept der dentalen Kommunikationskultur So fern und doch so nah Alexander Miranskij, Omar Gazaev", "#about", "header__link" )
+              li: +link-text( "Herstellung geschichteter Veneers bei inkongruenter Ausgangssituation Alexander Miranskij, Omar Gazaev", "#about", "header__link" )
+
+            .about__signature
+              img( src="img/sign.png" width="155" height="64" alt="signature" )
+          .about__mobile
+            p Омар Газаев, стоматолог
+            button Специализация и публикации
+              +svg( "arrow-1", 20, 10 )
+
+        section.text-block.text-block--tech.text-block--rellax.rellax( data-rellax-speed="1" )
+          h2.visually-hidden Технологии
+          p Технологии не стоят на месте, вместо просто белого &ndash; контролируемая яркость
+
+        section.lab.scale.scale--big( id="lab" )
+          h2.visually-hidden
+          img( src="img/lab@1x.jpg" srcset="img/lab@2x.jpg 2x" width="1312" height="772" alt="lab" )
+          .lab__text
+            p Партнерство с немецкими и швейцарскими лабораториями.
+            +svg( "swiss", 17, 12 )
+            +svg( "german", 17, 12 )
+
+        section.text-block.text-block--dark.text-block--smile.rellax( data-rellax-speed="1" )
+          h2.visually-hidden Улыбайся
+          p Улыбайся &ndash; это символ твоей #[span.text-block--italics уверенности].
+
+
+        section.smile.scale.scale--big( id="vinir" )
+          img( src="img/face@1x.jpg" srcset="img/face@2x.jpg 2x" width="1312" height="772" alt="Марина" )
+          p.smile__text Марина, успела до свадьбы
+
+        section.text-block.text-block--dark.text-block--bright.rellax( data-rellax-speed="1" )
+          h2.visually-hidden Ярко
+          p Ярко, натурально, #[span.text-block--italics персонально].
+
+        section.slider.scale.scale--big
+          .swiper-container.slider-container
+            .swiper-wrapper
+              .swiper-slide.slider__slide
+                img( src="img/smile@1x.jpg" srcset="img/smile@2x.jpg 2x" width="1312" height="772" alt="Марина" )
+                p Подпись к фото
+              .swiper-slide.slider__slide
+                img( src="img/face@1x.jpg" srcset="img/face@2x.jpg 2x" width="1312" height="772" alt="Марина" )
+                p Подпись к фото
+              .swiper-slide.slider__slide
+                img( src="img/smile@1x.jpg" srcset="img/smile@2x.jpg 2x" width="1312" height="772" alt="Марина" )
+                p Подпись к фото
+            button: +svg( "arrow-2", 24, 24 )
+            .swiper-pagination
+
+            .swiper-button-prev.slider__button.slider-prev
+              +svg( "arrow-prev", 20, 10 )
+
+            .swiper-button-next.slider__button.slider-next
+              +svg( "arrow-1", 20, 10 )
+
+        section.location.location--dark( id="location" ).rellax( data-rellax-speed="1" )
+          h2.visually-hidden Адрес
+          p Локация &ndash; #[a.location--italics(href="#") Патрики].#[br] Есть бесплатная парковка.
+          a(href="#") Посмотреть на карте
+            +svg( "arrow-1", 20, 10 )
+          img( src="img/map@1x.png" srcset="img/map@2x.png 2x" width="378" height="425" alt="map" )
+
+
+    footer.footer
+      p 2020, all rights reserved
+      p Design: #[a.footer--italics(href="#") genue.ru]
+
+
+    block scripts
+      script( src="js/script.min.js" )

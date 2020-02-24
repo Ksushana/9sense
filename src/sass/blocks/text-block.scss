@@ -1,0 +1,79 @@
+.text-block {
+  font-weight: normal;
+  font-size: size(48px);
+  line-height: size(60px);
+  text-align: center;
+  transition: color 2s;
+  color: $color-black-bigtext;
+  display: flex;
+
+  min-height: size(700px);
+
+  @include mobile {
+    font-size: size(24px);
+    line-height: size(36px);
+
+    text-align: left;
+  }
+
+
+  &--tech {
+    padding: 0 size(220px);
+    color: $color-grey-light;
+    transition: color 1s;
+
+
+    @include mobile {
+      padding: 0 size(17px);
+      min-height: size(248px);
+      text-align: start;
+
+      p {
+        margin: 0;
+      }
+
+    }
+
+    &.dark {
+      color: $color-black-bigtext;
+    }
+  }
+
+  &--smile {
+    padding: 0 size(360px);
+    min-height: size(667px);
+
+    @include mobile {
+      padding: size(18px) size(87px) 0 size(17px);
+      min-height: size(380px);
+      align-items: center;
+    }
+  }
+
+  &--bright {
+    padding: 0 size(100px);
+    min-height: size(637px);
+
+    @include mobile {
+      padding: size(18px) size(87px) 0 size(17px);
+      min-height: size(380px);
+      align-items: center;
+
+    }
+  }
+
+  p {
+    height: fit-content;
+    margin: auto;
+
+    @include mobile {
+      margin: 0;
+      letter-spacing: 0.02em;
+    }
+  }
+
+  &--italics {
+    font-style: italic;
+    font-family: "NCTLarkspur-Italic", Arial, sans-serif;
+  }
+}

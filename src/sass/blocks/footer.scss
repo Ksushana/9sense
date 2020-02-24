@@ -1,0 +1,28 @@
+.footer {
+  font-size: size(16px);
+  line-height: size(16px);
+  letter-spacing: 0.02em;
+  color: $color-grey-footer;
+  display: flex;
+  padding: 0 size(64px) size(20px);
+
+  p {
+    padding-right: size(43px) ;
+
+  }
+
+  @include mobile {
+    font-size: size(12px);
+    line-height: size(24px);
+    padding: size(32px) size(16px) size(20px);
+
+    p {
+      padding-right: size(18px) ;
+    }
+  }
+}
+
+.footer--italics {
+  font-style: italic;
+    font-family: "NCTLarkspur-Italic", Arial, sans-serif;
+}
