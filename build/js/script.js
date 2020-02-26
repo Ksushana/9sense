@@ -9298,6 +9298,7 @@ for (var i = 0; i < linkNav.length; i++) {
   const close = document.querySelector(`.about__close`);
 
   let containerScale;
+  let containerTransition;
 
   const openInfo = () => {
     fixContainer();
@@ -9308,11 +9309,11 @@ for (var i = 0; i < linkNav.length; i++) {
   };
 
   const closeInfo = () => {
-    returnContainer();
-
     info.classList.remove(`about__block--show`);
     $(`body`).css("overflow-y", "visible");
     setTimeout(() => $(info).css("opacity", 0), 500);
+
+    setTimeout(() => returnContainer, 500);
   };
 
   link.addEventListener(`click`, () => {
@@ -9330,11 +9331,15 @@ for (var i = 0; i < linkNav.length; i++) {
   }
 
   function fixContainer() {
+    containerTransition = $(container).css("transition");
+    $(container).css("transition", "all 0s ease 0s");
+
     containerScale = getScale(container);
     $(container).css("transform", "none");
   }
 
   function returnContainer() {
+    $(container).css("transition", containerTransition);
     $(container).css("transform", `scale(${containerScale})`);
   }
 })();
