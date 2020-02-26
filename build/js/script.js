@@ -9384,8 +9384,8 @@ $(() => {
 
   const headerLinksOriginalTop = parseInt(headerLinks.css("top"), 10);
   const headerLinksOriginalRight = parseInt(headerLinks.css("right"), 10);
-  const minTop = headerLinksOriginalTop / 4;
-  const minRight = headerLinksOriginalRight / 4;
+  const minTop = headerLinksOriginalTop / 2;
+  const minRight = headerLinksOriginalRight / 2;
 
   window.animateHeaderLinks = function(scrollTop) {
     const { right, top } = calculateHeaderLinks(scrollTop);
