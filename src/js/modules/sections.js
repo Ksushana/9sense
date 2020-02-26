@@ -41,6 +41,7 @@ $(() => {
     animateTexts();
     animatePictures();
     hideTexts();
+    window.animateHeaderLinks(lastScroll);
     window.animateLogo(lastScroll);
     window.animateTurn(lastScroll);
     window.animateSlider(lastScroll);

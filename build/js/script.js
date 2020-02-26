@@ -9358,8 +9358,6 @@ for (var i = 0; i < linkNav.length; i++) {
 let logo = document.querySelector(`.header__logo`);
 let links = document.querySelector(`.header__links`);
 
-// let about = document.querySelector(`.about`);
-
 window.addEventListener(`scroll`, function() {
   const windowScroll = window.pageYOffset;
   if (!window.isMobile()) {
@@ -9368,14 +9366,12 @@ window.addEventListener(`scroll`, function() {
         window.pageYOffset + 64 - window.pageYOffset * 1.07 + `px`;
       logo.style.top =
         window.pageYOffset + 64 - window.pageYOffset * 1.07 + `px`;
-      links.style.right =
-        window.pageYOffset + 60 - window.pageYOffset * 1.07 + `px`;
-      links.style.top =
-        window.pageYOffset + 64 - window.pageYOffset * 1.07 + `px`;
+      // links.style.right =
+      //   window.pageYOffset + 60 - window.pageYOffset * 1.07 + `px`;
+      // links.style.top =
+      //   window.pageYOffset + 64 - window.pageYOffset * 1.07 + `px`;
     }
   }
-
-  // about.style.transform = `scale(` + window.pageYOffset / 1400 + `)`;
 });
 
 $(() => {
@@ -9386,12 +9382,22 @@ $(() => {
   turn.css("transition", "transform 0.1s");
   logo.css("transition", "transform 0.1s");
 
+  const headerLinksOriginalTop = parseInt(headerLinks.css("top"), 10);
+  const headerLinksOriginalRight = parseInt(headerLinks.css("right"), 10);
+  const minTop = headerLinksOriginalTop / 4;
+  const minRight = headerLinksOriginalRight / 4;
+
+  window.animateHeaderLinks = function(scrollTop) {
+    const { right, top } = calculateHeaderLinks(scrollTop);
+    headerLinks.css("right", `${right}px`);
+    headerLinks.css("top", `${top}px`);
+  };
+
   window.animateLogo = function(lastScroll) {
     const pageHeight = $(document).height();
     const windowHeight = $(window).height();
     const rotate = (lastScroll / (pageHeight - windowHeight)) * 360;
     logo.css("transform", `rotate(${rotate}deg)`);
-    // logo.style.transform = `rotate(` + window.pageYOffset / 17 + `deg)`;
   };
 
   window.animateTurn = function(lastScroll) {
@@ -9408,6 +9414,21 @@ $(() => {
       return;
     }
   };
+
+  // helpers
+
+  function calculateHeaderLinks(scrollTop) {
+    const startOffset = 0;
+    const finishOffset = $(window).height() / 4;
+
+    const position = (scrollTop - startOffset) / (finishOffset - startOffset);
+    const relative = Math.max(0, Math.min(1, position));
+
+    const top = minTop + (headerLinksOriginalTop - minTop) * (1 - relative);
+    const right =
+      minRight + (headerLinksOriginalRight - minRight) * (1 - relative);
+    return { right, top };
+  }
 });
 
 (() => {
@@ -9543,6 +9564,7 @@ $(() => {
     animateTexts();
     animatePictures();
     hideTexts();
+    window.animateHeaderLinks(lastScroll);
     window.animateLogo(lastScroll);
     window.animateTurn(lastScroll);
     window.animateSlider(lastScroll);
