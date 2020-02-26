@@ -9291,9 +9291,30 @@ for (var i = 0; i < linkNav.length; i++) {
   };
 })();
 
-let body = document.querySelector(`body`);
+(() => {
+  const link = document.querySelector(`.about__mobile button`);
+  const info = document.querySelector(`.about__block`);
+
+  const openInfo = () => {
+    info.classList.add(`about__block--show`);
+    $(`body`).css("overflow-y", "hidden");
+  };
+
+  const closeInfo = () => {
+    // menu.classList.remove(`header__links--show`);
+    // openButton.classList.remove(`header__open--click`);
+    // closeButton.classList.remove(`header__close--show`);
+    // $(`body`).css("overflow-y", "visible");
+    // // if (scrollTop) {
+    // //   window.scroll(0, scrollTop);
+    // //   scrollTop = null;
+    // // }
+    // header.style.transform = ``;
+  };
+})();
 
 (() => {
+  const body = document.querySelector(`body`);
   const text = document.querySelector(`.text-block--tech`);
   const logo = document.querySelector(`.header__logo`);
   const menu = document.querySelector(`.header__links ul`);
@@ -9309,6 +9330,7 @@ let body = document.querySelector(`body`);
     menu.classList.add(`dark`);
     turn.classList.add(`dark`);
     lang.classList.add(`dark`);
+    shadow.classList.add(`show`);
   }
 
   function light() {
@@ -9318,11 +9340,12 @@ let body = document.querySelector(`body`);
     menu.classList.remove(`dark`);
     turn.classList.remove(`dark`);
     lang.classList.remove(`dark`);
+
     shadow.classList.remove(`show`);
   }
 
   window.animateBackground = function(lastScroll) {
-    const breakpoint = textBlockTech.offset().top + textBlockTech.height() / 2;
+    const breakpoint = textBlockTech.offset().top;
     const current = lastScroll + $(window).height() / 2;
     if (current > breakpoint) {
       dark();
@@ -9339,54 +9362,39 @@ let links = document.querySelector(`.header__links`);
 
 window.addEventListener(`scroll`, function() {
   const windowScroll = window.pageYOffset;
-  logo.style.transform = `rotate(` + window.pageYOffset / 17 + `deg)`;
-
-  if (windowScroll < 400) {
-    logo.style.left =
-      window.pageYOffset + 64 - window.pageYOffset * 1.07 + `px`;
-    logo.style.top = window.pageYOffset + 64 - window.pageYOffset * 1.07 + `px`;
-    links.style.right =
-      window.pageYOffset + 60 - window.pageYOffset * 1.07 + `px`;
-    links.style.top =
-      window.pageYOffset + 64 - window.pageYOffset * 1.07 + `px`;
+  if (!window.isMobile()) {
+    if (windowScroll < 400) {
+      logo.style.left =
+        window.pageYOffset + 64 - window.pageYOffset * 1.07 + `px`;
+      logo.style.top =
+        window.pageYOffset + 64 - window.pageYOffset * 1.07 + `px`;
+      links.style.right =
+        window.pageYOffset + 60 - window.pageYOffset * 1.07 + `px`;
+      links.style.top =
+        window.pageYOffset + 64 - window.pageYOffset * 1.07 + `px`;
+    }
   }
 
   // about.style.transform = `scale(` + window.pageYOffset / 1400 + `)`;
 });
 
 $(() => {
-  let lastScroll = 0;
-  let ticking = false;
-
   const turn = $(`.header__turn`);
   const headerLinks = $(".header__links");
+  const logo = $(`.header__logo`);
 
   turn.css("transition", "transform 0.1s");
+  logo.css("transition", "transform 0.1s");
 
-  window.addEventListener(`scroll`, () =>
-    window.requestAnimationFrame(scrollHandler)
-  );
+  window.animateLogo = function(lastScroll) {
+    const pageHeight = $(document).height();
+    const windowHeight = $(window).height();
+    const rotate = (lastScroll / (pageHeight - windowHeight)) * 360;
+    logo.css("transform", `rotate(${rotate}deg)`);
+    // logo.style.transform = `rotate(` + window.pageYOffset / 17 + `deg)`;
+  };
 
-  // helpers
-
-  function scrollHandler() {
-    lastScroll = $(window).scrollTop();
-    requestTick();
-  }
-
-  function requestTick() {
-    if (!ticking) {
-      requestAnimationFrame(animate);
-      ticking = true;
-    }
-  }
-
-  function animate() {
-    animateTurn();
-    ticking = false;
-  }
-
-  function animateTurn() {
+  window.animateTurn = function(lastScroll) {
     const headerLinksRightOffset =
       $(window).width() - headerLinks.offset().left - headerLinks.width();
     const turnRightOffset =
@@ -9395,77 +9403,79 @@ $(() => {
     if (moveOffset > 0) {
       turn.css("transform", `translateX(${moveOffset}px)`);
     }
-  }
+
+    if (!window.isMobile()) {
+      return;
+    }
+  };
 });
 
-// // (() => {
-// //   const header = document.querySelector(`.header`);
+(() => {
+  const header = document.querySelector(`.header`);
 
-// //   if (header) {
-// //     const menu = document.querySelector(`.header__links`);
-// //     const openButton = document.querySelector(`.header__open`);
-// //     const closeButton = document.querySelector(`.header__close`);
+  if (header) {
+    const menu = document.querySelector(`.header__links`);
+    const openButton = document.querySelector(`.header__open`);
+    const closeButton = document.querySelector(`.header__close`);
+    const link = menu.querySelectorAll(`.header__links li`);
 
-// //     let scrollTop;
+    let scrollTop;
 
-// //     const openMenu = () => {
-// //       // scrollTop = window.getScrollTop();
-// //       menu.classList.add(`header__links--show`);
-// //       openButton.classList.add(`header__open--click`);
-// //       closeButton.classList.add(`header__close--show`);
-// //       document.body.style.top = `${-scrollTop}px`;
-// //     };
+    const openMenu = () => {
+      // scrollTop = window.getScrollTop();
+      menu.classList.add(`header__links--show`);
+      openButton.classList.add(`header__open--click`);
+      closeButton.classList.add(`header__close--show`);
+      document.body.style.top = `${-scrollTop}px`;
+      $(`body`).css("overflow-y", "hidden");
+    };
 
-// //     const closeMenu = () => {
-// //       document.body.setAttribute(`style`, ``);
-// //       menu.classList.remove(`header__links--show`);
-// //       openButton.classList.remove(`header__open--click`);
-// //       closeButton.classList.remove(`header__close--show`);
+    const closeMenu = () => {
+      menu.classList.remove(`header__links--show`);
+      openButton.classList.remove(`header__open--click`);
+      closeButton.classList.remove(`header__close--show`);
+      $(`body`).css("overflow-y", "visible");
 
-// //       // menu.style. = ``;
+      // if (scrollTop) {
+      //   window.scroll(0, scrollTop);
+      //   scrollTop = null;
+      // }
 
-// //       if (scrollTop) {
-// //         window.scroll(0, scrollTop);
-// //         scrollTop = null;
-// //       }
+      header.style.transform = ``;
+    };
 
-// //       header.style.transform = ``;
-// //     };
+    openButton.addEventListener(`click`, () => {
+      window.setTimeout(openMenu, 100);
+    });
 
-// //     openButton.addEventListener(`click`, () => {
-// //       window.setTimeout(openMenu, 100);
-// //     });
+    closeButton.addEventListener(`click`, () => {
+      window.setTimeout(closeMenu, 100);
+    });
 
-// //     closeButton.addEventListener(`click`, () => {
-// //       window.setTimeout(closeMenu, 100);
-// //     });
+    // link.addEventListener(`click`, () => {
+    //   window.setTimeout(closeMenu, 100);
+    // });
 
-// //     // window.addEventListener(`resize`, () => {
-// //     //   closeMenu();
-// //     //   header.style.transform = ``;
-// //     // });
-// //   }
-// // })();
+    // window.addEventListener(`resize`, () => {
+    //   closeMenu();
+    //   header.style.transform = ``;
+    // });
+  }
+})();
 
-// $(function () {
+$(function() {
+  var $burger = $(".header__open");
 
-//   var $burger = $('.header__open');
+  var $menu = $("header__links");
 
-//   var $menu = $('header__links');
-
-//   $burger.click(function () {
-
-//     if ($menu.hasClass('active')) {
-
-//       $menu.slideDown('normal').removeClass('active');
-//     }
-//     else {
-
-//       $menu.slideUp('normal').addClass('active');
-//     }
-//   });
-
-// });
+  $burger.click(function() {
+    if ($menu.hasClass("active")) {
+      $menu.slideDown("normal").removeClass("active");
+    } else {
+      $menu.slideUp("normal").addClass("active");
+    }
+  });
+});
 
 // function isScrolledIntoView(elem) {
 //   var docViewTop = $(window).scrollTop();
@@ -9497,17 +9507,18 @@ $(() => {
   let lastScroll = 0;
   let ticking = false;
 
-  const pictures = $(".scale--big");
-  const textBlocks = $(".text-block");
+  const pictures = $(`.scale--big`);
+  const textBlocks = $(`.parallax`);
+  const menu = $(`.header__links`);
 
   pictures.each((_, picture) => {
-    $(picture).css("transition", "transform 0.1s");
+    $(picture).css(`transition`, `transform 0.1s`);
   });
 
   textBlocks.each((_, textBlock) => {
     $(textBlock)
-      .find("p")
-      .css("transition", "transform 0.1s");
+      .find(`p`)
+      .css(`transition`, `transform 0.1s`);
   });
 
   window.addEventListener(`scroll`, () =>
@@ -9531,6 +9542,10 @@ $(() => {
   function animate() {
     animateTexts();
     animatePictures();
+    hideTexts();
+    window.animateLogo(lastScroll);
+    window.animateTurn(lastScroll);
+    window.animateSlider(lastScroll);
     window.animateBackground(lastScroll);
     ticking = false;
   }
@@ -9544,7 +9559,7 @@ $(() => {
   }
 
   function updatePicture(element, { scale }) {
-    element.css("transform", `scale(${scale})`);
+    element.css(`transform`, `scale(${scale})`);
   }
 
   function calculateScale(element) {
@@ -9555,7 +9570,7 @@ $(() => {
     const elementHeight = element.height();
 
     const startOffset = elementOffset - windowHeight;
-    const finishOffset = elementOffset - windowHeight / 2 + elementHeight / 2;
+    const finishOffset = elementOffset - windowHeight + elementHeight;
 
     const position = (scrollTop - startOffset) / (finishOffset - startOffset);
     const relative = Math.max(0, Math.min(1, position));
@@ -9580,7 +9595,7 @@ $(() => {
     const elementHeight = element.height();
 
     const startOffset = elementOffset - windowHeight;
-    const finishOffset = elementOffset - windowHeight / 2 + elementHeight / 2;
+    const finishOffset = elementOffset - windowHeight + elementHeight;
 
     const position = (scrollTop - startOffset) / (finishOffset - startOffset);
     const relative = Math.max(0, Math.min(1, position));
@@ -9588,10 +9603,70 @@ $(() => {
   }
 
   function updateTextBlock(element, relative) {
-    const offset = relative * -50;
-    element.find("p").css("transform", `translateY(${offset}px)`);
+    const offset = relative * -40;
+    element.find(`p`).css(`transform`, `translateY(${offset}px)`);
+  }
+
+  function hideTexts() {
+    textBlocks.each((_, textBlock) => {
+      textBlock = $(textBlock);
+      const disappearance = calculateOpacity(textBlock);
+      hideTextBlock(textBlock, disappearance);
+    });
+  }
+
+  function calculateOpacity(element) {
+    const scrollTop = lastScroll;
+    const windowHeight = $(window).height();
+
+    const elementOffset = element.offset().top;
+    const elementHeight = element.height();
+    const menuHeight = menu.height();
+
+    const startOffset = elementOffset - windowHeight / 4;
+    const finishOffset =
+      elementOffset + elementHeight / 2 - (menuHeight + 40) * 2;
+
+    const position = (scrollTop - startOffset) / (finishOffset - startOffset);
+    const relative = Math.max(0, Math.min(1, position));
+    const opacity = 1 - relative;
+
+    return opacity;
+  }
+
+  function hideTextBlock(element, opacity) {
+    element.find(`p`).css(`opacity`, opacity);
   }
 });
+
+(() => {
+  const slider = $(".slider");
+
+  // function color() {
+
+  // }
+
+  // function bandw() {
+  //   img.classList.remove(`color`);
+  // }
+
+  window.animateSlider = function(lastScroll) {
+    const imgs = document.querySelectorAll(`.slider__slide img`);
+    const breakpoint = slider.offset().top + slider.height();
+    const current = lastScroll + $(window).height();
+    if (current > breakpoint) {
+      for (let i = 0; i < imgs.length; i++) {
+        const img = imgs[i];
+        img.classList.add(`color`);
+      }
+    } else {
+      for (let i = 0; i < imgs.length; i++) {
+        const img = imgs[i];
+        img.classList.remove(`color`);
+      }
+    }
+  };
+})();
 
 (() => {
   const slider = document.querySelector(`.slider-container`);

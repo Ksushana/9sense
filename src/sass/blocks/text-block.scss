@@ -16,22 +16,19 @@
     text-align: left;
   }
 
-
   &--tech {
     padding: 0 size(220px);
     color: $color-grey-light;
     transition: color 1s;
 
-
     @include mobile {
       padding: 0 size(17px);
-      min-height: size(248px);
-      text-align: start;
+      min-height: size(393px);
+      text-align: center;
 
       p {
-        margin: 0;
+        // margin: 0;
       }
-
     }
 
     &.dark {
@@ -58,7 +55,6 @@
       padding: size(18px) size(87px) 0 size(17px);
       min-height: size(380px);
       align-items: center;
-
     }
   }
 

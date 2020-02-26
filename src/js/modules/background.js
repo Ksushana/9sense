@@ -1,6 +1,5 @@
-let body = document.querySelector(`body`);
-
 (() => {
+  const body = document.querySelector(`body`);
   const text = document.querySelector(`.text-block--tech`);
   const logo = document.querySelector(`.header__logo`);
   const menu = document.querySelector(`.header__links ul`);
@@ -16,6 +15,7 @@ let body = document.querySelector(`body`);
     menu.classList.add(`dark`);
     turn.classList.add(`dark`);
     lang.classList.add(`dark`);
+    shadow.classList.add(`show`);
   }
 
   function light() {
@@ -25,11 +25,12 @@ let body = document.querySelector(`body`);
     menu.classList.remove(`dark`);
     turn.classList.remove(`dark`);
     lang.classList.remove(`dark`);
+
     shadow.classList.remove(`show`);
   }
 
   window.animateBackground = function(lastScroll) {
-    const breakpoint = textBlockTech.offset().top + textBlockTech.height() / 2;
+    const breakpoint = textBlockTech.offset().top;
     const current = lastScroll + $(window).height() / 2;
     if (current > breakpoint) {
       dark();

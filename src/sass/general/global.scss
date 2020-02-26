@@ -46,9 +46,9 @@ a {
 
   transition: opacity 0.4s;
 
-    &:hover {
-      opacity: 0.6;
-    }
+  &:hover {
+    opacity: 0.6;
+  }
 
   &:not([href]) {
     cursor: default;
@@ -71,18 +71,36 @@ a {
   padding: size(80px) size(64px) size(35px);
   position: relative;
 
-
   .shadow {
-    background: linear-gradient(180deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 0%);
-    transition: all 1s;
+    background: linear-gradient(
+      180deg,
+      rgba(241, 241, 241, 0.6) 0%,
+      rgba(241, 241, 241, 0) 100%
+    );
+
+    opacity: 0;
+    transition: opacity 1s;
+    z-index: 1;
     &.show {
+      background: linear-gradient(
+        180deg,
+        rgba(241, 241, 241, 0.6) 0%,
+        rgba(241, 241, 241, 0) 100%
+      );
+      opacity: 0.8;
+      transition: all 1s;
       position: fixed;
       content: "";
-      width: 100%;
-      height: 30vh;
-      background: rgb(255,255,255);
-      background: linear-gradient(180deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 100%);
+      width: 100vw;
+      height: size(400px);
+      background: rgb(255, 255, 255);
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
       top: 0;
+      left: 0;
     }
   }
 

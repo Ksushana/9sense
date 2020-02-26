@@ -9,6 +9,11 @@
     filter: grayscale(100%);
     width: size(1312px);
     height: size(772px);
+    transition: filter 1s;
+
+    &.color {
+      filter: none;
+    }
 
     @include mobile {
       width: 100%;
@@ -44,7 +49,9 @@
     opacity: 1;
   }
 
-  .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+  .swiper-container-horizontal
+    > .swiper-pagination-bullets
+    .swiper-pagination-bullet {
     margin: 0 3px;
     width: size(8px);
     height: size(8px);
@@ -58,7 +65,6 @@
       width: size(6px);
       height: size(6px);
     }
-
   }
 
   p {
@@ -99,7 +105,6 @@
       }
     }
   }
-
 }
 
 .slider__button {
@@ -117,11 +122,11 @@
   }
 
   &.slider-prev {
-    left: size(616px)
+    left: size(616px);
   }
 
   &.slider-next {
-    right: size(616px)
+    right: size(616px);
   }
 
   &:hover {
@@ -137,6 +142,3 @@
 .slider__slide {
   position: relative;
 }
-
-
-

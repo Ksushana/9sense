@@ -20,7 +20,7 @@ html( lang="ru" )
         +svg( "logo", 120, 120 )
 
       button.header__open
-      //- button.header__close
+      button.header__close
 
       nav.header__links
         ul
@@ -32,15 +32,17 @@ html( lang="ru" )
 
       p.header__turn
         span Клиника эстетической стоматологии в Москве
-      p.header__phrase.rellax( data-rellax-speed="1" ) Природа начинает, #[span.header__phrase--italics искусство] направляет, опыт совершенствует.
+      .parallax.header__phrase
+        p Природа начинает, #[span.header__phrase--italics искусство] направляет, опыт совершенствует.
 
     main
       .container
         h1.visually-hidden #{mainTitle}
         .shadow
 
-        section.about.scale.scale--big( id="about target" )
+        section.about.scale.scale--big( id="about" )
           .about__block
+            button.about__close
             h2 Омар Газаев
 
             h3 Специализация
@@ -62,7 +64,7 @@ html( lang="ru" )
             button Специализация и публикации
               +svg( "arrow-1", 20, 10 )
 
-        section.text-block.text-block--tech.text-block--rellax.rellax( data-rellax-speed="1" )
+        section.text-block.text-block--tech.parallax
           h2.visually-hidden Технологии
           p Технологии не стоят на месте, вместо просто белого &ndash; контролируемая яркость
 
@@ -74,7 +76,7 @@ html( lang="ru" )
             +svg( "swiss", 17, 12 )
             +svg( "german", 17, 12 )
 
-        section.text-block.text-block--dark.text-block--smile.rellax( data-rellax-speed="1" )
+        section.text-block.text-block--dark.text-block--smile.parallax
           h2.visually-hidden Улыбайся
           p Улыбайся &ndash; это символ твоей #[span.text-block--italics уверенности].
 
@@ -83,7 +85,7 @@ html( lang="ru" )
           img( src="img/face@1x.jpg" srcset="img/face@2x.jpg 2x" width="1312" height="772" alt="Марина" )
           p.smile__text Марина, успела до свадьбы
 
-        section.text-block.text-block--dark.text-block--bright.rellax( data-rellax-speed="1" )
+        section.text-block.text-block--dark.text-block--bright.parallax
           h2.visually-hidden Ярко
           p Ярко, натурально, #[span.text-block--italics персонально].
 
@@ -99,7 +101,7 @@ html( lang="ru" )
               .swiper-slide.slider__slide
                 img( src="img/smile@1x.jpg" srcset="img/smile@2x.jpg 2x" width="1312" height="772" alt="Марина" )
                 p Подпись к фото
-            button: +svg( "arrow-2", 24, 24 )
+            button: +svg( "lupa", 24, 24 )
             .swiper-pagination
 
             .swiper-button-prev.slider__button.slider-prev
@@ -108,9 +110,9 @@ html( lang="ru" )
             .swiper-button-next.slider__button.slider-next
               +svg( "arrow-1", 20, 10 )
 
-        section.location.location--dark( id="location" ).rellax( data-rellax-speed="1" )
+        section.location.location--dark( id="location" ).parallax
           h2.visually-hidden Адрес
-          p Локация &ndash; #[a.location--italics(href="#") Патрики].#[br] Есть бесплатная парковка.
+          p Локация &ndash; #[a.location--italics(href="https://yandex.ru/maps/-/CKan624~") Патрики].#[br] Есть бесплатная парковка.
           a(href="#") Посмотреть на карте
             +svg( "arrow-1", 20, 10 )
           img( src="img/map@1x.png" srcset="img/map@2x.png 2x" width="378" height="425" alt="map" )
@@ -120,6 +122,9 @@ html( lang="ru" )
       p 2020, all rights reserved
       p Design: #[a.footer--italics(href="#") genue.ru]
 
+    .popup
+      img.popup__img(src="", alt="")
+      button.popup__close
 
     block scripts
       script( src="js/script.min.js" )

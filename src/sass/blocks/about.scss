@@ -4,8 +4,10 @@
   background-image: url("../img/omar@1x.jpg");
   background-size: 97%;
   background-repeat: no-repeat;
+  transform: scale(0.9);
 
-  @media (-webkit-min-device-pixel-ratio: $retina-dppx), (min-resolution: $retina-dpi) {
+  @media (-webkit-min-device-pixel-ratio: $retina-dppx),
+    (min-resolution: $retina-dpi) {
     background-image: url("../img/omar@2x.jpg");
   }
 
@@ -64,12 +66,23 @@
   }
 
   @include mobile {
-    height: 0;
-    display: none;
+    position: fixed;
     bottom: 0;
+    left: 0;
+    // transform: translateY(110%);
+    transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+    height: size(596px);
+    width: 100vw;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    background: $color-grey-light;
+    z-index: 301;
+    &--show {
+      transform: translateY(0);
+      transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
   }
 }
-
 
 .about__works {
   li {
@@ -124,4 +137,3 @@
     }
   }
 }
-
