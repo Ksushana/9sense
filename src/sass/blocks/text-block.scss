@@ -24,11 +24,8 @@
     @include mobile {
       padding: 0 size(17px);
       min-height: size(393px);
-      text-align: center;
-
-      p {
-        // margin: 0;
-      }
+      text-align: start;
+      align-items: center;
     }
 
     &.dark {

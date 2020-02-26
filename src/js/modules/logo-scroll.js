@@ -9,10 +9,6 @@ window.addEventListener(`scroll`, function() {
         window.pageYOffset + 64 - window.pageYOffset * 1.07 + `px`;
       logo.style.top =
         window.pageYOffset + 64 - window.pageYOffset * 1.07 + `px`;
-      // links.style.right =
-      //   window.pageYOffset + 60 - window.pageYOffset * 1.07 + `px`;
-      // links.style.top =
-      //   window.pageYOffset + 64 - window.pageYOffset * 1.07 + `px`;
     }
   }
 });
@@ -27,10 +23,13 @@ $(() => {
 
   const headerLinksOriginalTop = parseInt(headerLinks.css("top"), 10);
   const headerLinksOriginalRight = parseInt(headerLinks.css("right"), 10);
-  const minTop = headerLinksOriginalTop / 2;
-  const minRight = headerLinksOriginalRight / 2;
+  const minTop = headerLinksOriginalTop / 2.5;
+  const minRight = headerLinksOriginalRight / 2.5;
 
   window.animateHeaderLinks = function(scrollTop) {
+    if (window.isMobile()) {
+      return;
+    }
     const { right, top } = calculateHeaderLinks(scrollTop);
     headerLinks.css("right", `${right}px`);
     headerLinks.css("top", `${top}px`);
@@ -44,6 +43,9 @@ $(() => {
   };
 
   window.animateTurn = function(lastScroll) {
+    if (window.isMobile()) {
+      return;
+    }
     const headerLinksRightOffset =
       $(window).width() - headerLinks.offset().left - headerLinks.width();
     const turnRightOffset =

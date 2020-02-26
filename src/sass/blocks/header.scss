@@ -51,6 +51,23 @@
     &::after {
       z-index: -2;
       bottom: 0;
+      width: 100vw;
+      right: 0;
+      left: 0;
+    }
+
+    &::before {
+      width: size(76px);
+      height: 100%;
+      position: absolute;
+      content: "";
+      right: 0;
+      top: 0;
+      background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.5) 100%
+      );
     }
   }
 }
@@ -118,7 +135,7 @@
     ul {
       flex-direction: column;
       align-items: center;
-      margin-top: size(320px);
+      margin-top: 50%;
     }
 
     li {

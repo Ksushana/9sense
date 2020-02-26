@@ -5,7 +5,7 @@
     const menu = document.querySelector(`.header__links`);
     const openButton = document.querySelector(`.header__open`);
     const closeButton = document.querySelector(`.header__close`);
-    const link = menu.querySelectorAll(`.header__links li`);
+    const buttons = $(`.header__links li`);
 
     let scrollTop;
 
@@ -40,14 +40,11 @@
       window.setTimeout(closeMenu, 100);
     });
 
-    // link.addEventListener(`click`, () => {
-    //   window.setTimeout(closeMenu, 100);
-    // });
-
-    // window.addEventListener(`resize`, () => {
-    //   closeMenu();
-    //   header.style.transform = ``;
-    // });
+    buttons.each((_, button) => {
+      button.addEventListener(`click`, () => {
+        window.setTimeout(closeMenu, 100);
+      });
+    });
   }
 })();
 
