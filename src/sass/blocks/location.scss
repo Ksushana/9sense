@@ -10,6 +10,10 @@
   min-height: size(670px);
   letter-spacing: 0.02em;
 
+  a.location--italics {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
   img,
   a:not(.location--italics) {
     display: none;

@@ -2878,6 +2878,10 @@ a:not([href]) {
   letter-spacing: 0.02em;
 }
 
+.location a.location--italics {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
 .location img,
 .location a:not(.location--italics) {
   display: none;
