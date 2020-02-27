@@ -1696,17 +1696,13 @@ a:not([href]) {
 }
 
 .header__close--show::before {
-  -webkit-transform-origin: 0 top;
-          transform-origin: 0 top;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -webkit-transform: rotate(45deg) translatex(-14px);
+          transform: rotate(45deg) translatex(-14px);
 }
 
 .header__close--show::after {
-  -webkit-transform-origin: 0 top;
-          transform-origin: 0 top;
-  -webkit-transform: rotate(135deg) translatex(14px) translateY(-17px);
-          transform: rotate(135deg) translatex(14px) translateY(-17px);
+  -webkit-transform: rotate(135deg) translatey(14px);
+          transform: rotate(135deg) translatey(14px);
 }
 
 @media (max-width: 767px) {

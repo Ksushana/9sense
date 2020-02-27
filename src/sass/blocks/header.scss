@@ -428,13 +428,13 @@
     z-index: 301;
 
     &::before {
-      transform-origin: 0 top;
-      transform: rotate(45deg);
+      // transform-origin: 0 top;
+      transform: rotate(45deg) translatex(-14px);
     }
 
     &::after {
-      transform-origin: 0 top;
-      transform: rotate(135deg) translatex(14px) translateY(-17px);
+      // transform-origin: 0 bottom;
+      transform: rotate(135deg) translatey(14px);
     }
   }
 
