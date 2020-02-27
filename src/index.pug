@@ -93,14 +93,17 @@ html( lang="ru" )
           .swiper-container.slider-container
             .swiper-wrapper
               .swiper-slide.slider__slide
-                img( src="img/smile@1x.jpg" srcset="img/smile@2x.jpg 2x" width="1312" height="772" alt="Марина" )
-                p Подпись к фото
+                a.slider__img( href="img/smile@2x.jpg")
+                  img( src="img/smile@1x.jpg" srcset="img/smile@2x.jpg 2x" width="1312" height="772" alt="Марина" )
+                  p Подпись к фото
               .swiper-slide.slider__slide
-                img( src="img/face@1x.jpg" srcset="img/face@2x.jpg 2x" width="1312" height="772" alt="Марина" )
-                p Подпись к фото
+                a.slider__img( href="img/smile@2x.jpg")
+                  img( src="img/smile@1x.jpg" srcset="img/smile@2x.jpg 2x" width="1312" height="772" alt="Марина" )
+                  p Подпись к фото
               .swiper-slide.slider__slide
-                img( src="img/smile@1x.jpg" srcset="img/smile@2x.jpg 2x" width="1312" height="772" alt="Марина" )
-                p Подпись к фото
+                a.slider__img( href="img/smile@2x.jpg")
+                  img( src="img/smile@1x.jpg" srcset="img/smile@2x.jpg 2x" width="1312" height="772" alt="Марина" )
+                  p Подпись к фото
             button: +svg( "lupa", 24, 24 )
             .swiper-pagination
 
@@ -121,10 +124,6 @@ html( lang="ru" )
     footer.footer
       p 2020, all rights reserved
       p Design: #[a.footer--italics(href="#") genue.ru]
-
-    .popup
-      img.popup__img( src="img/smile@1x.jpg" srcset="img/smile@2x.jpg 2x" alt="Марина" )
-      button.popup__close
 
     block scripts
       script( src="js/script.min.js" )
