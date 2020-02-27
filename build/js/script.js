@@ -10374,11 +10374,13 @@ for (var i = 0; i < linkNav.length; i++) {
     $(info).css("opacity", 1);
     info.classList.add(`about__block--show`);
     $(`body`).css("overflow-y", "hidden");
+    window.bodyScrollLock.disableBodyScroll(info);
   };
 
   const closeInfo = () => {
     info.classList.remove(`about__block--show`);
     $(`body`).css("overflow-y", "visible");
+    window.bodyScrollLock.enableBodyScroll(info);
     setTimeout(() => $(info).css("opacity", 0), 500);
 
     setTimeout(() => returnContainer, 500);
@@ -10552,6 +10554,7 @@ $(() => {
       closeButton.classList.add(`header__close--show`);
       document.body.style.top = `${-scrollTop}px`;
       $(`body`).css("overflow-y", "hidden");
+      window.bodyScrollLock.disableBodyScroll(menu);
     };
 
     const closeMenu = () => {
@@ -10559,6 +10562,7 @@ $(() => {
       openButton.classList.remove(`header__open--click`);
       closeButton.classList.remove(`header__close--show`);
       $(`body`).css("overflow-y", "visible");
+      window.bodyScrollLock.enableBodyScroll(menu);
 
       // if (scrollTop) {
       //   window.scroll(0, scrollTop);

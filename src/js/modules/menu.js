@@ -16,6 +16,7 @@
       closeButton.classList.add(`header__close--show`);
       document.body.style.top = `${-scrollTop}px`;
       $(`body`).css("overflow-y", "hidden");
+      window.bodyScrollLock.disableBodyScroll(menu);
     };
 
     const closeMenu = () => {
@@ -23,6 +24,7 @@
       openButton.classList.remove(`header__open--click`);
       closeButton.classList.remove(`header__close--show`);
       $(`body`).css("overflow-y", "visible");
+      window.bodyScrollLock.enableBodyScroll(menu);
 
       // if (scrollTop) {
       //   window.scroll(0, scrollTop);

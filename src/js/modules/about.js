@@ -13,11 +13,13 @@
     $(info).css("opacity", 1);
     info.classList.add(`about__block--show`);
     $(`body`).css("overflow-y", "hidden");
+    window.bodyScrollLock.disableBodyScroll(info);
   };
 
   const closeInfo = () => {
     info.classList.remove(`about__block--show`);
     $(`body`).css("overflow-y", "visible");
+    window.bodyScrollLock.enableBodyScroll(info);
     setTimeout(() => $(info).css("opacity", 0), 500);
 
     setTimeout(() => returnContainer, 500);
