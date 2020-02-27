@@ -2146,8 +2146,8 @@ a:not([href]) {
   background-color: transparent;
   border: none;
   padding: 0;
-  right: 10px;
-  top: 40px;
+  right: 0;
+  top: 0.83333rem;
   -webkit-transition: opacity 1s;
   transition: opacity 1s;
   outline: none;
