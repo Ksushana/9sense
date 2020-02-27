@@ -1,0 +1,67 @@
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: $color-popup-bg;
+  z-index: 400;
+
+  img {
+    height: 57vh;
+    margin: auto;
+    object-fit: contain;
+    transform: translateX(-25%);
+  }
+
+  &.show {
+    display: flex;
+  }
+}
+
+.popup__close {
+  display: none;
+
+  @include mobile {
+    display: block;
+    position: absolute;
+    width: size(23px);
+    height: size(50px);
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    right: size(15px);
+    top: 0;
+    transition: opacity 1s;
+
+    outline: none;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: size(3px);
+      height: size(30px);
+      background-color: $color-black-bigtext;
+      top: 25%;
+      left: 42%;
+      border-radius: 100px;
+      transition: all 1s;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: size(3px);
+      height: size(30px);
+      background-color: $color-black-bigtext;
+      top: 25%;
+      left: 42%;
+      border-radius: 100px;
+      transition: all 1s;
+      transform: rotate(-45deg);
+    }
+  }
+}

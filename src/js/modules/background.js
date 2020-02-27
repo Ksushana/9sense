@@ -7,6 +7,7 @@
   const lang = document.querySelector(`.header__lang`);
   const shadow = document.querySelector(`.shadow`);
   const textBlockTech = $(".text-block--tech");
+  const aboutText = document.querySelector(`.about__mobile p`);
 
   function dark() {
     body.classList.add(`dark`);
@@ -15,6 +16,7 @@
     menu.classList.add(`dark`);
     turn.classList.add(`dark`);
     lang.classList.add(`dark`);
+    aboutText.classList.add(`dark`);
     shadow.classList.add(`show`);
   }
 
@@ -25,7 +27,7 @@
     menu.classList.remove(`dark`);
     turn.classList.remove(`dark`);
     lang.classList.remove(`dark`);
-
+    aboutText.classList.remove(`dark`);
     shadow.classList.remove(`show`);
   }
 

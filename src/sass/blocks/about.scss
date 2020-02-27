@@ -33,6 +33,12 @@
     line-height: size(24px);
     letter-spacing: 0.01em;
     margin-bottom: size(40px);
+
+    @include mobile {
+      font-size: size(28px);
+      margin-top: size(38px);
+      margin-bottom: size(34px);
+    }
   }
 
   h3 {
@@ -61,6 +67,10 @@
   img {
     width: size(277px);
     height: size(119px);
+    @include mobile {
+      width: size(210px);
+      height: size(90px);
+    }
   }
 
   @include mobile {
@@ -69,10 +79,11 @@
     left: 0;
     right: 0;
     transform: translateY(110%);
+    padding: 0 size(86px) 0 size(17px);
     margin-top: auto;
     transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
-    height: size(596px);
-    width: 100vw;
+    height: size(564px);
+    width: 100%;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
     background: $color-grey-light;
@@ -80,6 +91,7 @@
     opacity: 0;
     pointer-events: none;
     -webkit-backface-visibility: hidden;
+    box-sizing: border-box;
 
     &--show {
       pointer-events: visible;
@@ -100,6 +112,11 @@
   margin-top: size(50px);
   position: relative;
   left: size(-35px);
+
+  @include mobile {
+    left: size(-5px);
+    margin-top: size(12px);
+  }
 }
 
 .about__mobile {
@@ -118,6 +135,11 @@
       margin: 0;
       letter-spacing: 0.02em;
       line-height: size(21px);
+      transition: color 1s;
+
+      &.dark {
+        color: $color-black-bigtext;
+      }
     }
 
     button {
@@ -155,8 +177,8 @@
     background-color: transparent;
     border: none;
     padding: 0;
-    right: 10px;
-    top: 40px;
+    right: size(15px);
+    top: 0;
     transition: opacity 1s;
 
     outline: none;
@@ -166,7 +188,7 @@
       content: "";
       width: size(3px);
       height: size(30px);
-      background-color: $color-white;
+      background-color: $color-black-bigtext;
       top: 25%;
       left: 42%;
       border-radius: 100px;
@@ -179,7 +201,7 @@
       content: "";
       width: size(3px);
       height: size(30px);
-      background-color: $color-white;
+      background-color: $color-black-bigtext;
       top: 25%;
       left: 42%;
       border-radius: 100px;

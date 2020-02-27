@@ -9353,6 +9353,7 @@ for (var i = 0; i < linkNav.length; i++) {
   const lang = document.querySelector(`.header__lang`);
   const shadow = document.querySelector(`.shadow`);
   const textBlockTech = $(".text-block--tech");
+  const aboutText = document.querySelector(`.about__mobile p`);
 
   function dark() {
     body.classList.add(`dark`);
@@ -9361,6 +9362,7 @@ for (var i = 0; i < linkNav.length; i++) {
     menu.classList.add(`dark`);
     turn.classList.add(`dark`);
     lang.classList.add(`dark`);
+    aboutText.classList.add(`dark`);
     shadow.classList.add(`show`);
   }
 
@@ -9371,7 +9373,7 @@ for (var i = 0; i < linkNav.length; i++) {
     menu.classList.remove(`dark`);
     turn.classList.remove(`dark`);
     lang.classList.remove(`dark`);
-
+    aboutText.classList.remove(`dark`);
     shadow.classList.remove(`show`);
   }
 
@@ -9528,29 +9530,29 @@ $(function() {
   });
 });
 
+(() => {
+  const foto = document.querySelector(`.slider img`);
+  const popup = document.querySelector(`.popup`);
+  const closeButton = document.querySelector(`.popup__close`);
 
-// function isScrolledIntoView(elem) {
-//   var docViewTop = $(window).scrollTop();
-//   var docViewBottom = docViewTop + $(window).height();
+  const openPopup = () => {
+    popup.classList.add(`show`);
+    $(`body`).css("overflow-y", "hidden");
+  };
 
-//   var elemTop = $(elem).offset().top;
-//   var elemBottom = elemTop + $(elem).height();
+  const closePop = () => {
+    popup.classList.remove(`show`);
+    $(`body`).css("overflow-y", "visible");
+  };
 
-//   return ((elemBottom < = docViewBottom) && (elemTop >= docViewTop));
-// }
+  foto.addEventListener(`click`, () => {
+    window.setTimeout(openPopup, 100);
+  });
 
-// isInView: function(elem) {
-//   var docViewTop = $(window).scrollTop(),
-//     docViewBottom = docViewTop + $(window).height(),
-//     elemTop = $(elem).offset().top,
-//     elemBottom = elemTop + $(elem).height();
-//   return ((elemBottom < = docViewBottom) && (elemTop >= docViewTop));
-// }
-
-// // var rellaxes = document.querySelectorAll('.rellax');
-
-// $(`.text-block--rellax`).visible(true);
-// let rellax = new Rellax(`.rellax`);
+  closeButton.addEventListener(`click`, () => {
+    window.setTimeout(closePop, 100);
+  });
+})();
 
 $(() => {
   const maxScale = 1.0;
@@ -9561,6 +9563,7 @@ $(() => {
 
   const pictures = $(`.scale--big`);
   const textBlocks = $(`.parallax`);
+  let headerBlock = $(`.parallax-header`);
   const menu = $(`.header__links`);
 
   pictures.each((_, picture) => {
@@ -9572,6 +9575,10 @@ $(() => {
       .find(`p`)
       .css(`transition`, `transform 0.1s`);
   });
+
+  $(headerBlock)
+    .find(`p`)
+    .css(`transition`, `transform 0.1s`);
 
   window.addEventListener(`scroll`, () =>
     window.requestAnimationFrame(scrollHandler)
@@ -9593,8 +9600,10 @@ $(() => {
 
   function animate() {
     animateTexts();
+    animateHeader();
     animatePictures();
     hideTexts();
+    hideHeader();
     window.animateHeaderLinks(lastScroll);
     window.animateLogo(lastScroll);
     window.animateTurn(lastScroll);
@@ -9634,10 +9643,14 @@ $(() => {
 
   function animateTexts() {
     textBlocks.each((_, textBlock) => {
-      textBlock = $(textBlock);
-      const relative = calculateTextRelative(textBlock);
-      updateTextBlock(textBlock, relative);
+      const relative = calculateTextRelative($(textBlock));
+      updateTextBlock($(textBlock), relative);
     });
+  }
+
+  function animateHeader() {
+    const relative = calculateHeaderRelative($(headerBlock));
+    updateHeaderBlock($(headerBlock), relative);
   }
 
   function calculateTextRelative(element) {
@@ -9655,7 +9668,27 @@ $(() => {
     return relative;
   }
 
+  function calculateHeaderRelative(element) {
+    const scrollTop = lastScroll;
+    const windowHeight = $(window).height();
+
+    const elementOffset = element.offset().top;
+    const elementHeight = element.height();
+
+    const startOffset = 0;
+    const finishOffset = windowHeight / 2;
+
+    const position = (scrollTop - startOffset) / (finishOffset - startOffset);
+    const relative = Math.max(0, Math.min(1, position));
+    return relative;
+  }
+
   function updateTextBlock(element, relative) {
+    const offset = relative * -40;
+    element.find(`p`).css(`transform`, `translateY(${offset}px)`);
+  }
+
+  function updateHeaderBlock(element, relative) {
     const offset = relative * -40;
     element.find(`p`).css(`transform`, `translateY(${offset}px)`);
   }
@@ -9668,7 +9701,16 @@ $(() => {
     });
   }
 
+  function hideHeader() {
+    headerBlock = $(headerBlock);
+    const disappearance = calculateOpacity(headerBlock);
+    hideHeaderBlock(headerBlock, disappearance);
+  }
+
   function calculateOpacity(element) {
+    // if (window.isMobile()) {
+    //   return;
+    // }
     const scrollTop = lastScroll;
     const windowHeight = $(window).height();
 
@@ -9677,8 +9719,29 @@ $(() => {
     const menuHeight = menu.height();
 
     const startOffset = elementOffset - windowHeight / 4;
+    const finishOffset = elementOffset + elementHeight / 2 - 80 * 2;
+
+    const position = (scrollTop - startOffset) / (finishOffset - startOffset);
+    const relative = Math.max(0, Math.min(1, position));
+    const opacity = 1 - relative;
+
+    return opacity;
+  }
+
+  function calculateOpacityMobile(element) {
+    if (!window.isMobile()) {
+      return;
+    }
+    const scrollTop = lastScroll;
+    const windowHeight = $(window).height();
+
+    const elementOffset = element.offset().top;
+    const elementHeight = element.height();
+    const fadeHide = windowHeight / 5;
+
+    const startOffset = elementOffset - windowHeight / 4;
     const finishOffset =
-      elementOffset + elementHeight / 2 - (menuHeight + 40) * 2;
+      elementOffset + elementHeight / 2 - (fadeHide + 40) * 2;
 
     const position = (scrollTop - startOffset) / (finishOffset - startOffset);
     const relative = Math.max(0, Math.min(1, position));
@@ -9688,6 +9751,10 @@ $(() => {
   }
 
   function hideTextBlock(element, opacity) {
+    element.find(`p`).css(`opacity`, opacity);
+  }
+
+  function hideHeaderBlock(element, opacity) {
     element.find(`p`).css(`opacity`, opacity);
   }
 });

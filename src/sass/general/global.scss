@@ -81,6 +81,8 @@ a {
     opacity: 0;
     transition: opacity 1s;
     z-index: 1;
+    pointer-events: none;
+
     &.show {
       background: linear-gradient(
         180deg,
