@@ -1358,7 +1358,7 @@ button::-moz-focus-inner {
 
 /* Main image in popup */
 img.mfp-img {
-  max-width: 200% !important;
+  max-width: 100% !important;
   height: auto;
   display: block;
   line-height: 0;
@@ -1366,6 +1366,7 @@ img.mfp-img {
           box-sizing: border-box;
   padding: 40px 0 40px;
   margin: 0 auto;
+  overflow-x: scroll;
 }
 
 /* The shadow behind the image */
@@ -1414,6 +1415,7 @@ img.mfp-img {
 
 .mfp-image-holder .mfp-content {
   max-width: 100%;
+  overflow-x: scroll;
 }
 
 .mfp-gallery .mfp-image-holder .mfp-figure {
