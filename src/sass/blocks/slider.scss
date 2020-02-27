@@ -2,14 +2,14 @@
   padding-top: size(70px);
 
   @include mobile {
-    padding-top: size(36px);
+    padding-top: size(54px);
   }
 
   img {
     filter: grayscale(100%);
     width: size(1312px);
     height: size(772px);
-    transition: filter 1s;
+    transition: filter 0.5s;
 
     &.color {
       filter: none;
@@ -91,7 +91,7 @@
       background-color: transparent;
 
       top: size(16px);
-      right: size(10px);
+      right: 0;
       position: absolute;
 
       @include mobile {
@@ -144,6 +144,6 @@
   position: relative;
 }
 
-.slider__img {
+.slider__img:hover {
   opacity: 1;
 }

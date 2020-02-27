@@ -1,4 +1,11 @@
 $(document).ready(function() {
+  if (!window.isMobile()) {
+    const photos = $(`.slider__img`);
+    $(`.slider__img`).click(function(event) {
+      event.preventDefault();
+    });
+    return;
+  }
   $(".slider__img").magnificPopup({
     type: "image",
     closeOnContentClick: true,

@@ -10599,6 +10599,13 @@ $(function() {
 });
 
 $(document).ready(function() {
+  if (!window.isMobile()) {
+    const photos = $(`.slider__img`);
+    $(`.slider__img`).click(function(event) {
+      event.preventDefault();
+    });
+    return;
+  }
   $(".slider__img").magnificPopup({
     type: "image",
     closeOnContentClick: true,
@@ -10626,6 +10633,7 @@ $(() => {
   const textBlocks = $(`.parallax`);
   let headerBlock = $(`.parallax-header`);
   const menu = $(`.header__links`);
+  let header = $(`.header__gradient`);
 
   pictures.each((_, picture) => {
     $(picture).css(`transition`, `transform 0.1s`);
@@ -10665,6 +10673,7 @@ $(() => {
     animatePictures();
     hideTexts();
     hideHeader();
+    showBG();
     window.animateHeaderLinks(lastScroll);
     window.animateLogo(lastScroll);
     window.animateTurn(lastScroll);
@@ -10768,6 +10777,12 @@ $(() => {
     hideHeaderBlock(headerBlock, disappearance);
   }
 
+  function showBG() {
+    header = $(header);
+    const disappearance = calculateBGOpacity(header);
+    showBGGradient(header, disappearance);
+  }
+
   function calculateOpacity(element) {
     // if (window.isMobile()) {
     //   return;
@@ -10811,12 +10826,37 @@ $(() => {
     return opacity;
   }
 
+  function calculateBGOpacity(element) {
+    if (!window.isMobile()) {
+      return;
+    }
+    const scrollTop = lastScroll;
+    const windowHeight = $(window).height();
+
+    const elementOffset = element.offset().top;
+    const elementHeight = element.height();
+    const fadeHide = windowHeight / 5;
+
+    const startOffset = elementOffset + windowHeight / 6;
+    const finishOffset = elementOffset + windowHeight / 3;
+
+    const position = (scrollTop - startOffset) / (finishOffset - startOffset);
+    const relative = Math.max(0, Math.min(1, position));
+    const opacity = relative;
+
+    return opacity;
+  }
+
   function hideTextBlock(element, opacity) {
     element.find(`p`).css(`opacity`, opacity);
   }
 
   function hideHeaderBlock(element, opacity) {
     element.find(`p`).css(`opacity`, opacity);
+  }
+
+  function showBGGradient(element, opacity) {
+    element.css(`opacity`, opacity);
   }
 });
 
@@ -10834,7 +10874,7 @@ $(() => {
   window.animateSlider = function(lastScroll) {
     const imgs = document.querySelectorAll(`.slider__slide img`);
     const breakpoint = slider.offset().top + slider.height();
-    const current = lastScroll + $(window).height();
+    const current = lastScroll + $(window).height() / 2 + slider.height() / 1.5;
     if (current > breakpoint) {
       for (let i = 0; i < imgs.length; i++) {
         const img = imgs[i];

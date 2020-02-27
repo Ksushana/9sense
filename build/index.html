@@ -13,9 +13,12 @@
 
 <body>
   <header class="header">
+    <div class="header__gradient"></div>
     <div class="header__logo"><svg width="120" height="120" aria-hidden="true">
         <use xlink:href="img/sprite.svg#logo"></use>
-      </svg></div><button class="header__open"></button><button class="header__close"></button>
+      </svg></div><button class="header__open">
+      <div class="header__open-button"></div>
+    </button><button class="header__close"></button>
     <nav class="header__links">
       <ul>
         <li><a class="link-text header__link" href="#about"><span>Омар Газаев</span></a></li>
@@ -58,7 +61,7 @@
       </section>
       <section class="text-block text-block--tech parallax">
         <h2 class="visually-hidden">Технологии</h2>
-        <p>Технологии не стоят на месте, вместо просто белого &ndash; контролируемая яркость</p>
+        <p>Технологии не стоят на месте, вместо просто белого &ndash; контролируемая яркость.</p>
       </section>
       <section class="lab scale scale--big" id="lab">
         <h2 class="visually-hidden"></h2><img src="img/lab@1x.jpg" srcset="img/lab@2x.jpg 2x" width="1312" height="772" alt="lab">
@@ -84,16 +87,11 @@
       <section class="slider scale scale--big">
         <div class="swiper-container slider-container">
           <div class="swiper-wrapper">
-            <div class="swiper-slide slider__slide"><a class="slider__img" href="img/smile@2x.jpg"><img src="img/smile@1x.jpg" srcset="img/smile@2x.jpg 2x" width="1312" height="772" alt="Марина">
-                <p>Подпись к фото</p>
-              </a></div>
-            <div class="swiper-slide slider__slide"><a class="slider__img" href="img/face@2x.jpg"><img src="img/face@1x.jpg" srcset="img/face@2x.jpg 2x" width="1312" height="772" alt="Марина">
-                <p>Подпись к фото</p>
-              </a></div>
-            <div class="swiper-slide slider__slide"><a class="slider__img" href="img/smile@2x.jpg"><img src="img/smile@1x.jpg" srcset="img/smile@2x.jpg 2x" width="1312" height="772" alt="Марина">
-                <p>Подпись к фото</p>
-              </a></div>
-          </div><button><svg width="24" height="24" aria-hidden="true">
+            <div class="swiper-slide slider__slide"><a class="slider__img" href="img/smile@2x.jpg"><img src="img/smile@1x.jpg" srcset="img/smile@2x.jpg 2x" width="1312" height="772" alt="Марина"></a></div>
+            <div class="swiper-slide slider__slide"><a class="slider__img" href="img/face@2x.jpg"><img src="img/face@1x.jpg" srcset="img/face@2x.jpg 2x" width="1312" height="772" alt="Марина"></a></div>
+            <div class="swiper-slide slider__slide"><a class="slider__img" href="img/smile@2x.jpg"><img src="img/smile@1x.jpg" srcset="img/smile@2x.jpg 2x" width="1312" height="772" alt="Марина"></a></div>
+          </div>
+          <p>Подпись к фото3</p><button><svg width="24" height="24" aria-hidden="true">
               <use xlink:href="img/sprite.svg#lupa"></use>
             </svg></button>
           <div class="swiper-pagination"></div>
@@ -107,9 +105,9 @@
       </section>
       <section class="location location--dark parallax" id="location">
         <h2 class="visually-hidden">Адрес</h2>
-        <p>Локация &ndash; <a class="location--italics" href="https://yandex.ru/maps/-/CKan624~">Патрики</a>.<br> Есть бесплатная парковка.</p><a href="#">Посмотреть на карте<svg width="20" height="10" aria-hidden="true">
+        <p>Локация &ndash; <a class="location--italics" href="https://yandex.ru/maps/-/CKan624~">Патрики</a>.<br> Есть бесплатная парковка.<a href="#">Посмотреть на карте<svg width="20" height="10" aria-hidden="true">
               <use xlink:href="img/sprite.svg#arrow-1"></use>
-            </svg></a><img src="img/map@1x.png" srcset="img/map@2x.png 2x" width="378" height="425" alt="map">
+            </svg></a></p><img src="img/map@1x.png" srcset="img/map@2x.png 2x" width="378" height="425" alt="map">
       </section>
     </div>
   </main>

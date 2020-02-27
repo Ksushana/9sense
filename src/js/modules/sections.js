@@ -9,6 +9,7 @@ $(() => {
   const textBlocks = $(`.parallax`);
   let headerBlock = $(`.parallax-header`);
   const menu = $(`.header__links`);
+  let header = $(`.header__gradient`);
 
   pictures.each((_, picture) => {
     $(picture).css(`transition`, `transform 0.1s`);
@@ -48,6 +49,7 @@ $(() => {
     animatePictures();
     hideTexts();
     hideHeader();
+    showBG();
     window.animateHeaderLinks(lastScroll);
     window.animateLogo(lastScroll);
     window.animateTurn(lastScroll);
@@ -151,6 +153,12 @@ $(() => {
     hideHeaderBlock(headerBlock, disappearance);
   }
 
+  function showBG() {
+    header = $(header);
+    const disappearance = calculateBGOpacity(header);
+    showBGGradient(header, disappearance);
+  }
+
   function calculateOpacity(element) {
     // if (window.isMobile()) {
     //   return;
@@ -194,11 +202,36 @@ $(() => {
     return opacity;
   }
 
+  function calculateBGOpacity(element) {
+    if (!window.isMobile()) {
+      return;
+    }
+    const scrollTop = lastScroll;
+    const windowHeight = $(window).height();
+
+    const elementOffset = element.offset().top;
+    const elementHeight = element.height();
+    const fadeHide = windowHeight / 5;
+
+    const startOffset = elementOffset + windowHeight / 6;
+    const finishOffset = elementOffset + windowHeight / 3;
+
+    const position = (scrollTop - startOffset) / (finishOffset - startOffset);
+    const relative = Math.max(0, Math.min(1, position));
+    const opacity = relative;
+
+    return opacity;
+  }
+
   function hideTextBlock(element, opacity) {
     element.find(`p`).css(`opacity`, opacity);
   }
 
   function hideHeaderBlock(element, opacity) {
     element.find(`p`).css(`opacity`, opacity);
+  }
+
+  function showBGGradient(element, opacity) {
+    element.css(`opacity`, opacity);
   }
 });

@@ -43,7 +43,8 @@
     align-items: flex-start;
 
     p {
-      margin: 0  0 size(15px);
+      margin: 0 0 size(15px);
+      padding-top: size(31px);
     }
 
     a:not(.location--italics) {

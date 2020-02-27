@@ -6,6 +6,7 @@
   transition: color 2s;
   color: $color-black-bigtext;
   display: flex;
+  box-sizing: border-box;
 
   min-height: size(700px);
 
@@ -22,7 +23,7 @@
     transition: color 1s;
 
     @include mobile {
-      padding: 0 size(17px);
+      padding: size(85px) size(17px) 0;
       min-height: size(393px);
       text-align: start;
       align-items: center;
@@ -41,6 +42,10 @@
       padding: size(18px) size(87px) 0 size(17px);
       min-height: size(380px);
       align-items: center;
+
+      p {
+        padding-top: size(100px);
+      }
     }
   }
 
@@ -52,6 +57,10 @@
       padding: size(18px) size(87px) 0 size(17px);
       min-height: size(380px);
       align-items: center;
+
+      p {
+        padding-top: size(100px);
+      }
     }
   }
 

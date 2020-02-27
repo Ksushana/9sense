@@ -38,10 +38,12 @@
     background-image: url("../img/main-mobile@1x.jpg");
     min-height: size(1032px);
     background-size: cover;
-    background-position: top center;
+    background-position: center;
     background-repeat: no-repeat;
 
     padding: size(10px) size(17px) 0;
+    min-height: auto;
+    height: 100vh;
 
     @media (-webkit-min-device-pixel-ratio: $retina-dppx),
       (min-resolution: $retina-dpi) {
@@ -69,6 +71,24 @@
         rgba(0, 0, 0, 0.5) 100%
       );
     }
+  }
+}
+
+.header__gradient {
+  @include mobile {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    z-index: 1;
+    opacity: 0;
   }
 }
 
@@ -267,7 +287,7 @@
   }
 
   @include mobile {
-    margin: auto auto size(30px);
+    margin: auto auto size(100px);
     opacity: 0;
   }
 }
@@ -305,7 +325,7 @@
     font-size: size(11px);
     line-height: size(22px);
     right: 0.5rem;
-    top: size(514px);
+    top: 50vh;
     position: absolute;
   }
 }
@@ -338,38 +358,48 @@
 .header__open {
   position: absolute;
   display: none;
-  width: size(6px);
-  height: size(6px);
-  border-radius: 50%;
-  background-color: $color-white;
-  border: none;
-  padding: 0;
-  right: 18px;
-  top: 64px;
+  width: size(50px);
+  height: size(50px);
+  right: size(15px);
+  top: size(40px);
   transition: opacity 1s;
   z-index: 102;
   outline: none;
+  padding: 0;
+  border: none;
+  background-color: transparent;
 
-  &::before {
-    position: absolute;
-    content: "";
+  .header__open-button {
+    position: relative;
+    top: 0;
+    right: -50%;
     width: size(6px);
     height: size(6px);
     border-radius: 50%;
     background-color: $color-white;
-    top: -12px;
-    left: 0;
-  }
+    border: none;
 
-  &::after {
-    position: absolute;
-    content: "";
-    width: size(6px);
-    height: size(6px);
-    border-radius: 50%;
-    background-color: $color-white;
-    bottom: -12px;
-    left: 0;
+    &::before {
+      position: absolute;
+      content: "";
+      width: size(6px);
+      height: size(6px);
+      border-radius: 50%;
+      background-color: $color-white;
+      top: size(-12px);
+      left: 0;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: size(6px);
+      height: size(6px);
+      border-radius: 50%;
+      background-color: $color-white;
+      bottom: -12px;
+      left: 0;
+    }
   }
 
   &--click {
@@ -387,7 +417,7 @@
   pointer-events: none;
   opacity: 0;
   position: absolute;
-  width: size(23px);
+  width: size(50px);
   height: size(50px);
   background-color: transparent;
   border: none;
