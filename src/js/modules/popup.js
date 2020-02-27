@@ -1,5 +1,5 @@
 (() => {
-  const foto = document.querySelector(`.slider img`);
+  const foto = document.querySelector(`.slider button`);
   const popup = document.querySelector(`.popup`);
   const closeButton = document.querySelector(`.popup__close`);
 
