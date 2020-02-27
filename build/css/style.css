@@ -2082,7 +2082,7 @@ a:not([href]) {
   display: none;
   width: 1.04167rem;
   height: 1.04167rem;
-  right: 0.3125rem;
+  right: 0;
   top: 0.83333rem;
   -webkit-transition: opacity 1s;
   transition: opacity 1s;
@@ -2122,7 +2122,7 @@ a:not([href]) {
   height: 0.125rem;
   border-radius: 50%;
   background-color: #ffffff;
-  bottom: -12px;
+  bottom: -0.25rem;
   left: 0;
 }
 

@@ -360,7 +360,7 @@
   display: none;
   width: size(50px);
   height: size(50px);
-  right: size(15px);
+  right: 0;
   top: size(40px);
   transition: opacity 1s;
   z-index: 102;
@@ -397,7 +397,7 @@
       height: size(6px);
       border-radius: 50%;
       background-color: $color-white;
-      bottom: -12px;
+      bottom: size(-12px);
       left: 0;
     }
   }
