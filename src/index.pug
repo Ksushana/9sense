@@ -61,7 +61,7 @@ html( lang="ru" )
 
             .about__signature
               img( src="img/sign.png" width="155" height="64" alt="signature" )
-          .about__mobile
+          .about__mobile.small-text
             p Омар Газаев, стоматолог
             button Специализация и публикации
               +svg( "arrow-1", 20, 10 )
@@ -73,7 +73,7 @@ html( lang="ru" )
         section.lab.scale.scale--big( id="lab" )
           h2.visually-hidden
           img( src="img/lab@1x.jpg" srcset="img/lab@2x.jpg 2x" width="1312" height="772" alt="lab" )
-          .lab__text
+          .lab__text.small-text
             p Партнерство с немецкими и швейцарскими лабораториями.
             +svg( "swiss", 17, 12 )
             +svg( "german", 17, 12 )
@@ -85,7 +85,7 @@ html( lang="ru" )
 
         section.smile.scale.scale--big( id="vinir" )
           img( src="img/face@1x.jpg" srcset="img/face@2x.jpg 2x" width="1312" height="772" alt="Марина" )
-          p.smile__text Марина, успела до свадьбы
+          p.smile__text.small-text Марина, успела до свадьбы
 
         section.text-block.text-block--dark.text-block--bright.parallax
           h2.visually-hidden Ярко
@@ -103,7 +103,7 @@ html( lang="ru" )
               .swiper-slide.slider__slide
                 a.slider__img( href="img/smile@2x.jpg")
                   img( src="img/smile@1x.jpg" srcset="img/smile@2x.jpg 2x" width="1312" height="772" alt="Марина3" )
-            p.slider__caption
+            p.slider__caption.small-text
             button: +svg( "lupa", 24, 24 )
             .swiper-pagination
 

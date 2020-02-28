@@ -10,6 +10,7 @@ $(() => {
   let headerBlock = $(`.parallax-header`);
   const menu = $(`.header__links`);
   let header = $(`.header__gradient`);
+  let smallTexts = $(`.small-text`);
 
   pictures.each((_, picture) => {
     $(picture).css(`transition`, `transform 0.1s`);
@@ -50,6 +51,7 @@ $(() => {
     hideTexts();
     hideHeader();
     showBG();
+    hideSmallText();
     window.animateHeaderLinks(lastScroll);
     window.animateLogo(lastScroll);
     window.animateTurn(lastScroll);
@@ -153,6 +155,17 @@ $(() => {
     hideHeaderBlock(headerBlock, disappearance);
   }
 
+  function hideSmallText() {
+    // if (!window.isMobile()) {
+    //   return;
+    // }
+    smallTexts.each((_, smallText) => {
+      smallText = $(smallText);
+      const disappearance = calculateOpacity(smallText);
+      hideTextSmall(smallText, disappearance);
+    });
+  }
+
   function showBG() {
     header = $(header);
     const disappearance = calculateBGOpacity(header);
@@ -160,9 +173,6 @@ $(() => {
   }
 
   function calculateOpacity(element) {
-    // if (window.isMobile()) {
-    //   return;
-    // }
     const scrollTop = lastScroll;
     const windowHeight = $(window).height();
 
@@ -189,11 +199,10 @@ $(() => {
 
     const elementOffset = element.offset().top;
     const elementHeight = element.height();
-    const fadeHide = windowHeight / 5;
+    const menuHeight = menu.height();
 
     const startOffset = elementOffset - windowHeight / 4;
-    const finishOffset =
-      elementOffset + elementHeight / 2 - (fadeHide + 40) * 2;
+    const finishOffset = elementOffset + elementHeight / 2 - 80 * 2;
 
     const position = (scrollTop - startOffset) / (finishOffset - startOffset);
     const relative = Math.max(0, Math.min(1, position));
@@ -229,6 +238,10 @@ $(() => {
 
   function hideHeaderBlock(element, opacity) {
     element.find(`p`).css(`opacity`, opacity);
+  }
+
+  function hideTextSmall(element, opacity) {
+    element.css(`opacity`, opacity);
   }
 
   function showBGGradient(element, opacity) {

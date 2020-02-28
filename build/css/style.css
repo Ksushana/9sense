@@ -1693,6 +1693,10 @@ a:not([href]) {
   }
 }
 
+.small-text {
+  opacity: 1;
+}
+
 /* Blocks */
 .header {
   min-height: 20rem;
@@ -2073,7 +2077,7 @@ a:not([href]) {
     font-size: 0.5rem;
     line-height: 0.75rem;
     width: 80%;
-    margin: auto 0 2.3125rem;
+    margin: auto 0 20%;
   }
 }
 
