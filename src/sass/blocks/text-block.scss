@@ -20,7 +20,7 @@
   &--tech {
     padding: size(80px) size(220px) 0;
     color: $color-grey-light;
-    transition: color 1s;
+    transition: color 0.3s;
 
     @include mobile {
       padding: size(85px) size(17px) 0;

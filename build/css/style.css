@@ -1620,8 +1620,8 @@ body {
   overflow-x: hidden;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-transition: background-color 1s;
-  transition: background-color 1s;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
 }
 
 body.dark {
@@ -1812,8 +1812,8 @@ a:not([href]) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transition: color 1s;
-  transition: color 1s;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .header__links ul.dark {
@@ -1956,8 +1956,8 @@ a:not([href]) {
   width: 2.5rem;
   height: 2.5rem;
   fill: #ffffff;
-  -webkit-transition: fill 1s;
-  transition: fill 1s;
+  -webkit-transition: fill 0.3s;
+  transition: fill 0.3s;
 }
 
 .header__logo svg path {
@@ -1996,8 +1996,9 @@ a:not([href]) {
   transition: opacity 0.4s;
   z-index: 10;
   outline: none;
-  -webkit-transition: color 1s;
-  transition: color 1s;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  font-weight: 600;
 }
 
 .header__lang.dark {
@@ -2019,7 +2020,7 @@ a:not([href]) {
   color: #ebebeb;
   position: fixed;
   right: 1.25rem;
-  top: 12.79167rem;
+  top: 50vh;
   font-size: 0.22917rem;
   line-height: 0.45833rem;
   letter-spacing: 0.04167rem;
@@ -2038,8 +2039,8 @@ a:not([href]) {
   right: -4.16667rem;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
-  -webkit-transition: color 1s;
-  transition: color 1s;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .header__turn.dark {
@@ -2370,8 +2371,8 @@ a:not([href]) {
     margin: 0;
     letter-spacing: 0.02em;
     line-height: 0.4375rem;
-    -webkit-transition: color 1s;
-    transition: color 1s;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
   }
   .about__mobile p.dark {
     color: #1f1f1f;
@@ -2475,8 +2476,8 @@ a:not([href]) {
 .text-block--tech {
   padding: 1.66667rem 4.58333rem 0;
   color: #f1f1f1;
-  -webkit-transition: color 1s;
-  transition: color 1s;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 @media (max-width: 767px) {

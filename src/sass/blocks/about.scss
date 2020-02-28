@@ -135,7 +135,7 @@
       margin: 0;
       letter-spacing: 0.02em;
       line-height: size(21px);
-      transition: color 1s;
+      transition: color 0.3s;
 
       &.dark {
         color: $color-black-bigtext;

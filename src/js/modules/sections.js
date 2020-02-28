@@ -142,7 +142,10 @@ $(() => {
   }
 
   function hideTexts() {
-    textBlocks.each((_, textBlock) => {
+    textBlocks.each((index, textBlock) => {
+      if (index === textBlocks.length - 1 && (!window.isMobile()) {
+        return;
+      }
       textBlock = $(textBlock);
       const disappearance = calculateOpacity(textBlock);
       hideTextBlock(textBlock, disappearance);
