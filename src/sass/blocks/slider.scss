@@ -100,6 +100,7 @@
         display: block;
         z-index: 100;
         pointer-events: none;
+        padding: 0 size(10px) 0 0;
       }
 
       svg {
@@ -125,11 +126,11 @@
   }
 
   &.slider-prev {
-    left: size(616px);
+    left: size(625px);
   }
 
   &.slider-next {
-    right: size(616px);
+    right: size(618px);
   }
 
   &:hover {

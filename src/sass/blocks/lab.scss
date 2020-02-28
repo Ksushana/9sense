@@ -34,7 +34,7 @@
 
   p {
     margin: 0;
-    padding-right: size(21px);
+    padding-right: size(12px);
 
     @include mobile {
       display: inline;
@@ -49,9 +49,7 @@
     height: size(12px);
 
     @include mobile {
-      padding: size(7px) 0 0 size(8px) ;
+      padding: size(7px) 0 0 size(8px);
     }
   }
 }
-
-

@@ -1,8 +1,9 @@
 (() => {
   const container = document.querySelector(".about");
   const link = document.querySelector(`.about__mobile button`);
-  const info = document.querySelector(`.about__block`);
+  const info = document.querySelector(`.about__container`);
   const close = document.querySelector(`.about__close`);
+  // const block = document.querySelector(`.about__block`);
 
   let containerScale;
   let containerTransition;
@@ -11,13 +12,13 @@
     fixContainer();
 
     $(info).css("opacity", 1);
-    info.classList.add(`about__block--show`);
+    info.classList.add(`about__container--show`);
     $(`body`).css("overflow-y", "hidden");
     window.bodyScrollLock.disableBodyScroll(info);
   };
 
   const closeInfo = () => {
-    info.classList.remove(`about__block--show`);
+    info.classList.remove(`about__container--show`);
     $(`body`).css("overflow-y", "visible");
     window.bodyScrollLock.enableBodyScroll(info);
     setTimeout(() => $(info).css("opacity", 0), 500);

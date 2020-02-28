@@ -8,32 +8,46 @@
   const shadow = document.querySelector(`.shadow`);
   const textBlockTech = $(".text-block--tech");
   const aboutText = document.querySelector(`.about__mobile p`);
+  const headerOpen = document.querySelector(`.header__open`);
 
   function dark() {
     body.classList.add(`dark`);
     text.classList.add(`dark`);
     logo.classList.add(`dark`);
-    menu.classList.add(`dark`);
     turn.classList.add(`dark`);
-    lang.classList.add(`dark`);
+
     aboutText.classList.add(`dark`);
     shadow.classList.add(`show`);
+    headerOpen.classList.add(`dark`);
+
+    if (!window.isMobile()) {
+      menu.classList.add(`dark`);
+      lang.classList.add(`dark`);
+    }
   }
 
   function light() {
     body.classList.remove(`dark`);
     text.classList.remove(`dark`);
     logo.classList.remove(`dark`);
-    menu.classList.remove(`dark`);
     turn.classList.remove(`dark`);
-    lang.classList.remove(`dark`);
+
     aboutText.classList.remove(`dark`);
     shadow.classList.remove(`show`);
+    headerOpen.classList.remove(`dark`);
+
+    if (!window.isMobile()) {
+      menu.classList.remove(`dark`);
+      lang.classList.remove(`dark`);
+    }
   }
 
   window.animateBackground = function(lastScroll) {
-    const breakpoint = textBlockTech.offset().top;
-    const current = lastScroll + $(window).height() / 2;
+    const breakpoint =
+      textBlockTech.offset().top +
+      textBlockTech.height() / 2 -
+      $(window).height() / 2;
+    const current = lastScroll;
     if (current > breakpoint) {
       dark();
     } else {
