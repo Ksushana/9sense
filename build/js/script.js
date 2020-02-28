@@ -10679,7 +10679,7 @@ $(() => {
     hideTexts();
     hideHeader();
     showBG();
-    // hideSmallText();
+    hideSmallText();
     window.animateHeaderLinks(lastScroll);
     window.animateLogo(lastScroll);
     window.animateTurn(lastScroll);
@@ -10789,7 +10789,7 @@ $(() => {
     // }
     smallTexts.each((_, smallText) => {
       smallText = $(smallText);
-      const disappearance = calculateOpacity(smallText);
+      const disappearance = calculateSTOpacity(smallText);
       hideTextSmall(smallText, disappearance);
     });
   }
@@ -10818,18 +10818,14 @@ $(() => {
     return opacity;
   }
 
-  function calculateOpacityMobile(element) {
-    if (!window.isMobile()) {
-      return;
-    }
+  function calculateSTOpacity(element) {
     const scrollTop = lastScroll;
     const windowHeight = $(window).height();
 
     const elementOffset = element.offset().top;
     const elementHeight = element.height();
-    const menuHeight = menu.height();
 
-    const startOffset = elementOffset - windowHeight / 4;
+    const startOffset = elementOffset - windowHeight / 2;
     const finishOffset = elementOffset + elementHeight / 2 - 80 * 2;
 
     const position = (scrollTop - startOffset) / (finishOffset - startOffset);
