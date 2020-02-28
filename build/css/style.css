@@ -1699,7 +1699,7 @@ a:not([href]) {
 
 /* Blocks */
 .header {
-  min-height: 20rem;
+  height: 100vh;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1712,16 +1712,11 @@ a:not([href]) {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 1.25rem 1.33333rem 0;
-  background-image: url("../img/main@1x.jpg");
-  background-size: contain;
+  background-image: url("../img/main-new.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: center 10%;
   z-index: 200;
-}
-
-@media (-webkit-min-device-pixel-ratio: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  .header {
-    background-image: url("../img/main@2x.jpg");
-  }
 }
 
 .header::after {
@@ -1729,7 +1724,7 @@ a:not([href]) {
   content: "";
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(31, 31, 31, 0)), color-stop(87.83%, rgba(21, 21, 21, 0.95)), to(#141414));
   background: linear-gradient(180deg, rgba(31, 31, 31, 0) 0%, rgba(21, 21, 21, 0.95) 87.83%, #141414 100%);
-  bottom: 1.25rem;
+  bottom: 0;
   width: 105%;
   height: 8.5rem;
   left: -1.33333rem;
@@ -1738,24 +1733,14 @@ a:not([href]) {
 
 @media (max-width: 767px) {
   .header {
-    background-image: url("../img/main-mobile@1x.jpg");
     min-height: 21.5rem;
-    background-size: cover;
-    background-position: center;
+    background-size: 250%;
+    background-position: 38% 5%;
     background-repeat: no-repeat;
     padding: 0.20833rem 0.35417rem 0;
     min-height: auto;
     height: 100vh;
   }
-}
-
-@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5dppx), (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi) {
-  .header {
-    background-image: url("../img/main-mobile@2x.jpg");
-  }
-}
-
-@media (max-width: 767px) {
   .header::after {
     z-index: -2;
     bottom: 0;
@@ -2065,7 +2050,7 @@ a:not([href]) {
   font-weight: normal;
   z-index: 5;
   width: 45%;
-  margin: auto 0 3rem;
+  margin: auto 0 80px;
 }
 
 .header__phrase--italics {
@@ -2635,6 +2620,10 @@ a:not([href]) {
   transition: -webkit-filter 0.5s;
   transition: filter 0.5s;
   transition: filter 0.5s, -webkit-filter 0.5s;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .slider img.color {
@@ -2834,6 +2823,10 @@ a:not([href]) {
 .smile img {
   width: 27.33333rem;
   height: 16.08333rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 25%;
+     object-position: 50% 25%;
 }
 
 @media (max-width: 767px) {
