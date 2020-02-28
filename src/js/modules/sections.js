@@ -143,7 +143,7 @@ $(() => {
 
   function hideTexts() {
     textBlocks.each((index, textBlock) => {
-      if (index === textBlocks.length - 1 && (!window.isMobile()) {
+      if (index === textBlocks.length - 1 && !window.isMobile()) {
         return;
       }
       textBlock = $(textBlock);
