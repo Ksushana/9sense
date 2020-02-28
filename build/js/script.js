@@ -10376,6 +10376,9 @@ for (var i = 0; i < linkNav.length; i++) {
     info.classList.add(`about__container--show`);
     $(`body`).css("overflow-y", "hidden");
     window.bodyScrollLock.disableBodyScroll(info);
+    info.ontouchmove = function(e) {
+      e.preventDefault();
+    };
   };
 
   const closeInfo = () => {
@@ -10385,6 +10388,9 @@ for (var i = 0; i < linkNav.length; i++) {
     setTimeout(() => $(info).css("opacity", 0), 500);
 
     setTimeout(() => returnContainer, 500);
+    info.ontouchmove = function(e) {
+      return true;
+    };
   };
 
   link.addEventListener(`click`, () => {
