@@ -18,7 +18,7 @@
   }
 
   &--tech {
-    padding: 0 size(220px);
+    padding: size(80px) size(220px) 0;
     color: $color-grey-light;
     transition: color 1s;
 
@@ -35,7 +35,7 @@
   }
 
   &--smile {
-    padding: 0 size(360px);
+    padding: size(80px) size(360px) 0;
     min-height: size(667px);
 
     @include mobile {
@@ -50,7 +50,7 @@
   }
 
   &--bright {
-    padding: 0 size(100px);
+    padding: size(80px) size(100px) 0;
     min-height: size(637px);
 
     @include mobile {

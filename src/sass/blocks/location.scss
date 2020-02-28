@@ -6,7 +6,7 @@
   transition: color 2s;
   color: $color-grey-light;
   display: flex;
-  padding: 0 size(296px);
+  padding: size(40px) size(296px) 0;
   min-height: size(670px);
   letter-spacing: 0.02em;
 

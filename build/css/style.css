@@ -2469,7 +2469,7 @@ a:not([href]) {
 }
 
 .text-block--tech {
-  padding: 0 4.58333rem;
+  padding: 1.66667rem 4.58333rem 0;
   color: #f1f1f1;
   -webkit-transition: color 1s;
   transition: color 1s;
@@ -2491,7 +2491,7 @@ a:not([href]) {
 }
 
 .text-block--smile {
-  padding: 0 7.5rem;
+  padding: 1.66667rem 7.5rem 0;
   min-height: 13.89583rem;
 }
 
@@ -2509,7 +2509,7 @@ a:not([href]) {
 }
 
 .text-block--bright {
-  padding: 0 2.08333rem;
+  padding: 1.66667rem 2.08333rem 0;
   min-height: 13.27083rem;
 }
 
@@ -2875,7 +2875,7 @@ a:not([href]) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0 6.16667rem;
+  padding: 0.83333rem 6.16667rem 0;
   min-height: 13.95833rem;
   letter-spacing: 0.02em;
 }
