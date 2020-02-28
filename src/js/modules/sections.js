@@ -51,7 +51,7 @@ $(() => {
     hideTexts();
     hideHeader();
     showBG();
-    hideSmallText();
+    // hideSmallText();
     window.animateHeaderLinks(lastScroll);
     window.animateLogo(lastScroll);
     window.animateTurn(lastScroll);
