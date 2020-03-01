@@ -10499,13 +10499,16 @@ $(() => {
   const headerLinks = $(".header__links");
   const logo = $(`.header__logo`);
 
-  turn.css("transition", "transform 0.1s");
-  // logo.css("transition", "transform 0.1s");
+  turn.css("transition", "transform 0.1s linear");
+  logo.css("transition", "transform 0.1s linear");
 
   const headerLinksOriginalTop = parseInt(headerLinks.css("top"), 10);
   const headerLinksOriginalRight = parseInt(headerLinks.css("right"), 10);
   const minTop = headerLinksOriginalTop / 2.5;
   const minRight = headerLinksOriginalRight / 2.5;
+
+  const pageHeight = $(document).height();
+  const windowHeight = $(window).height();
 
   window.animateHeaderLinks = function(scrollTop) {
     if (window.isMobile()) {
@@ -10517,8 +10520,6 @@ $(() => {
   };
 
   window.animateLogo = function(lastScroll) {
-    const pageHeight = $(document).height();
-    const windowHeight = $(window).height();
     const rotate = (lastScroll / (pageHeight - windowHeight)) * 360;
     logo.css("transform", `rotate(${rotate}deg)`);
   };
@@ -10662,18 +10663,18 @@ $(() => {
   let smallTexts = $(`.small-text`);
 
   pictures.each((_, picture) => {
-    $(picture).css(`transition`, `transform 0.1s`);
+    $(picture).css(`transition`, `transform 0.1s linear`);
   });
 
   textBlocks.each((_, textBlock) => {
     $(textBlock)
       .find(`p`)
-      .css(`transition`, `transform 0.1s`);
+      .css(`transition`, `transform 0.1s linear`);
   });
 
   $(headerBlock)
     .find(`p`)
-    .css(`transition`, `transform 0.1s`);
+    .css(`transition`, `transform 0.1s linear`);
 
   window.addEventListener(`scroll`, () =>
     window.requestAnimationFrame(scrollHandler)

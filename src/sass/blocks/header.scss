@@ -243,6 +243,7 @@
   z-index: 205;
   width: size(120px);
   height: size(120px);
+  transition: transform 0.1s linear;
 
   svg {
     width: size(120px);

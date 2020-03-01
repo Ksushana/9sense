@@ -13,18 +13,18 @@ $(() => {
   let smallTexts = $(`.small-text`);
 
   pictures.each((_, picture) => {
-    $(picture).css(`transition`, `transform 0.1s`);
+    $(picture).css(`transition`, `transform 0.1s linear`);
   });
 
   textBlocks.each((_, textBlock) => {
     $(textBlock)
       .find(`p`)
-      .css(`transition`, `transform 0.1s`);
+      .css(`transition`, `transform 0.1s linear`);
   });
 
   $(headerBlock)
     .find(`p`)
-    .css(`transition`, `transform 0.1s`);
+    .css(`transition`, `transform 0.1s linear`);
 
   window.addEventListener(`scroll`, () =>
     window.requestAnimationFrame(scrollHandler)
