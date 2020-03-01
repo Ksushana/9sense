@@ -10,6 +10,8 @@
   const aboutText = document.querySelector(`.about__mobile p`);
   const headerOpen = document.querySelector(`.header__open`);
 
+  const windowHeight = $(window).height();
+
   function dark() {
     body.classList.add(`dark`);
     text.classList.add(`dark`);
@@ -46,7 +48,7 @@
     const breakpoint =
       textBlockTech.offset().top +
       textBlockTech.height() / 2 -
-      $(window).height() / 2;
+      windowHeight / 2;
     const current = lastScroll;
     if (current > breakpoint) {
       dark();

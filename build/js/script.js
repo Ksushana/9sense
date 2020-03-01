@@ -10433,6 +10433,8 @@ for (var i = 0; i < linkNav.length; i++) {
   const aboutText = document.querySelector(`.about__mobile p`);
   const headerOpen = document.querySelector(`.header__open`);
 
+  const windowHeight = $(window).height();
+
   function dark() {
     body.classList.add(`dark`);
     text.classList.add(`dark`);
@@ -10469,7 +10471,7 @@ for (var i = 0; i < linkNav.length; i++) {
     const breakpoint =
       textBlockTech.offset().top +
       textBlockTech.height() / 2 -
-      $(window).height() / 2;
+      windowHeight / 2;
     const current = lastScroll;
     if (current > breakpoint) {
       dark();
@@ -10529,9 +10531,8 @@ $(() => {
       return;
     }
     const headerLinksRightOffset =
-      $(window).width() - headerLinks.offset().left - headerLinks.width();
-    const turnRightOffset =
-      $(window).width() - turn.offset().left - turn.width();
+      windowHeight - headerLinks.offset().left - headerLinks.width();
+    const turnRightOffset = windowHeight - turn.offset().left - turn.width();
     const moveOffset = Math.max(0, turnRightOffset - headerLinksRightOffset);
     if (moveOffset > 0) {
       turn.css("transform", `translateX(${moveOffset}px)`);
@@ -10546,7 +10547,7 @@ $(() => {
 
   function calculateHeaderLinks(scrollTop) {
     const startOffset = 0;
-    const finishOffset = $(window).height() / 4;
+    const finishOffset = windowHeight / 4;
 
     const position = (scrollTop - startOffset) / (finishOffset - startOffset);
     const relative = Math.max(0, Math.min(1, position));
@@ -10662,6 +10663,8 @@ $(() => {
   let header = $(`.header__gradient`);
   let smallTexts = $(`.small-text`);
 
+  const windowHeight = $(window).height();
+
   pictures.each((_, picture) => {
     $(picture).css(`transition`, `transform 0.1s linear`);
   });
@@ -10724,7 +10727,6 @@ $(() => {
 
   function calculateScale(element) {
     const scrollTop = lastScroll;
-    const windowHeight = $(window).height();
 
     const elementOffset = element.offset().top;
     const elementHeight = element.height();
@@ -10753,7 +10755,6 @@ $(() => {
 
   function calculateTextRelative(element) {
     const scrollTop = lastScroll;
-    const windowHeight = $(window).height();
 
     const elementOffset = element.offset().top;
     const elementHeight = element.height();
@@ -10768,10 +10769,6 @@ $(() => {
 
   function calculateHeaderRelative(element) {
     const scrollTop = lastScroll;
-    const windowHeight = $(window).height();
-
-    const elementOffset = element.offset().top;
-    const elementHeight = element.height();
 
     const startOffset = 0;
     const finishOffset = windowHeight / 2;
@@ -10809,9 +10806,6 @@ $(() => {
   }
 
   function hideSmallText() {
-    // if (!window.isMobile()) {
-    //   return;
-    // }
     smallTexts.each((_, smallText) => {
       smallText = $(smallText);
       const disappearance = calculateSTOpacity(smallText);
@@ -10827,11 +10821,9 @@ $(() => {
 
   function calculateOpacity(element) {
     const scrollTop = lastScroll;
-    const windowHeight = $(window).height();
 
     const elementOffset = element.offset().top;
     const elementHeight = element.height();
-    const menuHeight = menu.height();
 
     const startOffset = elementOffset - windowHeight / 4;
     const finishOffset = elementOffset + elementHeight / 2 - 80 * 2;
@@ -10845,7 +10837,6 @@ $(() => {
 
   function calculateSTOpacity(element) {
     const scrollTop = lastScroll;
-    const windowHeight = $(window).height();
 
     const elementOffset = element.offset().top;
     const elementHeight = element.height();
@@ -10865,11 +10856,8 @@ $(() => {
       return;
     }
     const scrollTop = lastScroll;
-    const windowHeight = $(window).height();
 
     const elementOffset = element.offset().top;
-    const elementHeight = element.height();
-    const fadeHide = windowHeight / 5;
 
     const startOffset = elementOffset + windowHeight / 6;
     const finishOffset = elementOffset + windowHeight / 3;
@@ -10901,18 +10889,12 @@ $(() => {
 (() => {
   const slider = $(".slider");
 
-  // function color() {
-
-  // }
-
-  // function bandw() {
-  //   img.classList.remove(`color`);
-  // }
+  const windowHeight = $(window).height();
 
   window.animateSlider = function(lastScroll) {
     const imgs = document.querySelectorAll(`.slider__slide img`);
     const breakpoint = slider.offset().top + slider.height();
-    const current = lastScroll + $(window).height() / 2 + slider.height() / 1;
+    const current = lastScroll + windowHeight / 2 + slider.height() / 1;
     if (current > breakpoint) {
       for (let i = 0; i < imgs.length; i++) {
         const img = imgs[i];

@@ -12,6 +12,8 @@ $(() => {
   let header = $(`.header__gradient`);
   let smallTexts = $(`.small-text`);
 
+  const windowHeight = $(window).height();
+
   pictures.each((_, picture) => {
     $(picture).css(`transition`, `transform 0.1s linear`);
   });
@@ -74,7 +76,6 @@ $(() => {
 
   function calculateScale(element) {
     const scrollTop = lastScroll;
-    const windowHeight = $(window).height();
 
     const elementOffset = element.offset().top;
     const elementHeight = element.height();
@@ -103,7 +104,6 @@ $(() => {
 
   function calculateTextRelative(element) {
     const scrollTop = lastScroll;
-    const windowHeight = $(window).height();
 
     const elementOffset = element.offset().top;
     const elementHeight = element.height();
@@ -118,10 +118,6 @@ $(() => {
 
   function calculateHeaderRelative(element) {
     const scrollTop = lastScroll;
-    const windowHeight = $(window).height();
-
-    const elementOffset = element.offset().top;
-    const elementHeight = element.height();
 
     const startOffset = 0;
     const finishOffset = windowHeight / 2;
@@ -159,9 +155,6 @@ $(() => {
   }
 
   function hideSmallText() {
-    // if (!window.isMobile()) {
-    //   return;
-    // }
     smallTexts.each((_, smallText) => {
       smallText = $(smallText);
       const disappearance = calculateSTOpacity(smallText);
@@ -177,11 +170,9 @@ $(() => {
 
   function calculateOpacity(element) {
     const scrollTop = lastScroll;
-    const windowHeight = $(window).height();
 
     const elementOffset = element.offset().top;
     const elementHeight = element.height();
-    const menuHeight = menu.height();
 
     const startOffset = elementOffset - windowHeight / 4;
     const finishOffset = elementOffset + elementHeight / 2 - 80 * 2;
@@ -195,7 +186,6 @@ $(() => {
 
   function calculateSTOpacity(element) {
     const scrollTop = lastScroll;
-    const windowHeight = $(window).height();
 
     const elementOffset = element.offset().top;
     const elementHeight = element.height();
@@ -215,11 +205,8 @@ $(() => {
       return;
     }
     const scrollTop = lastScroll;
-    const windowHeight = $(window).height();
 
     const elementOffset = element.offset().top;
-    const elementHeight = element.height();
-    const fadeHide = windowHeight / 5;
 
     const startOffset = elementOffset + windowHeight / 6;
     const finishOffset = elementOffset + windowHeight / 3;

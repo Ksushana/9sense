@@ -48,9 +48,8 @@ $(() => {
       return;
     }
     const headerLinksRightOffset =
-      $(window).width() - headerLinks.offset().left - headerLinks.width();
-    const turnRightOffset =
-      $(window).width() - turn.offset().left - turn.width();
+      windowHeight - headerLinks.offset().left - headerLinks.width();
+    const turnRightOffset = windowHeight - turn.offset().left - turn.width();
     const moveOffset = Math.max(0, turnRightOffset - headerLinksRightOffset);
     if (moveOffset > 0) {
       turn.css("transform", `translateX(${moveOffset}px)`);
@@ -65,7 +64,7 @@ $(() => {
 
   function calculateHeaderLinks(scrollTop) {
     const startOffset = 0;
-    const finishOffset = $(window).height() / 4;
+    const finishOffset = windowHeight / 4;
 
     const position = (scrollTop - startOffset) / (finishOffset - startOffset);
     const relative = Math.max(0, Math.min(1, position));
