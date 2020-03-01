@@ -2275,7 +2275,7 @@ a:not([href]) {
     left: 0;
     right: 0;
     width: 100vw;
-    height: 120vh;
+    height: 140vh;
     z-index: 3010;
     display: -webkit-box;
     display: -ms-flexbox;
