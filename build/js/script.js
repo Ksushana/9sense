@@ -10369,6 +10369,8 @@ for (var i = 0; i < linkNav.length; i++) {
   let containerScale;
   let containerTransition;
 
+  info.style.opacity = 0;
+
   const openInfo = () => {
     fixContainer();
 
