@@ -15,7 +15,8 @@
   }
 
   img,
-  a:not(.location--italics) {
+  a:not(.location--italics),
+  span {
     display: none;
   }
 
@@ -67,6 +68,10 @@
       }
     }
 
+    .location__img-cover {
+      position: relative;
+    }
+
     img {
       display: block;
       width: size(378px);
@@ -74,6 +79,17 @@
       margin: 0 auto;
       padding-top: size(117px);
       padding-bottom: size(117px);
+    }
+
+    span {
+      position: absolute;
+      display: inline;
+      font-size: size(18px);
+      line-height: size(26px);
+      width: 40%;
+      text-align: center;
+      top: 49%;
+      right: 30%;
     }
   }
 }
