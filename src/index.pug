@@ -73,7 +73,7 @@ html( lang="ru" )
 
         section.lab.scale.scale--big( id="lab" )
           h2.visually-hidden
-          img( src="img/lab@1x.png" srcset="img/lab@2x.png 2x" width="1312" height="772" alt="lab" )
+          img( src="img/lab@1x.jpg" srcset="img/lab@2x.jpg 2x" width="1312" height="772" alt="lab" )
           .lab__text.small-text
             p Партнерство с немецкими и швейцарскими лабораториями.
             +svg( "swiss", 17, 12 )
@@ -85,7 +85,9 @@ html( lang="ru" )
 
 
         section.smile.scale.scale--big( id="vinir" )
-          img( src="img/face@1x.png" srcset="img/face@2x.png 2x" width="1312" height="772" alt="Марина" )
+          picture
+            source( media="(max-width: 768px)" srcset="img/face-mobile@2x.jpg 2x" )
+            img( src="img/face@1x.jpg" srcset="img/face@2x.jpg 2x" width="1312" height="772" alt="Марина" )
           p.smile__text.small-text Марина, успела до свадьбы
 
         section.text-block.text-block--dark.text-block--bright.parallax
@@ -96,14 +98,14 @@ html( lang="ru" )
           .swiper-container.slider-container
             .swiper-wrapper
               .swiper-slide.slider__slide
-                a.slider__img( href="img/smile@2x.png")
-                  img( src="img/smile@1x.png"  srcset="img/smile@2x.png 2x" width="1312" height="772" alt="Марина" )
+                a.slider__img( href="img/smile@2x.jpg")
+                  img( src="img/smile@1x.jpg"  srcset="img/smile@2x.jpg 2x" width="1312" height="772" alt="Марина" )
               .swiper-slide.slider__slide
-                a.slider__img( href="img/smile@2x.png")
-                  img( src="img/smile@1x.png"  srcset="img/smile@2x.png 2x" width="1312" height="772" alt="Марина2" )
+                a.slider__img( href="img/smile@2x.jpg")
+                  img( src="img/smile@1x.jpg"  srcset="img/smile@2x.jpg 2x" width="1312" height="772" alt="Марина2" )
               .swiper-slide.slider__slide
-                a.slider__img( href="img/smile@2x.png")
-                  img( src="img/smile@1x.png"  srcset="img/smile@2x.png 2x" width="1312" height="772" alt="Марина3" )
+                a.slider__img( href="img/smile@2x.jpg")
+                  img( src="img/smile@1x.jpg"  srcset="img/smile@2x.jpg 2x" width="1312" height="772" alt="Марина3" )
             p.slider__caption.small-text
             button: +svg( "lupa", 24, 24 )
             .swiper-pagination.small-text
@@ -117,19 +119,20 @@ html( lang="ru" )
         section.location.location--dark( id="location" ).parallax
           h2.visually-hidden Адрес
           p Локация &ndash; #[a.location--italics(href="https://yandex.ru/maps/-/CKan624~") Патрики]#[br] Есть бесплатная парковка
-            a(href="https://yandex.ru/maps/-/CKan624~") Посмотреть на карте
+            a.location__desktop-address( href="https://yandex.ru/maps/-/CKan624~") Большая Садовая ул., 5с2
+            a.location__mobile-address(href="https://yandex.ru/maps/-/CKan624~") Посмотреть на карте
               +svg( "arrow-1", 20, 10 )
           .location__img-cover
             img( src="img/map@1x.png" srcset="img/map@2x.png 2x" width="378" height="425" alt="map" )
             .location__address
-              span Большая#[br] Садовая ул., 5с2
-              a( title="WhatsApp" href="whatsapp://send?phone=+79057161451") +7 905 716-14-51
+              span.location__address-mobile Большая#[br] Садовая ул., 5с2
+              a.location__mobile-whatsapp( title="WhatsApp" href="whatsapp://send?phone=+79057161451") +7 905 716-14-51
                 +svg( "whatsapp", 18, 18 )
 
 
 
     footer.footer
-      p Design: #[a.footer--italics(href="#") genue.ru]
+      p Дизайн: #[a(href="#") genue.ru]
 
       a.footer__whatsapp( title="WhatsApp" href="whatsapp://send?phone=+79057161451") +7 (905) 716-14-51
         +svg( "whatsapp", 18, 18 )

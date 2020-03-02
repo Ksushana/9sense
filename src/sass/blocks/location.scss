@@ -6,23 +6,35 @@
   transition: color 2s;
   color: $color-grey-light;
   display: flex;
-  padding: size(40px) size(296px) 0;
+  padding: size(70px) size(296px) 0;
   min-height: size(670px);
   letter-spacing: 0.02em;
 
-  a.location--italics {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-  }
-
   img,
-  a:not(.location--italics),
-  span {
+  .location__mobile-address,
+  .location__mobile-whatsapp,
+  span.location__address-mobile {
     display: none;
   }
 
   p {
     height: fit-content;
     margin: auto;
+  }
+
+  .location__desktop-address {
+    display: inline-block;
+    font-size: size(16px);
+    line-height: size(16px);
+    letter-spacing: 0.01em;
+    position: relative;
+    top: size(-5px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding-bottom: size(2px);
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &--dark {
@@ -52,7 +64,7 @@
       padding-top: size(31px);
     }
 
-    a:not(.location--italics) {
+    a.location__mobile-address {
       display: inline-block;
       font-size: size(16px);
       line-height: size(20px);
@@ -96,6 +108,7 @@
       }
 
       a {
+        display: inline-block;
         position: relative;
         padding-left: size(28px);
         font-size: size(18px);

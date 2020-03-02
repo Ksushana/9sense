@@ -1679,7 +1679,7 @@ a:not([href]) {
   position: fixed;
   content: "";
   width: 100vw;
-  height: 8.33333rem;
+  height: 5rem;
   background: white;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.4)), to(rgba(255, 255, 255, 0)));
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
@@ -2241,7 +2241,7 @@ a:not([href]) {
 
 .about {
   padding: 1.25rem 2.02083rem 0;
-  background-image: url("../img/omar@1x.png");
+  background-image: url("../img/omar@1x.jpg");
   background-size: 97%;
   background-repeat: no-repeat;
   -webkit-transform: scale(0.9);
@@ -2250,16 +2250,16 @@ a:not([href]) {
 
 @media (-webkit-min-device-pixel-ratio: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
   .about {
-    background-image: url("../img/omar@2x.png");
+    background-image: url("../img/omar@2x.jpg");
   }
 }
 
 @media (max-width: 767px) {
   .about {
     padding: 0.20833rem 0.33333rem 0;
-    background-size: 194%;
+    background-size: 176%;
     background-position-y: top;
-    background-position-x: 72%;
+    background-position-x: 66%;
     z-index: 101;
     height: 11.66667rem;
     display: -webkit-box;
@@ -2859,6 +2859,7 @@ a:not([href]) {
 
 .footer p {
   padding-right: 0.89583rem;
+  margin-top: 0.20833rem;
 }
 
 .footer .footer__whatsapp {
@@ -2868,6 +2869,9 @@ a:not([href]) {
   -ms-flex-item-align: center;
       align-self: center;
   position: relative;
+  font-size: 0.375rem;
+  line-height: 0.5rem;
+  margin-top: 0.125rem;
 }
 
 @media (max-width: 767px) {
@@ -2878,8 +2882,8 @@ a:not([href]) {
 
 .footer .footer__whatsapp svg {
   position: absolute;
-  left: -0.58333rem;
-  top: -0.02083rem;
+  left: -0.54167rem;
+  top: 0.02083rem;
   width: 0.375rem;
   height: 0.375rem;
 }
@@ -2961,18 +2965,15 @@ a:not([href]) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0.83333rem 6.16667rem 0;
+  padding: 1.45833rem 6.16667rem 0;
   min-height: 13.95833rem;
   letter-spacing: 0.02em;
 }
 
-.location a.location--italics {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-}
-
 .location img,
-.location a:not(.location--italics),
-.location span {
+.location .location__mobile-address,
+.location .location__mobile-whatsapp,
+.location span.location__address-mobile {
   display: none;
 }
 
@@ -2981,6 +2982,23 @@ a:not([href]) {
   height: -moz-fit-content;
   height: fit-content;
   margin: auto;
+}
+
+.location .location__desktop-address {
+  display: inline-block;
+  font-size: 0.33333rem;
+  line-height: 0.33333rem;
+  letter-spacing: 0.01em;
+  position: relative;
+  top: -0.10417rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding-bottom: 0.04167rem;
+}
+
+@media (max-width: 767px) {
+  .location .location__desktop-address {
+    display: none;
+  }
 }
 
 .location--dark {
@@ -3016,14 +3034,14 @@ a:not([href]) {
     margin: 0 0 0.3125rem;
     padding-top: 0.64583rem;
   }
-  .location a:not(.location--italics) {
+  .location a.location__mobile-address {
     display: inline-block;
     font-size: 0.33333rem;
     line-height: 0.41667rem;
     text-align: left;
     letter-spacing: 0.02em;
   }
-  .location a:not(.location--italics) svg {
+  .location a.location__mobile-address svg {
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
     width: 0.3125rem;
@@ -3056,6 +3074,7 @@ a:not([href]) {
     display: inline;
   }
   .location .location__address a {
+    display: inline-block;
     position: relative;
     padding-left: 0.58333rem;
     font-size: 0.375rem;

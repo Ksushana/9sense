@@ -62,7 +62,7 @@ gulp.task("images", function() {
           progressive: true
         }),
         mozjpeg({
-          quality: 90
+          quality: 95
         }),
         imagemin.svgo({
           plugins: [
