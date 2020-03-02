@@ -20,7 +20,7 @@ $(document).ready(function() {
       duration: 300
     },
     callbacks: {
-      open: () => setTimeout(scollCenter, 10)
+      open: () => setTimeout(scollCenter, 50)
     }
   });
 
