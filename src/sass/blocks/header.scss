@@ -9,7 +9,7 @@
 
   padding: size(60px) size(64px) 0;
 
-  background-image: url("../img/main@1x.png");
+  background-image: url("../img/main@1x.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -17,7 +17,7 @@
 
   @media (-webkit-min-device-pixel-ratio: $retina-dppx),
     (min-resolution: $retina-dpi) {
-    background-image: url("../img/main@2x.png");
+    background-image: url("../img/main@2x.jpg");
   }
 
   &::after {
