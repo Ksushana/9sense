@@ -1,17 +1,17 @@
 let logo = document.querySelector(`.header__logo`);
 let links = document.querySelector(`.header__links`);
 
-// window.addEventListener(`scroll`, function() {
-//   const windowScroll = window.pageYOffset;
-//   if (!window.isMobile()) {
-//     if (windowScroll < 400) {
-//       logo.style.left =
-//         window.pageYOffset + 64 - window.pageYOffset * 1.07 + `px`;
-//       logo.style.top =
-//         window.pageYOffset + 64 - window.pageYOffset * 1.07 + `px`;
-//     }
-//   }
-// });
+window.addEventListener(`scroll`, function() {
+  const windowScroll = window.pageYOffset;
+  if (!window.isMobile()) {
+    if (windowScroll < 400) {
+      logo.style.left =
+        window.pageYOffset + 64 - window.pageYOffset * 1.07 + `px`;
+      logo.style.top =
+        window.pageYOffset + 64 - window.pageYOffset * 1.07 + `px`;
+    }
+  }
+});
 
 $(() => {
   const turn = $(`.header__turn`);

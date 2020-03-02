@@ -2367,7 +2367,7 @@ a:not([href]) {
     transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
     transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1), -webkit-transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
     position: relative;
-    padding: 0 1.79167rem 0 0.35417rem;
+    padding: 0 1.79167rem 0.3125rem 0.35417rem;
     margin-top: auto;
     height: 11.75rem;
     width: 100%;

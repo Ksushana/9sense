@@ -32,8 +32,6 @@
     right: 0;
     width: 100vw;
     height: 140vh;
-
-    // opacity: 0;
     z-index: 3010;
     display: flex;
     pointer-events: none;
@@ -109,7 +107,7 @@
   @include mobile {
     transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
     position: relative;
-    padding: 0 size(86px) 0 size(17px);
+    padding: 0 size(86px) size(15px) size(17px);
     margin-top: auto;
     height: size(564px);
     width: 100%;
