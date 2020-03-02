@@ -3064,5 +3064,7 @@ a:not([href]) {
     height: 0.25rem;
     left: -0.16667rem;
     top: 0.0625rem;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
   }
 }
