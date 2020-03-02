@@ -1989,7 +1989,7 @@ a:not([href]) {
 
 @media (max-width: 767px) {
   .header__logo {
-    top: 0.91667rem;
+    top: 0.33333rem;
     left: 0.33333rem;
     width: 2.16667rem;
     height: 2.16667rem;
@@ -2108,7 +2108,7 @@ a:not([href]) {
   width: 1.04167rem;
   height: 1.04167rem;
   right: 0;
-  top: 0.83333rem;
+  top: 0.33333rem;
   -webkit-transition: opacity 1s;
   transition: opacity 1s;
   z-index: 102;
@@ -2184,7 +2184,7 @@ a:not([href]) {
   border: none;
   padding: 0;
   right: 0;
-  top: 0.83333rem;
+  top: 0.33333rem;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
   outline: none;
@@ -3039,7 +3039,7 @@ a:not([href]) {
     width: 7.875rem;
     height: 8.85417rem;
     margin: 0 auto;
-    padding-top: 2.4375rem;
+    padding-top: 1.41667rem;
     padding-bottom: 2.4375rem;
   }
   .location .location__address {
@@ -3049,7 +3049,7 @@ a:not([href]) {
     line-height: 0.54167rem;
     width: 50%;
     text-align: center;
-    top: 48.5%;
+    top: 44.5%;
     right: 25%;
   }
   .location .location__address span {

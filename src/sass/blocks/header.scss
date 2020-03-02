@@ -265,7 +265,7 @@
   }
 
   @include mobile {
-    top: size(44px);
+    top: size(16px);
     left: size(16px);
     width: size(104px);
     height: size(104px);
@@ -379,7 +379,7 @@
   width: size(50px);
   height: size(50px);
   right: 0;
-  top: size(40px);
+  top: size(16px);
   transition: opacity 1s;
   z-index: 102;
   outline: none;
@@ -455,7 +455,7 @@
   border: none;
   padding: 0;
   right: 0;
-  top: size(40px);
+  top: size(16px);
   transition: opacity 0.5s;
 
   outline: none;
