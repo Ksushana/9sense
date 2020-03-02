@@ -1712,7 +1712,7 @@ a:not([href]) {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 1.25rem 1.33333rem 0;
-  background-image: url("../img/main@1x.jpg");
+  background-image: url("../img/main@1x.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1721,7 +1721,7 @@ a:not([href]) {
 
 @media (-webkit-min-device-pixel-ratio: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
   .header {
-    background-image: url("../img/main@2x.jpg");
+    background-image: url("../img/main@2x.png");
   }
 }
 
