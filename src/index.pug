@@ -121,14 +121,17 @@ html( lang="ru" )
               +svg( "arrow-1", 20, 10 )
           .location__img-cover
             img( src="img/map@1x.png" srcset="img/map@2x.png 2x" width="378" height="425" alt="map" )
-            span Большая Садовая ул., 5с2
+            .location__address
+              span Большая Садовая ул., 5с2
+              a( title="WhatsApp" href="whatsapp://send?phone=+79057161451") +7 (905) 716-14-51
+                +svg( "whatsapp", 18, 18 )
 
 
 
     footer.footer
       p Design: #[a.footer--italics(href="#") genue.ru]
 
-      a( title="WhatsApp" href="whatsapp://send?phone=+79057161451") +7 (905) 716-14-51
+      a.footer__whatsapp( title="WhatsApp" href="whatsapp://send?phone=+79057161451") +7 (905) 716-14-51
         +svg( "whatsapp", 18, 18 )
 
 

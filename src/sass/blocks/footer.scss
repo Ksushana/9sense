@@ -11,17 +11,23 @@
     padding-right: size(43px);
   }
 
-  a {
+  .footer__whatsapp {
     color: $color-black-bigtext;
     display: inline-block;
     margin: size(14px) 0;
     align-self: center;
     position: relative;
 
+    @include mobile {
+      display: none;
+    }
+
     svg {
       position: absolute;
       left: size(-30px);
       top: size(-3px);
+      width: size(18px);
+      height: size(18px);
     }
   }
 

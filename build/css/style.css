@@ -2856,7 +2856,7 @@ a:not([href]) {
   padding-right: 0.89583rem;
 }
 
-.footer a {
+.footer .footer__whatsapp {
   color: #1f1f1f;
   display: inline-block;
   margin: 0.29167rem 0;
@@ -2865,10 +2865,18 @@ a:not([href]) {
   position: relative;
 }
 
-.footer a svg {
+@media (max-width: 767px) {
+  .footer .footer__whatsapp {
+    display: none;
+  }
+}
+
+.footer .footer__whatsapp svg {
   position: absolute;
   left: -0.625rem;
   top: -0.0625rem;
+  width: 0.375rem;
+  height: 0.375rem;
 }
 
 @media (max-width: 767px) {
@@ -3029,7 +3037,7 @@ a:not([href]) {
     padding-top: 2.4375rem;
     padding-bottom: 2.4375rem;
   }
-  .location span {
+  .location .location__address {
     position: absolute;
     display: inline;
     font-size: 0.375rem;
@@ -3038,5 +3046,20 @@ a:not([href]) {
     text-align: center;
     top: 49%;
     right: 30%;
+  }
+  .location .location__address span {
+    display: inline;
+  }
+  .location .location__address a {
+    position: relative;
+    font-size: 0.25rem;
+    padding-left: 0.25rem;
+  }
+  .location .location__address a svg {
+    position: absolute;
+    width: 0.25rem;
+    height: 0.25rem;
+    left: -0.16667rem;
+    top: 0.0625rem;
   }
 }

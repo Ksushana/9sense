@@ -81,7 +81,7 @@
       padding-bottom: size(117px);
     }
 
-    span {
+    .location__address {
       position: absolute;
       display: inline;
       font-size: size(18px);
@@ -90,6 +90,24 @@
       text-align: center;
       top: 49%;
       right: 30%;
+
+      span {
+        display: inline;
+      }
+
+      a {
+        position: relative;
+        font-size: size(12px);
+        padding-left: size(12px);
+
+        svg {
+          position: absolute;
+          width: size(12px);
+          height: size(12px);
+          left: size(-8px);
+          top: size(3px);
+        }
+      }
     }
   }
 }
