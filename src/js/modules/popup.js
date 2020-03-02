@@ -11,13 +11,20 @@ $(document).ready(function() {
     closeOnContentClick: true,
     closeBtnInside: false,
     fixedContentPos: true,
-    mainClass: "mfp-no-margins mfp-with-zoom", // class to remove default margin from left and right side
+    mainClass: "mfp-no-margins mfp-with-zoom",
     image: {
       verticalFit: true
     },
     zoom: {
       enabled: true,
-      duration: 300 // don't foget to change the duration also in CSS
+      duration: 300
+    },
+    callbacks: {
+      open: () => setTimeout(scollCenter, 10)
     }
   });
+
+  function scollCenter() {
+    $(".mfp-figure").scrollLeft($(window).width() / 2);
+  }
 });
