@@ -1,14 +1,14 @@
 .about {
   padding: size(60px) size(97px) 0;
   // margin: size(79px) size(96px);
-  background-image: url("../img/omar@1x.jpg");
+  background-image: url("../img/omar@1x.png");
   background-size: 97%;
   background-repeat: no-repeat;
   transform: scale(0.9);
 
   @media (-webkit-min-device-pixel-ratio: $retina-dppx),
     (min-resolution: $retina-dpi) {
-    background-image: url("../img/omar@2x.jpg");
+    background-image: url("../img/omar@2x.png");
   }
 
   @include mobile {
