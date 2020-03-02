@@ -2051,7 +2051,7 @@ a:not([href]) {
   position: absolute;
   width: 8.33333rem;
   bottom: 0;
-  right: -4.16667rem;
+  right: -4.0625rem;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
   -webkit-transition: color 0.3s;
@@ -2847,10 +2847,28 @@ a:not([href]) {
   display: -ms-flexbox;
   display: flex;
   padding: 0 1.33333rem 0.41667rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .footer p {
   padding-right: 0.89583rem;
+}
+
+.footer a {
+  color: #1f1f1f;
+  display: inline-block;
+  margin: 0.29167rem 0;
+  -ms-flex-item-align: center;
+      align-self: center;
+  position: relative;
+}
+
+.footer a svg {
+  position: absolute;
+  left: -0.625rem;
+  top: -0.0625rem;
 }
 
 @media (max-width: 767px) {

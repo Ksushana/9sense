@@ -43,21 +43,24 @@ $(() => {
     logo.css("transform", `rotate(${rotate}deg)`);
   };
 
-  window.animateTurn = function(lastScroll) {
+  window.animateTurn = function(scrollTop) {
     if (window.isMobile()) {
       return;
     }
-    const headerLinksRightOffset =
-      windowHeight - headerLinks.offset().left - headerLinks.width();
-    const turnRightOffset = windowHeight - turn.offset().left - turn.width();
-    const moveOffset = Math.max(0, turnRightOffset - headerLinksRightOffset);
-    if (moveOffset > 0) {
-      turn.css("transform", `translateX(${moveOffset}px)`);
-    }
+    const right = calculateTurn(scrollTop);
+    turn.css("right", `${right}px`);
 
-    if (!window.isMobile()) {
-      return;
-    }
+    // const headerLinksRightOffset =
+    //   windowHeight - headerLinks.offset().left - headerLinks.width();
+    // const turnRightOffset = windowHeight - turn.offset().left - turn.width();
+    // const moveOffset = Math.max(0, turnRightOffset - headerLinksRightOffset);
+    // if (moveOffset > 0) {
+    //   turn.css("transform", `translateX(${moveOffset}px)`);
+    // }
+
+    // if (!window.isMobile()) {
+    //   return;
+    // }
   };
 
   // helpers
@@ -73,5 +76,17 @@ $(() => {
     const right =
       minRight + (headerLinksOriginalRight - minRight) * (1 - relative);
     return { right, top };
+  }
+
+  function calculateTurn(scrollTop) {
+    const startOffset = 0;
+    const finishOffset = windowHeight / 4;
+
+    const position = (scrollTop - startOffset) / (finishOffset - startOffset);
+    const relative = Math.max(0, Math.min(1, position));
+
+    const right =
+      minRight + (headerLinksOriginalRight - minRight) * (1 - relative);
+    return right;
   }
 });
