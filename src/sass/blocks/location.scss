@@ -86,7 +86,7 @@
       display: inline;
       font-size: size(18px);
       line-height: size(26px);
-      width: 40%;
+      width: 42%;
       text-align: center;
       top: 49%;
       right: 30%;
@@ -97,15 +97,14 @@
 
       a {
         position: relative;
-        font-size: size(12px);
         padding-left: size(12px);
 
         svg {
           position: absolute;
-          width: size(12px);
-          height: size(12px);
-          left: size(-8px);
-          top: size(3px);
+          width: size(18px);
+          height: size(18px);
+          left: size(-15px);
+          top: 0;
           transform: rotate(0);
         }
       }
