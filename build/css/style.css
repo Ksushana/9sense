@@ -2070,6 +2070,9 @@ a:not([href]) {
     top: 50vh;
     position: absolute;
   }
+  .header__turn span {
+    right: -4.20833rem;
+  }
 }
 
 .header__phrase {
