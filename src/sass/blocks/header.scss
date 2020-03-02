@@ -357,6 +357,7 @@
   width: 45%;
 
   margin: auto 0 0;
+  padding-top: size(100px);
 
   &--italics {
     font-style: italic;
@@ -368,6 +369,7 @@
     line-height: size(36px);
     width: 80%;
     margin: auto 0 20%;
+    padding-top: 0;
   }
 }
 

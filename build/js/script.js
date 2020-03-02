@@ -10825,7 +10825,7 @@ $(() => {
 
   function hideHeader() {
     headerBlock = $(headerBlock);
-    const disappearance = calculateOpacity(headerBlock);
+    const disappearance = calculateHeaderOpacity(headerBlock);
     hideHeaderBlock(headerBlock, disappearance);
   }
 
@@ -10852,6 +10852,26 @@ $(() => {
     const startOffset = window.isMobile()
       ? elementOffset - windowHeight / 4
       : elementOffset;
+    const finishOffset = window.isMobile()
+      ? elementOffset + elementHeight / 2 - 80 * 2
+      : elementOffset + elementHeight / 2 - 80;
+
+    const position = (scrollTop - startOffset) / (finishOffset - startOffset);
+    const relative = Math.max(0, Math.min(1, position));
+    const opacity = 1 - relative;
+
+    return opacity;
+  }
+
+  function calculateHeaderOpacity(element) {
+    const scrollTop = lastScroll;
+
+    const elementOffset = element.offset().top;
+    const elementHeight = element.height();
+
+    const startOffset = window.isMobile()
+      ? elementOffset - windowHeight / 4
+      : elementOffset - elementHeight;
     const finishOffset = window.isMobile()
       ? elementOffset + elementHeight / 2 - 80 * 2
       : elementOffset + elementHeight / 2 - 80;

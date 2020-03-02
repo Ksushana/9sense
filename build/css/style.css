@@ -2084,6 +2084,7 @@ a:not([href]) {
   z-index: 5;
   width: 45%;
   margin: auto 0 0;
+  padding-top: 2.08333rem;
 }
 
 .header__phrase--italics {
@@ -2097,6 +2098,7 @@ a:not([href]) {
     line-height: 0.75rem;
     width: 80%;
     margin: auto 0 20%;
+    padding-top: 0;
   }
 }
 
