@@ -2271,10 +2271,6 @@ a:not([href]) {
   }
 }
 
-.about__container {
-  opacity: 1 !important;
-}
-
 @media (max-width: 767px) {
   .about__container {
     background-color: transparent;

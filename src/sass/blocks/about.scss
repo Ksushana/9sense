@@ -24,7 +24,6 @@
 }
 
 .about__container {
-  opacity: 1 !important;
   @include mobile {
     background-color: transparent;
     position: fixed;
