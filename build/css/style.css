@@ -1741,7 +1741,6 @@ a:not([href]) {
 @media (max-width: 767px) {
   .header {
     background-image: url("../img/main-mobile@1x.jpg");
-    min-height: 21.5rem;
     background-position: center 30%;
     background-repeat: no-repeat;
     padding: 0.20833rem 0.35417rem 0;
@@ -1989,7 +1988,7 @@ a:not([href]) {
 
 @media (max-width: 767px) {
   .header__logo {
-    top: 0.33333rem;
+    top: 0.5rem;
     left: 0.33333rem;
     width: 2.16667rem;
     height: 2.16667rem;
@@ -2108,7 +2107,7 @@ a:not([href]) {
   width: 1.04167rem;
   height: 1.04167rem;
   right: 0;
-  top: 0.33333rem;
+  top: 0.5rem;
   -webkit-transition: opacity 1s;
   transition: opacity 1s;
   z-index: 102;
@@ -2184,7 +2183,7 @@ a:not([href]) {
   border: none;
   padding: 0;
   right: 0;
-  top: 0.33333rem;
+  top: 0.5rem;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
   outline: none;
@@ -2270,6 +2269,10 @@ a:not([href]) {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+}
+
+.about__container {
+  opacity: 1 !important;
 }
 
 @media (max-width: 767px) {

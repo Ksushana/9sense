@@ -28,7 +28,7 @@ html( lang="ru" )
         ul
           li: +link-text( "Омар Газаев", "#about", "header__link" )
           li: +link-text( "Лаборатория", "#lab", "header__link" )
-          li: +link-text( "Виниры", "#vinir", "header__link" )
+          li: +link-text( "Работы", "#works", "header__link" )
           li: +link-text( "Локация", "#location", "header__link" )
         button.header__lang En
 
@@ -57,8 +57,8 @@ html( lang="ru" )
 
               h3 Публикации
               ul.about__works
-                li: +link-text( "Ein Konzept der dentalen Kommunikationskultur So fern und doch so nah Alexander Miranskij, Omar Gazaev", "#about", "header__link" )
-                li: +link-text( "Herstellung geschichteter Veneers bei inkongruenter Ausgangssituation Alexander Miranskij, Omar Gazaev", "#about", "header__link" )
+                li: +link-text( "Ein Konzept der dentalen Kommunikationskultur So fern und doch so nah Alexander Miranskij, Omar Gazaev", "#", "" )
+                li: +link-text( "Herstellung geschichteter Veneers bei inkongruenter Ausgangssituation Alexander Miranskij, Omar Gazaev", "#", "" )
 
               .about__signature
                 img( src="img/sign2.png" width="155" height="64" alt="signature" )
@@ -84,7 +84,7 @@ html( lang="ru" )
           p Улыбайся &ndash; это символ твоей #[span.text-block--italics уверенности]
 
 
-        section.smile.scale.scale--big( id="vinir" )
+        section.smile.scale.scale--big
           picture
             source( media="(max-width: 768px)" srcset="img/face-mobile@2x.jpg 2x" )
             img( src="img/face@1x.jpg" srcset="img/face@2x.jpg 2x" width="1312" height="772" alt="Марина" )
@@ -94,7 +94,7 @@ html( lang="ru" )
           h2.visually-hidden Ярко
           p Ярко, натурально, #[span.text-block--italics персонально]
 
-        section.slider.scale.scale--big
+        section.slider.scale.scale--big( id="works" )
           .swiper-container.slider-container
             .swiper-wrapper
               .swiper-slide.slider__slide

@@ -1,5 +1,4 @@
 .header {
-  // min-height: size(960px);
   height: 100vh;
   width: 100%;
   display: flex;
@@ -39,7 +38,6 @@
 
   @include mobile {
     background-image: url("../img/main-mobile@1x.jpg");
-    min-height: size(1032px);
     background-position: center 30%;
     background-repeat: no-repeat;
 
@@ -265,7 +263,7 @@
   }
 
   @include mobile {
-    top: size(16px);
+    top: size(24px);
     left: size(16px);
     width: size(104px);
     height: size(104px);
@@ -379,7 +377,7 @@
   width: size(50px);
   height: size(50px);
   right: 0;
-  top: size(16px);
+  top: size(24px);
   transition: opacity 1s;
   z-index: 102;
   outline: none;
@@ -455,7 +453,7 @@
   border: none;
   padding: 0;
   right: 0;
-  top: size(16px);
+  top: size(24px);
   transition: opacity 0.5s;
 
   outline: none;
