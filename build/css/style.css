@@ -1914,6 +1914,10 @@ a:not([href]) {
     pointer-events: visible;
   }
   .header__links--show::before {
+    -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: -webkit-transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), -webkit-transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
     -webkit-transform: translateY(0);
             transform: translateY(0);
     -webkit-transition-delay: 0s;
