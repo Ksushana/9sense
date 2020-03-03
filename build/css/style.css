@@ -1862,6 +1862,8 @@ a:not([href]) {
     transition: transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
     transition: transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1), -webkit-transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
     z-index: -1;
+    -webkit-transition-delay: 0.05s;
+            transition-delay: 0.05s;
   }
   .header__links ul {
     -webkit-box-orient: vertical;
@@ -1883,26 +1885,26 @@ a:not([href]) {
   .header__links li:first-child {
     -webkit-transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
     transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-    -webkit-transition-delay: 0.2s;
-            transition-delay: 0.2s;
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s;
   }
   .header__links li:nth-child(2) {
     -webkit-transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
     transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-    -webkit-transition-delay: 0.15s;
-            transition-delay: 0.15s;
+    -webkit-transition-delay: 0.025s;
+            transition-delay: 0.025s;
   }
   .header__links li:nth-child(3) {
     -webkit-transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
     transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-    -webkit-transition-delay: 0.1s;
-            transition-delay: 0.1s;
+    -webkit-transition-delay: 0.05s;
+            transition-delay: 0.05s;
   }
   .header__links li:nth-child(4) {
     -webkit-transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
     transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-    -webkit-transition-delay: 0.05s;
-            transition-delay: 0.05s;
+    -webkit-transition-delay: 0.075s;
+            transition-delay: 0.075s;
   }
   .header__links--show {
     display: -webkit-box;
@@ -1912,12 +1914,10 @@ a:not([href]) {
     pointer-events: visible;
   }
   .header__links--show::before {
-    -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
-    transition: -webkit-transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
-    transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
-    transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1), -webkit-transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
     -webkit-transform: translateY(0);
             transform: translateY(0);
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s;
   }
   .header__links--show li {
     opacity: 1;
@@ -1929,20 +1929,20 @@ a:not([href]) {
   .header__links--show li:nth-child(2) {
     -webkit-transform: translateY(0.16667rem);
             transform: translateY(0.16667rem);
-    -webkit-transition-delay: 0.1s;
-            transition-delay: 0.1s;
+    -webkit-transition-delay: 0.05s;
+            transition-delay: 0.05s;
   }
   .header__links--show li:nth-child(3) {
     -webkit-transform: translateY(0.33333rem);
             transform: translateY(0.33333rem);
-    -webkit-transition-delay: 0.15s;
-            transition-delay: 0.15s;
+    -webkit-transition-delay: 0.1s;
+            transition-delay: 0.1s;
   }
   .header__links--show li:nth-child(4) {
     -webkit-transform: translateY(0.5rem);
             transform: translateY(0.5rem);
-    -webkit-transition-delay: 0.2s;
-            transition-delay: 0.2s;
+    -webkit-transition-delay: 0.12s;
+            transition-delay: 0.12s;
   }
   .header__links--show .header__lang {
     opacity: 1;
