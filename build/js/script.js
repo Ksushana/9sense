@@ -10311,41 +10311,57 @@
 !function (t) { var i = t(window); t.fn.visible = function (t, e, o) { if (!(this.length < 1)) { var r = this.length > 1 ? this.eq(0) : this, n = r.get(0), f = i.width(), h = i.height(), o = o ? o : "both", l = e === !0 ? n.offsetWidth * n.offsetHeight : !0; if ("function" == typeof n.getBoundingClientRect) { var g = n.getBoundingClientRect(), u = g.top >= 0 && g.top < h, s = g.bottom > 0 && g.bottom <= h, c = g.left >= 0 && g.left < f, a = g.right > 0 && g.right <= f, v = t ? u || s : u && s, b = t ? c || a : c && a; if ("both" === o) return l && v && b; if ("vertical" === o) return l && v; if ("horizontal" === o) return l && b } else { var d = i.scrollTop(), p = d + h, w = i.scrollLeft(), m = w + f, y = r.offset(), z = y.top, B = z + r.height(), C = y.left, R = C + r.width(), j = t === !0 ? B : z, q = t === !0 ? z : B, H = t === !0 ? R : C, L = t === !0 ? C : R; if ("both" === o) return !!l && p >= q && j >= d && m >= L && H >= w; if ("vertical" === o) return !!l && p >= q && j >= d; if ("horizontal" === o) return !!l && m >= L && H >= w } } } }(jQuery);
 "use strict";
 
-var linkNav = document.querySelectorAll('[href^="#"]'), //выбираем все ссылки к якорю на странице
-  V = 0.2; // скорость, может иметь дробное значение через точку (чем меньше значение - тем больше скорость)
-for (var i = 0; i < linkNav.length; i++) {
-  linkNav[i].addEventListener(
-    "click",
-    function(e) {
-      //по клику на ссылку
-      e.preventDefault(); //отменяем стандартное поведение
-      var windowHeight = window.innerHeight;
-      var w = window.pageYOffset, // производим прокрутка прокрутка
-        hash = this.href.replace(/[^#]*(.*)/, "$1"); // к id элемента, к которому нужно перейти
-      (t =
-        document.querySelector(hash).getBoundingClientRect().top +
-        document.querySelector(hash).getBoundingClientRect().height / 2 -
-        windowHeight / 2), // отступ от окна браузера до id
-        (start = null);
-      requestAnimationFrame(step); // подробнее про функцию анимации [developer.mozilla.org]
-      function step(time) {
-        if (start === null) start = time;
-        var progress = time - start,
-          r =
-            t < 0
-              ? Math.max(w - progress / V, w + t)
-              : Math.min(w + progress / V, w + t);
-        window.scrollTo(0, r);
-        if (r != w + t) {
-          requestAnimationFrame(step);
-        } else {
-          location.hash = hash; // URL с хэшем
-        }
-      }
-    },
-    false
-  );
+// var linkNav = document.querySelectorAll('[href^="#"]'), //выбираем все ссылки к якорю на странице
+//   V = 0.2; // скорость, может иметь дробное значение через точку (чем меньше значение - тем больше скорость)
+// for (var i = 0; i < linkNav.length; i++) {
+//   linkNav[i].addEventListener(
+//     "click",
+//     function(e) {
+//       //по клику на ссылку
+//       e.preventDefault(); //отменяем стандартное поведение
+//       var w = window.pageYOffset, // производим прокрутка прокрутка
+//         hash = this.href.replace(/[^#]*(.*)/, "$1"); // к id элемента, к которому нужно перейти
+//       (t =
+//         document.querySelector(hash).getBoundingClientRect().top +
+//         document.querySelector(hash).getBoundingClientRect().height / 2 -
+//         window.innerHeight / 2), // отступ от окна браузера до id
+//         (start = null);
+//       console.log(document.querySelector(hash).getBoundingClientRect().top);
+//       console.log(document.querySelector(hash).getBoundingClientRect().height);
+//       console.log(window.innerHeight);
+//       console.log("=====");
+//       requestAnimationFrame(step); // подробнее про функцию анимации [developer.mozilla.org]
+//       function step(time) {
+//         if (start === null) start = time;
+//         var progress = time - start,
+//           r =
+//             t < 0
+//               ? Math.max(w - progress / V, w + t)
+//               : Math.min(w + progress / V, w + t);
+//         window.scrollTo(0, r);
+//         if (r != w + t) {
+//           requestAnimationFrame(step);
+//         } else {
+//           location.hash = hash; // URL с хэшем
+//         }
+//       }
+//     },
+//     false
+//   );
+// }
+
+{
+  /* <script type="text/javascript"> */
 }
+$(document).ready(function() {
+  $("#links").on("click", "a", function(event) {
+    event.preventDefault();
+    var id = $(this).attr("href"),
+      top = $(id).offset().top + $(id).height() / 2 - $(window).height() / 2;
+    $("body,html").animate({ scrollTop: top }, 1500);
+  });
+});
+// </script>
 
 (() => {
   const MOBILE = 767;
