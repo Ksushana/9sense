@@ -8,7 +8,9 @@
   let containerScale;
   let containerTransition;
 
-  info.style.opacity = 0;
+  if (window.isMobile()) {
+    info.style.opacity = 0;
+  }
 
   const openInfo = () => {
     fixContainer();
