@@ -10662,7 +10662,6 @@ $(document).ready(function() {
 
   function scollCenter(attempt) {
     const currentScroll = $(".mfp-figure").scrollLeft();
-    console.log({ attempt, currentScroll });
     if (attempt > 100) {
       return;
     }
