@@ -175,10 +175,10 @@ $(() => {
     const elementHeight = element.height();
 
     const startOffset = window.isMobile()
-      ? elementOffset - windowHeight / 4
+      ? elementOffset - windowHeight / 8
       : elementOffset;
     const finishOffset = window.isMobile()
-      ? elementOffset + elementHeight / 2 - 80 * 2
+      ? elementOffset + elementHeight / 2 - 40
       : elementOffset + elementHeight / 2 - 80;
 
     const position = (scrollTop - startOffset) / (finishOffset - startOffset);

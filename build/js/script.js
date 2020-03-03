@@ -10656,7 +10656,7 @@ $(document).ready(function() {
       duration: 300
     },
     callbacks: {
-      open: () => setTimeout(scollCenter, 50)
+      open: () => setTimeout(scollCenter, 20)
     }
   });
 
@@ -10842,10 +10842,10 @@ $(() => {
     const elementHeight = element.height();
 
     const startOffset = window.isMobile()
-      ? elementOffset - windowHeight / 4
+      ? elementOffset - windowHeight / 8
       : elementOffset;
     const finishOffset = window.isMobile()
-      ? elementOffset + elementHeight / 2 - 80 * 2
+      ? elementOffset + elementHeight / 2 - 40
       : elementOffset + elementHeight / 2 - 80;
 
     const position = (scrollTop - startOffset) / (finishOffset - startOffset);
