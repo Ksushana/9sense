@@ -10656,12 +10656,21 @@ $(document).ready(function() {
       duration: 300
     },
     callbacks: {
-      open: () => setTimeout(scollCenter, 1)
+      open: () => scollCenter(0)
     }
   });
 
-  function scollCenter() {
+  function scollCenter(attempt) {
+    const currentScroll = $(".mfp-figure").scrollLeft();
+    console.log({ attempt, currentScroll });
+    if (attempt > 100) {
+      return;
+    }
+
     $(".mfp-figure").scrollLeft($(window).width() / 2);
+    if (currentScroll === 0) {
+      setTimeout(() => scollCenter(attempt + 1), 10);
+    }
   }
 });
 
