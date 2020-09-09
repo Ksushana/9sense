@@ -1,26 +1,12 @@
 let logo = document.querySelector(`.header__logo`);
 let links = document.querySelector(`.header__links`);
 
-window.addEventListener(`scroll`, function() {
-  const windowScroll = window.pageYOffset;
-  if (!window.isMobile()) {
-    if (windowScroll < 400) {
-      logo.style.left =
-        window.pageYOffset + 64 - window.pageYOffset * 1.07 + `px`;
-      logo.style.top =
-        window.pageYOffset + 64 - window.pageYOffset * 1.07 + `px`;
-    }
-  }
-});
-
 $(() => {
   const turn = $(`.header__turn`);
   const headerLinks = $(".header__links");
   const logo = $(`.header__logo`);
 
-  turn.css("transition", "transform 0.1s linear");
-  logo.css("transition", "transform 0.1s linear");
-
+  const headerLogoOriginalOffset = 64;
   const headerLinksOriginalTop = parseInt(headerLinks.css("top"), 10);
   const headerLinksOriginalRight = parseInt(headerLinks.css("right"), 10);
   const minTop = headerLinksOriginalTop / 2.5;
@@ -34,13 +20,30 @@ $(() => {
       return;
     }
     const { right, top } = calculateHeaderLinks(scrollTop);
-    headerLinks.css("right", `${right}px`);
-    headerLinks.css("top", `${top}px`);
+    headerLinks.css(
+      'transform',
+      `translate(${headerLinksOriginalRight - right}px, ${top - headerLinksOriginalTop}px)`
+    );
   };
 
   window.animateLogo = function(lastScroll) {
+    const windowScroll = window.pageYOffset;
     const rotate = (lastScroll / (pageHeight - windowHeight)) * 360;
-    logo.css("transform", `rotate(${rotate}deg)`);
+
+    const getMoveOffset = (scrollPosition) => {
+      return scrollPosition + headerLogoOriginalOffset - scrollPosition * 1.07 - headerLogoOriginalOffset;
+    };
+
+    if (!window.isMobile()) {
+      const offset = getMoveOffset(Math.min(windowScroll, 400));
+
+      logo.css(
+        "transform",
+        `translate(${offset}px, ${offset}px) rotate(${rotate}deg)`
+      );
+    } else {
+      logo.css("transform", `rotate(${rotate}deg)`);
+    }
   };
 
   window.animateTurn = function(scrollTop) {
@@ -48,7 +51,8 @@ $(() => {
       return;
     }
     const right = calculateTurn(scrollTop);
-    turn.css("right", `${right}px`);
+
+    turn.css("transform", `translateX(${headerLinksOriginalRight - right}px)`);
 
     // const headerLinksRightOffset =
     //   windowHeight - headerLinks.offset().left - headerLinks.width();

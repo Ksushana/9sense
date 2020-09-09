@@ -242,7 +242,7 @@
   z-index: 205;
   width: size(120px);
   height: size(120px);
-  transition: transform 0.1s linear;
+  // transition: transform 0.1s linear;
 
   svg {
     width: size(120px);
@@ -251,16 +251,13 @@
     transition: fill 0.3s;
 
     path {
-      fill: $color-white;
+      fill: currentColor;
     }
   }
 
   &.dark {
     svg {
       fill: $color-black-font;
-      path {
-        fill: $color-black-font;
-      }
     }
   }
 
@@ -316,7 +313,7 @@
   text-transform: uppercase;
   width: size(10px);
   height: size(10px);
-  transition: color 1s;
+  transition: color 0.3s;
 
   z-index: 201;
 
@@ -326,7 +323,6 @@
     bottom: 0;
     right: size(-195px);
     transform: rotate(-90deg);
-    transition: color 0.3s;
   }
 
   &.dark {
