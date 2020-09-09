@@ -34,6 +34,7 @@ body {
 
   box-sizing: border-box;
   transition: background-color 0.3s;
+  will-change: auto;
 
   &.dark {
     background-color: $color-grey-light;

@@ -1622,6 +1622,7 @@ body {
           box-sizing: border-box;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
+  will-change: auto;
 }
 
 body.dark {
@@ -1964,10 +1965,6 @@ a:not([href]) {
   z-index: 205;
   width: 2.5rem;
   height: 2.5rem;
-  -webkit-transition: -webkit-transform 0.1s linear;
-  transition: -webkit-transform 0.1s linear;
-  transition: transform 0.1s linear;
-  transition: transform 0.1s linear, -webkit-transform 0.1s linear;
 }
 
 .header__logo svg {
@@ -1979,14 +1976,10 @@ a:not([href]) {
 }
 
 .header__logo svg path {
-  fill: #ffffff;
+  fill: currentColor;
 }
 
 .header__logo.dark svg {
-  fill: #141414;
-}
-
-.header__logo.dark svg path {
   fill: #141414;
 }
 
@@ -2045,8 +2038,8 @@ a:not([href]) {
   text-transform: uppercase;
   width: 0.20833rem;
   height: 0.20833rem;
-  -webkit-transition: color 1s;
-  transition: color 1s;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
   z-index: 201;
 }
 
@@ -2057,8 +2050,6 @@ a:not([href]) {
   right: -4.0625rem;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s;
 }
 
 .header__turn.dark {
