@@ -18,12 +18,12 @@
   }
 
   &--tech {
-    padding: size(80px) size(220px) 0;
+    padding: size(80px) size(120px) 0;
     color: $color-grey-light;
     transition: color 0.3s;
 
     @include mobile {
-      padding: size(85px) size(17px) 0;
+      padding: size(85px) size(16px) 0;
       min-height: size(393px);
       text-align: start;
       align-items: center;
@@ -35,11 +35,11 @@
   }
 
   &--smile {
-    padding: size(80px) size(360px) 0;
+    padding: size(80px) size(120px) 0;
     min-height: size(667px);
 
     @include mobile {
-      padding: size(18px) size(87px) 0 size(17px);
+      padding: size(18px) size(16px) 0;
       min-height: size(380px);
       align-items: center;
 
@@ -50,11 +50,11 @@
   }
 
   &--bright {
-    padding: size(80px) size(100px) 0;
+    padding: size(80px) size(120px) 0;
     min-height: size(637px);
 
     @include mobile {
-      padding: size(18px) size(87px) 0 size(17px);
+      padding: size(18px) size(16px) 0;
       min-height: size(380px);
       align-items: center;
 

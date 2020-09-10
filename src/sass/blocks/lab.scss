@@ -43,13 +43,15 @@
   }
 
   svg {
-    padding-right: size(8px);
-    padding-top: size(3px);
+    margin-right: size(8px);
     width: size(17px);
     height: size(12px);
+    position: relative;
+    top: size(-1px);
 
     @include mobile {
-      padding: size(7px) 0 0 size(8px);
+      margin: 0 0 0 size(8px);
+      top: size(1px);
     }
   }
 }
