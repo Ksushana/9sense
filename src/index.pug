@@ -28,7 +28,7 @@ html( lang="ru" )
         ul
           li: +link-text( "Омар Газаев", "#about", "header__link header__link--anchor" )
           li: +link-text( "Лаборатория", "#lab", "header__link header__link--anchor" )
-          li: +link-text( "Работы", "#works", "header__link header__link--anchor" )
+          li: +link-text( "Виниры", "#works", "header__link header__link--anchor" )
           li: +link-text( "Локация", "#location", "header__link header__link--loc" )
         button.header__lang En
 
@@ -46,30 +46,39 @@ html( lang="ru" )
           .about__container
             .about__block
               button.about__close
-              h2 Омар Газаев
+              .about__block-inner
+                h2 Ваш доктор<br /> Омар Газаев
 
-              h3 Специализация
-              ul
-                li Dr. Domenico Massironi, Италия
-                li Dr. Christian Lex, Германия
-                li Dr. Domenico Massironi, Италия
-                li Dr. Christian Lex, Германия
+                h3 Подход
+                ul
+                  li
+                    | У меня свой, особенный подход к работе &ndash; я лично отвечаю за красоту и здоровье каждой улыбки, которую создаю.
+                    |
+                    |
+                    +link-text("Далее", href="#", "")
 
-              h3 Публикации
-              ul.about__works
-                li: +link-text( "Ein Konzept der dentalen Kommunikationskultur So fern und doch so nah Alexander Miranskij, Omar Gazaev", href="https://dentalmanufaktur-nuernberg.de/wordpress/wp-content/uploads/2017/08/qz_2013_03_s0280_scr-Kopie.pdf", "" )
-                li: +link-text( "Herstellung geschichteter Veneers bei inkongruenter Ausgangssituation Alexander Miranskij, Omar Gazaev", href="https://dentalmanufaktur-nuernberg.de/wordpress/wp-content/uploads/2017/08/qz_2014_09_s1164-Kopie.pdf", "" )
+                h3 Специализации
+                ul
+                  li Эстетическая стоматология
+                  li Хирургическая пародонтология
+                  li Имплантология
+                  li: +link-text("Больше", href="#", "") Больше
 
-              .about__signature
-                img( src="img/sign2.png" width="155" height="64" alt="signature" )
+                h3 Публикации
+                ul.about__works
+                  li: +link-text( "Ein Konzept der dentalen Kommunikationskultur So fern und doch so nah Alexander Miranskij, Omar Gazaev", href="https://dentalmanufaktur-nuernberg.de/wordpress/wp-content/uploads/2017/08/qz_2013_03_s0280_scr-Kopie.pdf", "" )
+                  li: +link-text( "Herstellung geschichteter Veneers bei inkongruenter Ausgangssituation Alexander Miranskij, Omar Gazaev", href="https://dentalmanufaktur-nuernberg.de/wordpress/wp-content/uploads/2017/08/qz_2014_09_s1164-Kopie.pdf", "" )
+
+                .about__signature
+                  img( src="img/sign2.png" width="155" height="64" alt="signature" )
           .about__mobile.small-text
             p Омар Газаев, стоматолог
-            button Специализация и публикации
+            button Специализации и публикации
               +svg( "arrow-1", 20, 10 )
 
         section.text-block.text-block--tech.parallax
           h2.visually-hidden Технологии
-          p Технологии не стоят на месте, вместо просто белого &ndash; #[span.text-block--italics контролируемая] яркость
+          p Технологии &ndash; инструмент в&nbsp;руках творца
 
         section.lab.scale.scale--big( id="lab" )
           h2.visually-hidden
@@ -81,18 +90,18 @@ html( lang="ru" )
 
         section.text-block.text-block--dark.text-block--smile.parallax
           h2.visually-hidden Улыбайся
-          p Улыбайся &ndash; это символ твоей #[span.text-block--italics уверенности]
+          p Улыбка, которая #[span.text-block--italics меняет всё].
 
 
         section.smile.scale.scale--big
           picture
             source( media="(max-width: 768px)" srcset="img/face-mobile@2x.jpg 2x" )
             img( src="img/face@1x.jpg" srcset="img/face@2x.jpg 2x" width="1312" height="772" alt="Марина" )
-          p.smile__text.small-text Марина, успела до свадьбы
+          p.smile__text.small-text Дарит уверенность
 
         section.text-block.text-block--dark.text-block--bright.parallax
           h2.visually-hidden Ярко
-          p Ярко, натурально, #[span.text-block--italics персонально]
+          p Истинная красота &ndash;#[br] #[span.text-block--italics идеальное сочетание нюансов].
 
         section.slider.scale.scale--big( id="works" )
           .swiper-container.slider-container
@@ -118,10 +127,11 @@ html( lang="ru" )
 
         section.location.location--dark( id="location" ).parallax
           h2.visually-hidden Адрес
-          p Локация &ndash; #[span.location--italics Патрики]#[br] Есть бесплатная парковка
-            a.location__desktop-address( href="https://yandex.ru/maps/-/CKan624~") Большая Садовая ул., 5с2
-            a.location__mobile-address(href="https://yandex.ru/maps/-/CKan624~") Посмотреть на карте
-              +svg( "arrow-1", 20, 10 )
+          p Приезжайте на встречу c&nbsp;Омаром Газаевым &ndash;#[br] он расскажет, как сделать вашу улыбку #[span.location--italics неповторимой].
+            span.location__address-row
+              a.location__desktop-address( href="https://yandex.ru/maps/-/CKan624~") Большая Садовая ул., 5с2
+              a.location__mobile-address(href="https://yandex.ru/maps/-/CKan624~") Посмотреть на карте
+                +svg( "arrow-1", 20, 10 )
           .location__img-cover
             img( src="img/map@1x.png" srcset="img/map@2x.png 2x" width="378" height="425" alt="map" )
             .location__address
@@ -132,7 +142,8 @@ html( lang="ru" )
 
 
     footer.footer
-      p Дизайн: #[a(href="#") genue.ru]
+      p Дизайн &ndash; #[a(href="#") студия Genue]
+
 
       a.footer__whatsapp( title="WhatsApp" href="whatsapp://send?phone=+79057161451") +7 (905) 716-14-51
         +svg( "whatsapp", 18, 18 )

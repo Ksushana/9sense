@@ -10483,9 +10483,6 @@ $(() => {
   const headerLinks = $(".header__links");
   const logo = $(`.header__logo`);
 
-  // turn.css("transition", "transform 0.1s linear");
-  // logo.css("transition", "transform 0.1s linear");
-
   const headerLogoOriginalOffset = 64;
   const headerLinksOriginalTop = parseInt(headerLinks.css("top"), 10);
   const headerLinksOriginalRight = parseInt(headerLinks.css("right"), 10);
@@ -10695,20 +10692,6 @@ $(() => {
   let smallTexts = $(`.small-text`);
 
   const windowHeight = $(window).height();
-
-  // pictures.each((_, picture) => {
-  //   $(picture).css(`transition`, `transform 0.1s linear`);
-  // });
-
-  // textBlocks.each((_, textBlock) => {
-  //   $(textBlock)
-  //     .find(`p`)
-  //     .css(`transition`, `transform 0.1s linear`);
-  // });
-
-  // $(headerBlock)
-  //   .find(`p`)
-  //   .css(`transition`, `transform 0.1s linear`);
 
   window.addEventListener(`scroll`, () =>
     window.requestAnimationFrame(scrollHandler)

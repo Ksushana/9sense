@@ -6,7 +6,7 @@
   transition: color 2s;
   color: $color-grey-light;
   display: flex;
-  padding: size(70px) size(296px) 0;
+  padding: size(70px) size(100px) 0;
   min-height: size(670px);
   letter-spacing: 0.02em;
 
@@ -28,7 +28,6 @@
     line-height: size(16px);
     letter-spacing: 0.01em;
     position: relative;
-    top: size(-5px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     padding-bottom: size(2px);
 
@@ -51,10 +50,9 @@
     line-height: size(36px);
     text-align: left;
 
-    padding: size(18px) size(87px) 0 size(17px);
+    padding: size(18px) size(16px) 0;
     min-height: size(400px);
     align-items: center;
-    padding-right: size(29px);
     padding-top: size(184px);
     flex-direction: column;
     align-items: flex-start;
@@ -87,6 +85,7 @@
     img {
       display: block;
       width: size(378px);
+      // max-width: 100%;
       height: size(425px);
       margin: 0 auto;
       padding-top: size(68px);
@@ -126,4 +125,12 @@
       }
     }
   }
+}
+
+.location__address-row {
+  margin-top: size(20px);
+  display: block;
+  font-size: size(16px);
+  line-height: size(16px);
+  letter-spacing: 0.01em;
 }
