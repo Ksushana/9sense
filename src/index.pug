@@ -30,7 +30,8 @@ html( lang="ru" )
           li: +link-text( "Лаборатория", "#lab", "header__link header__link--anchor" )
           li: +link-text( "Виниры", "#works", "header__link header__link--anchor" )
           li: +link-text( "Локация", "#location", "header__link header__link--loc" )
-        button.header__lang En
+        a.header__insta(href="")
+          +svg( "instagram", 24, 24 )
 
       p.header__turn
         span Клиника эстетической стоматологии в Москве
@@ -93,11 +94,27 @@ html( lang="ru" )
           p Улыбка, которая #[span.text-block--italics меняет всё].
 
 
-        section.smile.scale.scale--big
-          picture
-            source( media="(max-width: 768px)" srcset="img/face-mobile@2x.jpg 2x" )
-            img( src="img/face@1x.jpg" srcset="img/face@2x.jpg 2x" width="1312" height="772" alt="Марина" )
-          p.smile__text.small-text Дарит уверенность
+        section.slider.smile.scale.scale--big
+          //- picture
+          //-   source( media="(max-width: 768px)" srcset="img/face-mobile@2x.jpg 2x" )
+          //-   img( src="img/face@1x.jpg" srcset="img/face@2x.jpg 2x" width="1312" height="772" alt="Марина" )
+          //- p.smile__text.small-text Дарит уверенность
+
+          .swiper-container.slider-container
+            .swiper-wrapper
+              .swiper-slide.slider__slide
+                img( src="img/face@1x.jpg"  srcset="img/face@2x.jpg 2x" width="1312" height="772" alt="Дарит уверенность" )
+              .swiper-slide.slider__slide
+                img( src="img/face2@1x.jpg"  srcset="img/face2@2x.jpg 2x" width="1312" height="772" alt="Дает свободу быть собой" )
+            p.slider__caption.small-text
+
+            .swiper-pagination.small-text
+
+            .swiper-button-prev.slider__button.slider-prev.small-text
+              +svg( "arrow-prev", 20, 10 )
+
+            .swiper-button-next.slider__button.slider-next.small-text
+              +svg( "arrow-1", 20, 10 )
 
         section.text-block.text-block--dark.text-block--bright.parallax
           h2.visually-hidden Ярко
@@ -108,13 +125,10 @@ html( lang="ru" )
             .swiper-wrapper
               .swiper-slide.slider__slide
                 a.slider__img( href="img/smile@2x.jpg")
-                  img( src="img/smile@1x.jpg"  srcset="img/smile@2x.jpg 2x" width="1312" height="772" alt="Марина" )
+                  img( src="img/smile@1x.jpg"  srcset="img/smile@2x.jpg 2x" width="1312" height="772" alt="Дарит уверенность" )
               .swiper-slide.slider__slide
                 a.slider__img( href="img/smile@2x.jpg")
-                  img( src="img/smile@1x.jpg"  srcset="img/smile@2x.jpg 2x" width="1312" height="772" alt="Марина2" )
-              .swiper-slide.slider__slide
-                a.slider__img( href="img/smile@2x.jpg")
-                  img( src="img/smile@1x.jpg"  srcset="img/smile@2x.jpg 2x" width="1312" height="772" alt="Марина3" )
+                  img( src="img/smile@1x.jpg"  srcset="img/smile@2x.jpg 2x" width="1312" height="772" alt="Дает свободу быть собой" )
             p.slider__caption.small-text
             button: +svg( "lupa", 24, 24 )
             .swiper-pagination.small-text
@@ -133,20 +147,22 @@ html( lang="ru" )
               a.location__mobile-address(href="https://yandex.ru/maps/-/CKan624~") Посмотреть на карте
                 +svg( "arrow-1", 20, 10 )
           .location__img-cover
-            img( src="img/map@1x.png" srcset="img/map@2x.png 2x" width="378" height="425" alt="map" )
+            img( src="img/map.svg" width="378" height="425" alt="map" )
             .location__address
               span.location__address-mobile Большая#[br] Садовая ул., 5с2
-              a.location__mobile-whatsapp( title="WhatsApp" href="whatsapp://send?phone=+79057161451") +7 905 716-14-51
-                +svg( "whatsapp", 18, 18 )
-
-
+              //- a.location__mobile-whatsapp( title="WhatsApp" href="whatsapp://send?phone=+79057161451") +7 905 716-14-51
+              //-   +svg( "whatsapp", 18, 18 )
 
     footer.footer
-      p Дизайн &ndash; #[a(href="#") студия Genue]
-
-
-      a.footer__whatsapp( title="WhatsApp" href="whatsapp://send?phone=+79057161451") +7 (905) 716-14-51
-        +svg( "whatsapp", 18, 18 )
+      .footer__left
+        p.footer__dev
+          a.footer__link(href="https://genue.ru/" target="_blank") Дизайн &ndash; студия Genue
+      .footer__right
+        a.footer__link(href="tel:+79057161451") +7 (905) 716-14-51
+        span.footer__dot &middot;
+        a.footer__link.footer__link--solid(href="whatsapp://send?phone=+79057161451" title="Написать в WhatsApp") Написать в WhatsApp
+        //- a.footer__whatsapp( title="WhatsApp" href="whatsapp://send?phone=+79057161451") +7 (905) 716-14-51
+        //-   +svg( "whatsapp", 18, 18 )
 
 
     block scripts

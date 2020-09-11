@@ -1,8 +1,8 @@
 .footer {
-  font-size: size(16px);
-  line-height: size(16px);
-  letter-spacing: 0.02em;
-  color: $color-grey-footer;
+  font-size: size(18px);
+  line-height: size(24px);
+  letter-spacing: 0.01em;
+  color: $color-black-bigtext;
   display: flex;
   padding: 0 size(64px) size(20px);
   justify-content: space-between;
@@ -12,36 +12,58 @@
     margin-top: size(10px);
   }
 
-  .footer__whatsapp {
-    color: $color-black-bigtext;
-    display: inline-block;
-    margin: size(14px) 0;
-    align-self: center;
-    position: relative;
-    font-size: size(18px);
-    line-height: size(24px);
-    margin-top: size(6px);
+  &__link {
+    color: inherit;
 
-    @include mobile {
-      display: none;
-    }
-
-    svg {
-      position: absolute;
-      left: size(-26px);
-      top: size(1px);
-      width: size(18px);
-      height: size(18px);
+    &--solid {
+      border-bottom: 1px solid #DFDCE0;
     }
   }
 
+  &__dev {
+    color: $color-grey-footer;
+    font-size: size(16px);
+    line-height: 1;
+  }
+
+  &__dot {
+    margin: 0 10px;
+  }
+
+  // .footer__whatsapp {
+  //   color: $color-black-bigtext;
+  //   display: inline-block;
+  //   margin: size(14px) 0;
+  //   align-self: center;
+  //   position: relative;
+  //   font-size: size(18px);
+  //   line-height: size(24px);
+  //   margin-top: size(6px);
+
+  //   @include mobile {
+  //     display: none;
+  //   }
+
+  //   svg {
+  //     position: absolute;
+  //     left: size(-26px);
+  //     top: size(1px);
+  //     width: size(18px);
+  //     height: size(18px);
+  //   }
+  // }
+
   @include mobile {
-    font-size: size(12px);
-    line-height: size(24px);
+    display: block;
     padding: size(32px) size(16px) size(20px);
+    text-align: center;
 
     p {
       padding-right: size(18px);
+    }
+
+    &__left {
+      display: none;
     }
   }
 }

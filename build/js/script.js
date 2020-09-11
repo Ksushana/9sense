@@ -10421,7 +10421,6 @@ $(document).ready(function() {
   const logo = document.querySelector(`.header__logo`);
   const menu = document.querySelector(`.header__links ul`);
   const turn = document.querySelector(`.header__turn`);
-  const lang = document.querySelector(`.header__lang`);
   const shadow = document.querySelector(`.shadow`);
   const textBlockTech = $(".text-block--tech");
   const aboutText = document.querySelector(`.about__mobile p`);
@@ -10441,7 +10440,6 @@ $(document).ready(function() {
 
     if (!window.isMobile()) {
       menu.classList.add(`dark`);
-      lang.classList.add(`dark`);
     }
   }
 
@@ -10457,7 +10455,6 @@ $(document).ready(function() {
 
     if (!window.isMobile()) {
       menu.classList.remove(`dark`);
-      lang.classList.remove(`dark`);
     }
   }
 
@@ -10950,33 +10947,36 @@ $(() => {
 })();
 
 (() => {
-  const slider = document.querySelector(`.slider-container`);
-  const sliderCaption = slider.querySelector(".slider__caption");
+  const sliders = [].slice.call(document.querySelectorAll(`.slider-container`));
 
-  if (slider) {
-    new Swiper(slider, {
-      navigation: {
-        nextEl: `.slider-next`,
-        prevEl: `.slider-prev`
-      },
-      slidesPerView: 1,
-      slidesPerColumn: 1,
-      spaceBetween: 0,
-      loop: true,
-      pagination: {
-        el: `.swiper-pagination`,
-        type: `bullets`,
-        clickable: true
-      },
-      on: {
-        slideChange: function() {
-          changeCaption(this);
+  sliders.forEach(slider => {
+    const caption = slider.querySelector(".slider__caption");
+
+    if (slider) {
+      new Swiper(slider, {
+        navigation: {
+          nextEl: `.slider-next`,
+          prevEl: `.slider-prev`
+        },
+        slidesPerView: 1,
+        slidesPerColumn: 1,
+        spaceBetween: 0,
+        loop: true,
+        pagination: {
+          el: `.swiper-pagination`,
+          type: `bullets`,
+          clickable: true
+        },
+        on: {
+          slideChange: function() {
+            changeCaption(this, caption);
+          }
         }
-      }
-    });
-  }
+      });
+    }
+  });
 
-  function changeCaption(swiper) {
+  function changeCaption(swiper, sliderCaption) {
     const currentSlide = swiper.slides[swiper.activeIndex];
     const image = currentSlide.querySelector("img");
     const captionText = image.alt;
