@@ -96,7 +96,8 @@
   display: flex;
   margin-left: auto;
   font-weight: 500;
-  font-size: 0.3rem;
+  // font-size: 0.3rem;
+  font-size: size(16px);
   line-height: size(20px);
   letter-spacing: 0.01em;
   position: fixed;
@@ -114,13 +115,18 @@
     }
   }
 
-  li {
-    padding: 0 size(10px);
-    font-weight: 600;
-  }
+  // li {
+  //   // padding: 0 size(10px);
+  //   font-weight: 600;
+  // }
 
   a {
     padding: 0 size(15px);
+  }
+
+  .header__insta {
+    padding-right: 0;
+    padding-left: 0;
   }
 
   @include mobile {
@@ -226,7 +232,8 @@
         }
       }
 
-      .header__lang {
+      .header__lang,
+      .header__insta {
         opacity: 1;
         transition: opacity 0.2s;
         transition-delay: 0.3s;
@@ -242,7 +249,7 @@
   z-index: 205;
   width: size(120px);
   height: size(120px);
-  // transition: transform 0.1s linear;
+  will-change: transform;
 
   svg {
     width: size(120px);
@@ -285,7 +292,7 @@
   z-index: 10;
   outline: none;
   transition: color 0.3s;
-  font-weight: 600;
+  font-weight: 500;
 
   &.dark {
     color: $color-black-font;
@@ -293,6 +300,20 @@
 
   &:hover {
     opacity: 0.6;
+  }
+
+  @include mobile {
+    margin: auto auto size(120px);
+    opacity: 0;
+  }
+}
+
+.header__insta {
+  padding: 0;
+  margin: size(-3px) 0 0 size(58px);
+
+  svg {
+    vertical-align: middle;
   }
 
   @include mobile {
@@ -377,7 +398,7 @@
   right: 0;
   top: size(24px);
   transition: opacity 1s;
-  z-index: 102;
+  z-index: 202;
   outline: none;
   padding: 0;
   border: none;

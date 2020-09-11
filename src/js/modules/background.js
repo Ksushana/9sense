@@ -4,7 +4,6 @@
   const logo = document.querySelector(`.header__logo`);
   const menu = document.querySelector(`.header__links ul`);
   const turn = document.querySelector(`.header__turn`);
-  const lang = document.querySelector(`.header__lang`);
   const shadow = document.querySelector(`.shadow`);
   const textBlockTech = $(".text-block--tech");
   const aboutText = document.querySelector(`.about__mobile p`);
@@ -24,7 +23,6 @@
 
     if (!window.isMobile()) {
       menu.classList.add(`dark`);
-      lang.classList.add(`dark`);
     }
   }
 
@@ -40,7 +38,6 @@
 
     if (!window.isMobile()) {
       menu.classList.remove(`dark`);
-      lang.classList.remove(`dark`);
     }
   }
 
