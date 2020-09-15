@@ -1,0 +1,54 @@
+.header,
+main,
+.footer {
+  transition: opacity 1.2s;
+}
+
+.page-loading {
+  overflow: hidden;
+
+  body {
+    overflow: hidden;
+  }
+
+  .header,
+  main,
+  .footer {
+    opacity: 0;
+  }
+}
+
+.page-loaded {
+  opacity: 1;
+
+  .preloader {
+    opacity: 0;
+  }
+}
+
+.preloader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1000;
+  opacity: 1;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.2s;
+  animation: preload 3s linear infinite;
+  color: $color-white;
+
+  svg {
+    fill: currentColor;
+    vertical-align: top;
+  }
+}
+
+@keyframes preload {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
