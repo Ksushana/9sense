@@ -3,6 +3,7 @@
   const link = document.querySelector(`.about__mobile button`);
   const info = document.querySelector(`.about__container`);
   const close = document.querySelector(`.about__close`);
+  const collapseTriggers = [].slice.call(document.querySelectorAll('.about__collapse-trigger'));
   // const block = document.querySelector(`.about__block`);
 
   let containerScale;
@@ -42,6 +43,22 @@
 
   close.addEventListener(`click`, () => {
     window.setTimeout(closeInfo, 100);
+  });
+
+  collapseTriggers.forEach(collapseTrigger => {
+    collapseTrigger.addEventListener('click', event => {
+      event.preventDefault();
+
+      const collapseElement = document.querySelector(
+        `.about__collapse-text[data-id="${collapseTrigger.dataset.targetId}"]`
+      );
+
+      if (collapseElement !== null) {
+        collapseElement.classList.add('is-visible');
+      }
+
+      collapseTrigger.classList.add('is-hidden');
+    });
   });
 
   // helpers

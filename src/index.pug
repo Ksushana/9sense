@@ -4,7 +4,7 @@ block variables
 - let mainTitle = "Nine Sense Clinic";
 
 doctype html
-html( lang="ru" )
+html.page-loading( lang="ru" )
   head
     meta( charset="UTF-8" )
     title #{mainTitle} !{title && "| " + title}
@@ -15,6 +15,9 @@ html( lang="ru" )
     link( rel="stylesheet" href="css/style.min.css" )
 
   body
+    .preloader
+      +svg( "logo", 120, 120 )
+
     header.header
       .header__gradient
       .header__logo
@@ -30,7 +33,7 @@ html( lang="ru" )
           li: +link-text( "Лаборатория", "#lab", "header__link header__link--anchor" )
           li: +link-text( "Виниры", "#works", "header__link header__link--anchor" )
           li: +link-text( "Локация", "#location", "header__link header__link--loc" )
-        a.header__insta(href="")
+        a.header__insta(href="https://instagram.com/omargazaev?igshid=n52008pgrhzo" target="_blank" rel="noopener noreferrer")
           +svg( "instagram", 24, 24 )
 
       p.header__turn
@@ -53,17 +56,18 @@ html( lang="ru" )
                 h3 Подход
                 ul
                   li
-                    | У меня свой, особенный подход к работе &ndash; я лично отвечаю за красоту и здоровье каждой улыбки, которую создаю.
+                    | У меня свой, особенный подход к работе &ndash; я лично отвечаю за красоту и здоровье каждой улыбки, которую создаю. #[span.about__collapse-text(data-id="about-approach-text") Важно создать вокруг каждого человека доверительную среду, основной компонент которой — внимательное и бережное отношение.]
                     |
                     |
-                    +link-text("Далее", href="#", "")
+                    a.link-text.about__collapse-trigger(href="#" data-target-id="about-approach-text") Далее
 
                 h3 Специализации
                 ul
                   li Эстетическая стоматология
                   li Хирургическая пародонтология
                   li Имплантология
-                  li: +link-text("Больше", href="#", "") Больше
+                  li
+                    a.link-text(href="#" data-toggle="modal" data-target="#about-specializations-modal") Больше
 
                 h3 Публикации
                 ul.about__works
@@ -76,6 +80,74 @@ html( lang="ru" )
             p Омар Газаев, стоматолог
             button Специализации и публикации
               +svg( "arrow-1", 20, 10 )
+
+        #about-specializations-modal.modal.about-specializations-modal.fade(tabindex="-1" role="dialog" aria-labelledby="callback" aria-hidden="true")
+          .modal-dialog.modal-dialog-centered
+            .modal-content
+              button.modal__close(type="button" data-dismiss="modal" aria-label="Закрыть")
+              .about-specializations-modal__content
+                h2 Специализации
+                .about-specializations-modal__grid
+                  .about-specializations-modal__grid-item
+                    h3 2011, Italy
+                    ul
+                      li Advanced Continuing Education
+                      li The Esthetic Rehabilitation
+                      li A comprehensive prosthetic approach
+                      li Present by Mauro Fradeani
+
+                    h3 2013, USA
+                    ul
+                      li University of Pennsylvania department
+                      li School of Dental Medicine Department of Endodontics
+                      li Training Course in Microsurgical Endodontics
+                      li Kim, D.D.S., Ph.D., MD (Hon) Grossman Professor and Chairman
+
+                    h3 2013, 2014, Italy
+                    ul
+                      li Societa di Aggiomamento Stomatologico
+                      li Periodontal Surgery Bologna
+                      li Prof. Giovanni Zucchelli
+
+                    h3 2014, Japan
+                    ul
+                      li The Office of Kuwata College Tokyo Japan
+                      li Practice of occlusion and Ceramo-metal course
+                      li By Masahiro Kuwata
+
+                    h3 2014, Italy
+                    ul
+                      li Micro Prosthetics course by Domenico Massironi
+                      li Master’s session in PROSTHETICS AT MEG
+                  .about-specializations-modal__grid-item
+                    h3 2014, 2017, Germany
+                    ul
+                      li FGP - Grundlagenkurs (Biomechanischer Transfer)
+                      li Dr.Christian Lex
+
+                    h3 2015, Germany
+                    ul
+                      li Kurs "Oberflachen -und Texturkurs"
+                      li in Munchen mit Erfolg teilgenommen
+                      li Present by Bertrand Thievent CH
+
+                    h3 2017, Italy
+                    ul Master Educational Group
+                      li Adhesive partial restorations
+                      li Master's session in Onlays, Overlays and Veneerlays
+                      li Dr. Domenico Massironi, Dr. Alessandro Conti
+
+                    h3 2017, Moscow
+                    ul
+                      li Expert course
+                      li in periodontal and periimplant microsurgery
+                      li Speaker Dr. Rino Burkhardt
+
+                    h3 2018, Germany
+                    ul
+                      li Participated in the workshop
+                      li Comprehensive treatment strategies with
+                      li Dental implants by Prof. Markus Hurzeler
 
         section.text-block.text-block--tech.parallax
           h2.visually-hidden Технологии

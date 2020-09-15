@@ -1,3 +1,9 @@
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins';
+@import 'node_modules/bootstrap/scss/transitions';
+@import 'node_modules/bootstrap/scss/modal';
+
 /* Vendor */
 @import "vendor/normalize";
 @import "vendor/swiper";
@@ -9,7 +15,9 @@
 @import "general/fonts";
 @import "general/global";
 /* Blocks */
+@import "blocks/preload";
 @import "blocks/header";
+@import "blocks/modal";
 @import "blocks/about";
 @import "blocks/text-block";
 @import "blocks/lab";

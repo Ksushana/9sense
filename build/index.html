@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page-loading" lang="ru">
 
 <head>
   <meta charset="UTF-8">
@@ -12,6 +12,9 @@
 </head>
 
 <body>
+  <div class="preloader"><svg width="120" height="120" aria-hidden="true">
+      <use xlink:href="img/sprite.svg#logo"></use>
+    </svg></div>
   <header class="header">
     <div class="header__gradient"></div>
     <div class="header__logo"><svg width="120" height="120" aria-hidden="true">
@@ -25,7 +28,7 @@
         <li><a class="link-text header__link header__link--anchor" href="#lab"><span>Лаборатория</span></a></li>
         <li><a class="link-text header__link header__link--anchor" href="#works"><span>Виниры</span></a></li>
         <li><a class="link-text header__link header__link--loc" href="#location"><span>Локация</span></a></li>
-      </ul><a class="header__insta" href=""><svg width="24" height="24" aria-hidden="true">
+      </ul><a class="header__insta" href="https://instagram.com/omargazaev?igshid=n52008pgrhzo" target="_blank" rel="noopener noreferrer"><svg width="24" height="24" aria-hidden="true">
           <use xlink:href="img/sprite.svg#instagram"></use>
         </svg></a>
     </nav>
@@ -45,16 +48,16 @@
               <h2>Ваш доктор<br /> Омар Газаев</h2>
                 <h3>Подход</h3>
                 <ul>
-                  <li>У меня свой, особенный подход к работе &ndash; я лично отвечаю за красоту и здоровье каждой улыбки, которую создаю.
+                  <li>У меня свой, особенный подход к работе &ndash; я лично отвечаю за красоту и здоровье каждой улыбки, которую создаю. <span class="about__collapse-text" data-id="about-approach-text">Важно создать вокруг каждого человека доверительную среду, основной компонент которой — внимательное и бережное отношение.</span>
 
-                    <a class="link-text" href="#"><span>Далее</span></a></li>
+                    <a class="link-text about__collapse-trigger" href="#" data-target-id="about-approach-text">Далее</a></li>
                 </ul>
                 <h3>Специализации</h3>
                 <ul>
                   <li>Эстетическая стоматология</li>
                   <li>Хирургическая пародонтология</li>
                   <li>Имплантология</li>
-                  <li><a class="link-text" href="#"><span>Больше</span></a></li>
+                  <li><a class="link-text" href="#" data-toggle="modal" data-target="#about-specializations-modal">Больше</a></li>
                 </ul>
                 <h3>Публикации</h3>
                 <ul class="about__works">
@@ -71,6 +74,80 @@
             </svg></button>
         </div>
       </section>
+      <div class="modal about-specializations-modal fade" id="about-specializations-modal" tabindex="-1" role="dialog" aria-labelledby="callback" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content"><button class="modal__close" type="button" data-dismiss="modal" aria-label="Закрыть"></button>
+            <div class="about-specializations-modal__content">
+              <h2>Специализации</h2>
+              <div class="about-specializations-modal__grid">
+                <div class="about-specializations-modal__grid-item">
+                  <h3>2011, Italy</h3>
+                  <ul>
+                    <li>Advanced Continuing Education</li>
+                    <li>The Esthetic Rehabilitation</li>
+                    <li>A comprehensive prosthetic approach</li>
+                    <li>Present by Mauro Fradeani</li>
+                  </ul>
+                  <h3>2013, USA</h3>
+                  <ul>
+                    <li>University of Pennsylvania department</li>
+                    <li>School of Dental Medicine Department of Endodontics</li>
+                    <li>Training Course in Microsurgical Endodontics</li>
+                    <li>Kim, D.D.S., Ph.D., MD (Hon) Grossman Professor and Chairman</li>
+                  </ul>
+                  <h3>2013, 2014, Italy</h3>
+                  <ul>
+                    <li>Societa di Aggiomamento Stomatologico</li>
+                    <li>Periodontal Surgery Bologna</li>
+                    <li>Prof. Giovanni Zucchelli</li>
+                  </ul>
+                  <h3>2014, Japan</h3>
+                  <ul>
+                    <li>The Office of Kuwata College Tokyo Japan</li>
+                    <li>Practice of occlusion and Ceramo-metal course</li>
+                    <li>By Masahiro Kuwata</li>
+                  </ul>
+                  <h3>2014, Italy</h3>
+                  <ul>
+                    <li>Micro Prosthetics course by Domenico Massironi</li>
+                    <li>Master’s session in PROSTHETICS AT MEG</li>
+                  </ul>
+                </div>
+                <div class="about-specializations-modal__grid-item">
+                  <h3>2014, 2017, Germany</h3>
+                  <ul>
+                    <li>FGP - Grundlagenkurs (Biomechanischer Transfer)</li>
+                    <li>Dr.Christian Lex</li>
+                  </ul>
+                  <h3>2015, Germany</h3>
+                  <ul>
+                    <li>Kurs "Oberflachen -und Texturkurs"</li>
+                    <li>in Munchen mit Erfolg teilgenommen</li>
+                    <li>Present by Bertrand Thievent CH</li>
+                  </ul>
+                  <h3>2017, Italy</h3>
+                  <ul>Master Educational Group<li>Adhesive partial restorations</li>
+                    <li>Master's session in Onlays, Overlays and Veneerlays</li>
+                    <li>Dr. Domenico Massironi, Dr. Alessandro Conti</li>
+                  </ul>
+                  <h3>2017, Moscow</h3>
+                  <ul>
+                    <li>Expert course</li>
+                    <li>in periodontal and periimplant microsurgery</li>
+                    <li>Speaker Dr. Rino Burkhardt</li>
+                  </ul>
+                  <h3>2018, Germany</h3>
+                  <ul>
+                    <li>Participated in the workshop</li>
+                    <li>Comprehensive treatment strategies with</li>
+                    <li>Dental implants by Prof. Markus Hurzeler</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <section class="text-block text-block--tech parallax">
         <h2 class="visually-hidden">Технологии</h2>
         <p>Технологии &ndash; инструмент в&nbsp;руках творца</p>
