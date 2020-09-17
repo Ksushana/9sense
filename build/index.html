@@ -5,6 +5,14 @@
   <meta charset="UTF-8">
   <title>Nine Sense Clinic </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=yy4QkQ8z0E">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=yy4QkQ8z0E">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=yy4QkQ8z0E">
+  <link rel="manifest" href="/site.webmanifest?v=yy4QkQ8z0E">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg?v=yy4QkQ8z0E" color="#000000">
+  <link rel="shortcut icon" href="/favicon.ico?v=yy4QkQ8z0E">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
   <link rel="preload" href="fonts/HelveticaRegular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/HelveticaItalic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/HelveticaBold.woff2" as="font" type="font/woff2" crossorigin>
@@ -12,7 +20,7 @@
 </head>
 
 <body>
-  <div class="preloader"><svg width="120" height="120" aria-hidden="true">
+  <div class="preloader"><svg width="90" height="90" aria-hidden="true">
       <use xlink:href="img/sprite.svg#logo"></use>
     </svg></div>
   <header class="header">
@@ -189,12 +197,29 @@
       <section class="slider scale scale--big" id="works">
         <div class="swiper-container slider-container">
           <div class="swiper-wrapper">
-            <div class="swiper-slide slider__slide"><a class="slider__img" href="img/smile@2x.jpg"><img src="img/smile@1x.jpg" srcset="img/smile@2x.jpg 2x" width="1312" height="772" alt="Дарит уверенность"></a></div>
-            <div class="swiper-slide slider__slide"><a class="slider__img" href="img/smile@2x.jpg"><img src="img/smile@1x.jpg" srcset="img/smile@2x.jpg 2x" width="1312" height="772" alt="Дает свободу быть собой"></a></div>
+            <div class="swiper-slide slider__slide"><a class="slider__img" href="img/olga-smile@2x.jpg"><img src="img/olga-smile@1x.jpg" srcset="img/olga-smile@2x.jpg 2x" width="1312" height="772" alt="Ольга, 28 лет" data-target-modal="#olga-smile-modal">
+                <div class="slider__content">
+                  <h3 class="slider__content-title">Лечение двух зубов<br /> Установка виниров на три зуба<br /> Оттенок винира: NOL769Z</h3>
+                    <div class="slider__content-text">
+                      <p>Ольгу ко мне привела подруга, которая недавно закончила все процедуры. Ольга не могла поверить, что можно настолько сильно и незаметно преобразить улыбку. А когда убедилась, что это возможно, захотела себе такую же. Но я не делаю по шаблону — улыбка у Ольги получилась своя, естественная, живая, открытая.</p>
+                    </div>
+                    <div class="slider__content-more"><span class="slider__content-more-link">Подробнее</span></div>
+                </div>
+              </a></div>
+            <div class="swiper-slide slider__slide"><a class="slider__img" href="img/tatyana-smile@2x.jpg"><img src="img/tatyana-smile@1x.jpg" srcset="img/tatyana-smile@2x.jpg 2x" width="1312" height="772" alt="Татьяна, 34 года" data-target-modal="#tatyana-smile-modal">
+                <div class="slider__content">
+                  <h3 class="slider__content-title">Лечение зубов<br /> Установка брекетов<br /> Установка виниров<br /> Оттенок винира: LUH875P</h3>
+                    <div class="slider__content-text">
+                      <p>Татьяна обратилась ко мне по рекомендации друга — у нее была возможность устроиться на работу мечты в крупной транспортной корпорации и переехать за границу, но она поняла, что без красивой, здоровой улыбки у нее будет меньше шансов сделать карьеру. Все процедуры заняли около 6 месяцев, но результат себя оправдал на все 100 процентов.</p>
+                    </div>
+                    <div class="slider__content-more"><span class="slider__content-more-link">Подробнее</span></div>
+                </div>
+              </a></div>
           </div>
           <p class="slider__caption small-text"></p><button><svg width="24" height="24" aria-hidden="true">
               <use xlink:href="img/sprite.svg#lupa"></use>
             </svg></button>
+          <div class="slider__mobile-more"><span class="slider__mobile-more-link" data-toggle="modal" data-target="#olga-smile-modal">Что сделано<svg width="20" height="10" aria-hidden="true"><use xlink:href="img/sprite.svg#arrow-1"></use></svg></span></div>
           <div class="swiper-pagination small-text"></div>
           <div class="swiper-button-prev slider__button slider-prev small-text"><svg width="20" height="10" aria-hidden="true">
               <use xlink:href="img/sprite.svg#arrow-prev"></use>
@@ -204,6 +229,37 @@
             </svg></div>
         </div>
       </section>
+      <div class="modal slider-modal fade" id="olga-smile-modal" tabindex="-1" role="dialog" aria-labelledby="callback" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content"><button class="modal__close" type="button" data-dismiss="modal" aria-label="Закрыть"></button>
+            <div class="slider-modal__content">
+              <h2>Что сделано</h2>
+              <ul>
+                <li><em>Лечение двух зубов</em></li>
+                <li><em>Установка виниров на три зуба</em></li>
+                <li><em>Оттенок винира: NOL769Z</em></li>
+              </ul>
+              <p>Ольгу ко мне привела подруга, которая недавно закончила все процедуры. Ольга не могла поверить, что можно настолько сильно и незаметно преобразить улыбку. А когда убедилась, что это возможно, захотела себе такую же. Но я не делаю по шаблону — улыбка у Ольги получилась своя, естественная, живая, открытая.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal slider-modal fade" id="tatyana-smile-modal" tabindex="-1" role="dialog" aria-labelledby="callback" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content"><button class="modal__close" type="button" data-dismiss="modal" aria-label="Закрыть"></button>
+            <div class="slider-modal__content">
+              <h2>Что сделано</h2>
+              <ul>
+                <li><em>Лечение зубов</em></li>
+                <li><em>Установка брекетов</em></li>
+                <li><em>Установка виниров</em></li>
+                <li><em>Оттенок винира: LUH875P</em></li>
+              </ul>
+              <p>Татьяна обратилась ко мне по рекомендации друга — у нее была возможность устроиться на работу мечты в крупной транспортной корпорации и переехать за границу, но она поняла, что без красивой, здоровой улыбки у нее будет меньше шансов сделать карьеру. Все процедуры заняли около 6 месяцев, но результат себя оправдал на все 100 процентов.</p>
+            </div>
+          </div>
+        </div>
+      </div>
       <section class="location location--dark parallax" id="location">
         <h2 class="visually-hidden">Адрес</h2>
         <p>Приезжайте на встречу c&nbsp;Омаром Газаевым &ndash;<br> он расскажет, как сделать вашу улыбку <span class="location--italics">неповторимой</span>.<span class="location__address-row"><a class="location__desktop-address" href="https://yandex.ru/maps/-/CKan624~">Большая Садовая ул., 5с2</a><a class="location__mobile-address" href="https://yandex.ru/maps/-/CKan624~">Посмотреть на карте<svg width="20" height="10" aria-hidden="true"><use xlink:href="img/sprite.svg#arrow-1"></use></svg></a></span></p>

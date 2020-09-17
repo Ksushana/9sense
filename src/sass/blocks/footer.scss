@@ -54,16 +54,31 @@
   // }
 
   @include mobile {
-    display: block;
-    padding: size(32px) size(16px) size(20px);
+    display: flex;
+    flex-direction: column;
+    padding: size(32px) size(16px) size(60px);
     text-align: center;
 
     p {
-      padding-right: size(18px);
+      padding-right: 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
     }
 
     &__left {
-      display: none;
+      order: 2;
+    }
+
+    &__right {
+      margin-bottom: size(40px);
+      order: 1;
+    }
+
+    &__dev {
+      padding: 0;
+      margin: 0;
     }
   }
 }

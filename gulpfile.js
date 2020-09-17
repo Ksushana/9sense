@@ -34,9 +34,10 @@ gulp.task("copy", function() {
       [
         "src/fonts/**/*.{woff,woff2}",
         "src/json/**/*.json",
-        "src/*.{png,ico}",
+        "src/*.{png,ico,svg}",
         "src/*.webmanifest",
-        "src/*.json"
+        "src/*.json",
+        "src/*.xml",
       ],
       {
         base: "src"

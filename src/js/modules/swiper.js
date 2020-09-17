@@ -3,6 +3,7 @@
 
   sliders.forEach(slider => {
     const caption = slider.querySelector(".slider__caption");
+    const mobileMoreLink = slider.querySelector(".slider__mobile-more-link");
 
     if (slider) {
       new Swiper(slider, {
@@ -21,17 +22,42 @@
         },
         on: {
           slideChange: function() {
-            changeCaption(this, caption);
+            if (caption) {
+              changeCaption(this, caption);
+            }
+
+            if (mobileMoreLink) {
+              changeMoreLinkTarget(this, mobileMoreLink);
+            }
           }
         }
       });
     }
   });
 
+  if (!window.isMobile()) {
+    [].slice.call(document.querySelectorAll('.slider__content')).forEach(contentElement => {
+      const moreLink = contentElement.querySelector('.slider__content-more-link');
+
+      if (moreLink) {
+        moreLink.addEventListener('click', () => {
+          contentElement.classList.add('is-full');
+        });
+      }
+    });
+  }
+
   function changeCaption(swiper, sliderCaption) {
     const currentSlide = swiper.slides[swiper.activeIndex];
     const image = currentSlide.querySelector("img");
     const captionText = image.alt;
     sliderCaption.textContent = captionText;
+  }
+
+  function changeMoreLinkTarget(swiper, sliderMobileMoreLink) {
+    const currentSlide = swiper.slides[swiper.activeIndex];
+    const image = currentSlide.querySelector("img");
+    const target = image.dataset.targetModal;
+    sliderMobileMoreLink.setAttribute('data-target', target);
   }
 })();
