@@ -74,7 +74,7 @@ html.page-loading( lang="ru" )
                   li Хирургическая пародонтология
                   li Имплантология
                   li
-                    a.link-text(href="#" data-toggle="modal" data-target="#about-specializations-modal") Больше
+                    a.link-text(href="#" data-toggle="modal" data-target="[data-about-specializations-modal]") Больше
 
                 h3 Публикации
                 ul.about__works
@@ -85,76 +85,8 @@ html.page-loading( lang="ru" )
                   img( src="img/sign2.png" width="155" height="64" alt="signature" )
           .about__mobile.small-text
             p Омар Газаев, стоматолог
-            button Специализации и публикации
+            button(data-toggle="modal" data-target="[data-about-modal]") Специализации и публикации
               +svg( "arrow-1", 20, 10 )
-
-        #about-specializations-modal.modal.about-specializations-modal.fade(tabindex="-1" role="dialog" aria-labelledby="callback" aria-hidden="true")
-          .modal-dialog.modal-dialog-centered
-            .modal-content
-              button.modal__close(type="button" data-dismiss="modal" aria-label="Закрыть")
-              .about-specializations-modal__content
-                h2 Специализации
-                .about-specializations-modal__grid
-                  .about-specializations-modal__grid-item
-                    h3 2011, Italy
-                    ul
-                      li Advanced Continuing Education
-                      li The Esthetic Rehabilitation
-                      li A comprehensive prosthetic approach
-                      li Present by Mauro Fradeani
-
-                    h3 2013, USA
-                    ul
-                      li University of Pennsylvania department
-                      li School of Dental Medicine Department of Endodontics
-                      li Training Course in Microsurgical Endodontics
-                      li Kim, D.D.S., Ph.D., MD (Hon) Grossman Professor and Chairman
-
-                    h3 2013, 2014, Italy
-                    ul
-                      li Societa di Aggiomamento Stomatologico
-                      li Periodontal Surgery Bologna
-                      li Prof. Giovanni Zucchelli
-
-                    h3 2014, Japan
-                    ul
-                      li The Office of Kuwata College Tokyo Japan
-                      li Practice of occlusion and Ceramo-metal course
-                      li By Masahiro Kuwata
-
-                    h3 2014, Italy
-                    ul
-                      li Micro Prosthetics course by Domenico Massironi
-                      li Master’s session in PROSTHETICS AT MEG
-                  .about-specializations-modal__grid-item
-                    h3 2014, 2017, Germany
-                    ul
-                      li FGP - Grundlagenkurs (Biomechanischer Transfer)
-                      li Dr.Christian Lex
-
-                    h3 2015, Germany
-                    ul
-                      li Kurs "Oberflachen -und Texturkurs"
-                      li in Munchen mit Erfolg teilgenommen
-                      li Present by Bertrand Thievent CH
-
-                    h3 2017, Italy
-                    ul Master Educational Group
-                      li Adhesive partial restorations
-                      li Master's session in Onlays, Overlays and Veneerlays
-                      li Dr. Domenico Massironi, Dr. Alessandro Conti
-
-                    h3 2017, Moscow
-                    ul
-                      li Expert course
-                      li in periodontal and periimplant microsurgery
-                      li Speaker Dr. Rino Burkhardt
-
-                    h3 2018, Germany
-                    ul
-                      li Participated in the workshop
-                      li Comprehensive treatment strategies with
-                      li Dental implants by Prof. Markus Hurzeler
 
         section.text-block.text-block--tech.parallax
           h2.visually-hidden Технологии
@@ -203,7 +135,7 @@ html.page-loading( lang="ru" )
             .swiper-wrapper
               .swiper-slide.slider__slide
                 a.slider__img( href="img/olga-smile@2x.jpg")
-                  img( src="img/olga-smile@1x.jpg"  srcset="img/olga-smile@2x.jpg 2x" width="1312" height="772" alt="Ольга, 28 лет" data-target-modal="#olga-smile-modal" )
+                  img( src="img/olga-smile@1x.jpg"  srcset="img/olga-smile@2x.jpg 2x" width="1312" height="772" alt="Ольга, 28 лет" data-target-modal="[data-olga-smile-modal]" )
                   .slider__content
                     h3.slider__content-title Лечение двух зубов<br /> Установка виниров на три зуба<br /> Оттенок винира: NOL769Z
                     .slider__content-text
@@ -212,7 +144,7 @@ html.page-loading( lang="ru" )
                       span.slider__content-more-link Подробнее
               .swiper-slide.slider__slide
                 a.slider__img( href="img/tatyana-smile@2x.jpg")
-                  img( src="img/tatyana-smile@1x.jpg"  srcset="img/tatyana-smile@2x.jpg 2x" width="1312" height="772" alt="Татьяна, 34 года" data-target-modal="#tatyana-smile-modal")
+                  img( src="img/tatyana-smile@1x.jpg"  srcset="img/tatyana-smile@2x.jpg 2x" width="1312" height="772" alt="Татьяна, 34 года" data-target-modal="[data-tatyana-smile-modal]")
                   .slider__content
                     h3.slider__content-title Лечение зубов<br /> Установка брекетов<br /> Установка виниров<br /> Оттенок винира: LUH875P
                     .slider__content-text
@@ -223,7 +155,7 @@ html.page-loading( lang="ru" )
             button: +svg( "lupa", 24, 24 )
 
             .slider__mobile-more
-              span.slider__mobile-more-link(data-toggle="modal" data-target="#olga-smile-modal")
+              span.slider__mobile-more-link(data-toggle="modal" data-target="[data-olga-smile-modal]")
                 | Что сделано
                 +svg( "arrow-1", 20, 10 )
 
@@ -234,38 +166,6 @@ html.page-loading( lang="ru" )
 
             .swiper-button-next.slider__button.slider-next.small-text
               +svg( "arrow-1", 20, 10 )
-
-        #olga-smile-modal.modal.slider-modal.fade(tabindex="-1" role="dialog" aria-labelledby="callback" aria-hidden="true")
-          .modal-dialog.modal-dialog-centered
-            .modal-content
-              button.modal__close(type="button" data-dismiss="modal" aria-label="Закрыть")
-              .slider-modal__content
-                h2 Что сделано
-                ul
-                  li
-                    em Лечение двух зубов
-                  li
-                    em Установка виниров на три зуба
-                  li
-                    em Оттенок винира: NOL769Z
-                p Ольгу ко мне привела подруга, которая недавно закончила все процедуры. Ольга не могла поверить, что можно настолько сильно и незаметно преобразить улыбку. А когда убедилась, что это возможно, захотела себе такую же. Но я не делаю по шаблону — улыбка у Ольги получилась своя, естественная, живая, открытая.
-
-        #tatyana-smile-modal.modal.slider-modal.fade(tabindex="-1" role="dialog" aria-labelledby="callback" aria-hidden="true")
-          .modal-dialog.modal-dialog-centered
-            .modal-content
-              button.modal__close(type="button" data-dismiss="modal" aria-label="Закрыть")
-              .slider-modal__content
-                h2 Что сделано
-                ul
-                  li
-                    em Лечение зубов
-                  li
-                    em Установка брекетов
-                  li
-                    em Установка виниров
-                  li
-                    em Оттенок винира: LUH875P
-                p Татьяна обратилась ко мне по рекомендации друга — у нее была возможность устроиться на работу мечты в крупной транспортной корпорации и переехать за границу, но она поняла, что без красивой, здоровой улыбки у нее будет меньше шансов сделать карьеру. Все процедуры заняли около 6 месяцев, но результат себя оправдал на все 100 процентов.
 
         section.location.location--dark( id="location" ).parallax
           h2.visually-hidden Адрес
@@ -292,6 +192,137 @@ html.page-loading( lang="ru" )
         //- a.footer__whatsapp( title="WhatsApp" href="whatsapp://send?phone=+79057161451") +7 (905) 716-14-51
         //-   +svg( "whatsapp", 18, 18 )
 
+    .modals
+      .modal.info-modal.about-modal.fade(data-about-modal tabindex="-1" role="dialog" aria-labelledby="callback" aria-hidden="true")
+        .modal-dialog.modal-dialog-centered
+          .modal-content
+            button.modal__close(type="button" data-dismiss="modal" aria-label="Закрыть")
+            .modal__content
+              h2 Ваш доктор<br /> Омар Газаев
+
+              h3 Подход
+              ul
+                li
+                  | У меня свой, особенный подход к работе &ndash; я лично отвечаю за красоту и здоровье каждой улыбки, которую создаю. #[span.about__collapse-text(data-id="about-modal-approach-text") Важно создать вокруг каждого человека доверительную среду, основной компонент которой — внимательное и бережное отношение.]
+                  |
+                  |
+                  a.link-text.about__collapse-trigger(href="#" data-target-id="about-modal-approach-text") Далее
+
+              h3 Специализации
+              ul
+                li Эстетическая стоматология
+                li Хирургическая пародонтология
+                li Имплантология
+                li
+                  a.link-text(href="#" data-toggle="modal" data-target="[data-about-specializations-modal]") Больше
+
+              h3 Публикации
+              ul.about__works
+                li: +link-text( "Ein Konzept der dentalen Kommunikationskultur So fern und doch so nah Alexander Miranskij, Omar Gazaev", href="https://dentalmanufaktur-nuernberg.de/wordpress/wp-content/uploads/2017/08/qz_2013_03_s0280_scr-Kopie.pdf", "" )
+                li: +link-text( "Herstellung geschichteter Veneers bei inkongruenter Ausgangssituation Alexander Miranskij, Omar Gazaev", href="https://dentalmanufaktur-nuernberg.de/wordpress/wp-content/uploads/2017/08/qz_2014_09_s1164-Kopie.pdf", "" )
+
+              .about__signature
+                img( src="img/sign2.png" width="155" height="64" alt="signature" )
+
+      .modal.info-modal.about-specializations-modal.fade(data-about-specializations-modal tabindex="-1" role="dialog" aria-labelledby="callback" aria-hidden="true")
+        .modal-dialog.modal-dialog-centered
+          .modal-content
+            button.modal__close(type="button" data-dismiss="modal" aria-label="Закрыть")
+            .modal__content
+              h2 Специализации
+              .about-specializations-modal__grid
+                .about-specializations-modal__grid-item
+                  h3 2011, Italy
+                  ul
+                    li Advanced Continuing Education
+                    li The Esthetic Rehabilitation
+                    li A comprehensive prosthetic approach
+                    li Present by Mauro Fradeani
+
+                  h3 2013, USA
+                  ul
+                    li University of Pennsylvania department
+                    li School of Dental Medicine Department of Endodontics
+                    li Training Course in Microsurgical Endodontics
+                    li Kim, D.D.S., Ph.D., MD (Hon) Grossman Professor and Chairman
+
+                  h3 2013, 2014, Italy
+                  ul
+                    li Societa di Aggiomamento Stomatologico
+                    li Periodontal Surgery Bologna
+                    li Prof. Giovanni Zucchelli
+
+                  h3 2014, Japan
+                  ul
+                    li The Office of Kuwata College Tokyo Japan
+                    li Practice of occlusion and Ceramo-metal course
+                    li By Masahiro Kuwata
+
+                  h3 2014, Italy
+                  ul
+                    li Micro Prosthetics course by Domenico Massironi
+                    li Master’s session in PROSTHETICS AT MEG
+                .about-specializations-modal__grid-item
+                  h3 2014, 2017, Germany
+                  ul
+                    li FGP - Grundlagenkurs (Biomechanischer Transfer)
+                    li Dr.Christian Lex
+
+                  h3 2015, Germany
+                  ul
+                    li Kurs "Oberflachen -und Texturkurs"
+                    li in Munchen mit Erfolg teilgenommen
+                    li Present by Bertrand Thievent CH
+
+                  h3 2017, Italy
+                  ul Master Educational Group
+                    li Adhesive partial restorations
+                    li Master's session in Onlays, Overlays and Veneerlays
+                    li Dr. Domenico Massironi, Dr. Alessandro Conti
+
+                  h3 2017, Moscow
+                  ul
+                    li Expert course
+                    li in periodontal and periimplant microsurgery
+                    li Speaker Dr. Rino Burkhardt
+
+                  h3 2018, Germany
+                  ul
+                    li Participated in the workshop
+                    li Comprehensive treatment strategies with
+                    li Dental implants by Prof. Markus Hurzeler
+
+      .modal.info-modal.slider-modal.fade(data-olga-smile-modal tabindex="-1" role="dialog" aria-labelledby="callback" aria-hidden="true")
+        .modal-dialog.modal-dialog-centered
+          .modal-content
+            button.modal__close(type="button" data-dismiss="modal" aria-label="Закрыть")
+            .modal__content
+              h2 Что сделано
+              ul
+                li
+                  em Лечение двух зубов
+                li
+                  em Установка виниров на три зуба
+                li
+                  em Оттенок винира: NOL769Z
+              p Ольгу ко мне привела подруга, которая недавно закончила все процедуры. Ольга не могла поверить, что можно настолько сильно и незаметно преобразить улыбку. А когда убедилась, что это возможно, захотела себе такую же. Но я не делаю по шаблону — улыбка у Ольги получилась своя, естественная, живая, открытая.
+
+      .modal.info-modal.slider-modal.fade(data-tatyana-smile-modal tabindex="-1" role="dialog" aria-labelledby="callback" aria-hidden="true")
+        .modal-dialog.modal-dialog-centered
+          .modal-content
+            button.modal__close(type="button" data-dismiss="modal" aria-label="Закрыть")
+            .modal__content
+              h2 Что сделано
+              ul
+                li
+                  em Лечение зубов
+                li
+                  em Установка брекетов
+                li
+                  em Установка виниров
+                li
+                  em Оттенок винира: LUH875P
+              p Татьяна обратилась ко мне по рекомендации друга — у нее была возможность устроиться на работу мечты в крупной транспортной корпорации и переехать за границу, но она поняла, что без красивой, здоровой улыбки у нее будет меньше шансов сделать карьеру. Все процедуры заняли около 6 месяцев, но результат себя оправдал на все 100 процентов.
 
     block scripts
       script( src="js/script.min.js" )

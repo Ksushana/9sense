@@ -24,17 +24,22 @@
     cursor: pointer;
   }
 
+  &__content {
+    padding: size(44px);
+  }
+
   @include mobile {
     overflow: visible;
 
     .modal-dialog {
+      max-width: 100%;
       min-height: 100%;
       margin: 0;
       align-items: flex-end;
     }
 
     .modal-content {
-      max-height: calc(100vh - 48px);
+      max-height: calc(100vh - #{size(48px)});
       border-bottom-right-radius: 0;
       border-bottom-left-radius: 0;
     }
@@ -75,6 +80,13 @@
         border-radius: 100px;
         transform: rotate(-45deg);
       }
+    }
+
+    &__content {
+      padding: size(32px) size(16px) size(40px);
+      max-height: calc(100vh - #{size(48px)});
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
     }
 
     &.fade .modal-dialog {

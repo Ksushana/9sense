@@ -251,37 +251,13 @@
 }
 
 .slider-modal {
-  color: rgba(31, 31, 31, 0.88);
-  font-size: size(16px);
-  line-height: size(24px);
-  letter-spacing: 0.01em;
-  font-family: $font-family;
-
   h2 {
-    color: $color-black-bigtext;
-    font-weight: bold;
-    font-size: size(24px);
-    line-height: size(29px);
-    letter-spacing: 0.01em;
-    margin: 0 0 size(25px);
-
     @include mobile {
       margin-bottom: size(28px);
-      font-size: size(28px);
-      line-height: size(34px);
-    }
-  }
-
-  p {
-    margin: 0 0 size(18px);
-
-    &:last-child {
-      margin-bottom: 0;
     }
   }
 
   ul {
-    @include list-reset;
     margin-bottom: size(18px);
 
     &:last-child {
@@ -289,30 +265,11 @@
     }
   }
 
-  li {
-    a {
-      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    }
-  }
-
   .modal-dialog {
     max-width: size(500px);
-  }
 
-  &__content {
-    padding: size(44px);
-  }
-
-  @include mobile {
-    .modal-dialog {
+    @include mobile {
       max-width: 100%;
-    }
-
-    &__content {
-      padding: size(32px) size(16px) size(40px);
-      max-height: calc(100vh - #{size(48px)});
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch;
     }
   }
 }
