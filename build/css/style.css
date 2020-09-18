@@ -1800,70 +1800,6 @@ img.mfp-img {
 
 /* General */
 @font-face {
-  font-family: "HelveticaNeueCyr-Black";
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  src: url("../fonts/HelveticaBlack.woff2") format("woff2"), url("../fonts/HelveticaBlack.woff") format("woff");
-}
-
-@font-face {
-  font-family: "HelveticaNeueCyr-Bold";
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-  src: url("../fonts/HelveticaBold.woff2") format("woff2"), url("../fonts/HelveticaBold.woff") format("woff");
-}
-
-@font-face {
-  font-family: "HelveticaNeueCyr-Heavy";
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-  src: url("../fonts/HelveticaHeavy.woff2") format("woff2"), url("../fonts/HelveticaHeavy.woff") format("woff");
-}
-
-@font-face {
-  font-family: "HelveticaNeueCyr-Italic";
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-  src: url("../fonts/HelveticaItalic.woff2") format("woff2"), url("../fonts/HelveticaItalic.woff") format("woff");
-}
-
-@font-face {
-  font-family: "HelveticaNeueCyr-Medium";
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-  src: url("../fonts/HelveticaMedium.woff2") format("woff2"), url("../fonts/HelveticaMedium.woff") format("woff");
-}
-
-@font-face {
-  font-family: "HelveticaNeueCyr-MediumItalic";
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-  src: url("../fonts/HelveticaMediumItalic.woff2") format("woff2"), url("../fonts/HelveticaMediumItalic.woff") format("woff");
-}
-
-@font-face {
-  font-family: "HelveticaNeueCyr-Roman";
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  src: url("../fonts/HelveticaRegular.woff2") format("woff2"), url("../fonts/HelveticaRegular.woff") format("woff");
-}
-
-@font-face {
-  font-family: "HelveticaNeueCyr-UltraLight";
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-  src: url("../fonts/HelveticaUltraLight.woff2") format("woff2"), url("../fonts/HelveticaUltraLight.woff") format("woff");
-}
-
-@font-face {
   font-family: "NCTLarkspur-Italic";
   font-weight: 400;
   font-style: italic;
@@ -1900,7 +1836,7 @@ body {
   padding: 0;
   font-size: 0.41667rem;
   line-height: 1.8;
-  font-family: "HelveticaNeueCyr", "Arial", sans-serif;
+  font-family: "Helvetica Neue", Helvetica, "Arial", sans-serif;
   font-weight: 400;
   color: #1f1f1f;
   background-color: #141414;
