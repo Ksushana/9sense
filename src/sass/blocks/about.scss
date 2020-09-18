@@ -49,7 +49,6 @@
 
 .about__container {
   @include mobile {
-    display: none;
     background-color: transparent;
     position: fixed;
     bottom: 0;
@@ -58,7 +57,7 @@
     width: 100vw;
     height: 140vh;
     z-index: 3010;
-    display: flex;
+    display: none;
     pointer-events: none;
     -webkit-backface-visibility: hidden;
     box-sizing: border-box;
