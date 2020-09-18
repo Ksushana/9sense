@@ -1964,8 +1964,8 @@ main,
           transform: translate(-50%, -50%);
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
-  -webkit-animation: preload 1s linear infinite;
-          animation: preload 1s linear infinite;
+  -webkit-animation: preload 2.2s linear infinite;
+          animation: preload 2.2s linear infinite;
   color: #ffffff;
 }
 
