@@ -96,7 +96,6 @@
   display: flex;
   margin-left: auto;
   font-weight: 500;
-  // font-size: 0.3rem;
   font-size: size(16px);
   line-height: size(20px);
   letter-spacing: 0.01em;
@@ -115,11 +114,6 @@
     }
   }
 
-  // li {
-  //   // padding: 0 size(10px);
-  //   font-weight: 600;
-  // }
-
   a {
     padding: 0 size(15px);
   }
@@ -130,7 +124,6 @@
   }
 
   @include mobile {
-    // display: none;
     position: fixed;
     top: 0;
     left: 0;

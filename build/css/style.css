@@ -2749,7 +2749,7 @@ main,
 
 .about__block h2 {
   color: #1f1f1f;
-  font-weight: 500;
+  font-weight: bold;
   font-size: 0.5rem;
   line-height: 0.60417rem;
   letter-spacing: 0.01em;
@@ -2766,7 +2766,7 @@ main,
 }
 
 .about__block h3 {
-  font-weight: 500;
+  font-weight: bold;
   font-size: 0.33333rem;
   line-height: 0.5rem;
   margin-bottom: 0.29167rem;
@@ -2968,7 +2968,7 @@ main,
 
 .about__popup h2 {
   color: #1f1f1f;
-  font-weight: 500;
+  font-weight: bold;
   font-size: 0.5rem;
   line-height: 0.60417rem;
   letter-spacing: 0.01em;
@@ -2985,7 +2985,7 @@ main,
 }
 
 .about__popup h3 {
-  font-weight: 500;
+  font-weight: bold;
   font-size: 0.33333rem;
   line-height: 0.5rem;
   margin-bottom: 0.29167rem;
@@ -3062,7 +3062,7 @@ main,
 }
 
 .about-specializations-modal h2 {
-  font-weight: 500;
+  font-weight: bold;
   font-size: 0.5rem;
   line-height: 0.60417rem;
   letter-spacing: 0.01em;
@@ -3078,7 +3078,7 @@ main,
 
 .about-specializations-modal h3 {
   margin: 0;
-  font-weight: 500;
+  font-weight: bold;
   font-size: 0.33333rem;
   line-height: 0.5rem;
 }
@@ -3284,13 +3284,12 @@ main,
   width: 0.35417rem;
   height: 0.25rem;
   position: relative;
-  top: -0.02083rem;
+  top: 0.02083rem;
 }
 
 @media (max-width: 767px) {
   .lab__text svg {
     margin: 0 0 0 0.16667rem;
-    top: 0.02083rem;
   }
 }
 
@@ -3582,12 +3581,12 @@ main,
   font-size: 0.33333rem;
   line-height: 0.5rem;
   letter-spacing: 0.01em;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, "Arial", sans-serif;
 }
 
 .slider-modal h2 {
   color: #1f1f1f;
-  font-weight: 500;
+  font-weight: bold;
   font-size: 0.5rem;
   line-height: 0.60417rem;
   letter-spacing: 0.01em;
