@@ -2604,7 +2604,7 @@ main,
             align-items: flex-end;
   }
   .modal .modal-content {
-    max-height: calc(100vh - 1.41667rem);
+    max-height: calc(100vh - 1rem);
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
   }
@@ -2646,7 +2646,7 @@ main,
   }
   .modal__content {
     padding: 0.66667rem 0.33333rem 0.83333rem;
-    max-height: calc(100vh - 1.41667rem);
+    max-height: calc(100vh - 1rem);
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
@@ -2890,7 +2890,7 @@ main,
 
 @media (max-width: 767px) {
   .about__block-inner {
-    max-height: calc(100vh - 68px);
+    max-height: calc(100vh - 48px);
     padding: 0 0.33333rem 0.3125rem 0.33333rem;
     overflow-y: auto;
     -webkit-box-sizing: border-box;
