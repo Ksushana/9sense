@@ -1,8 +1,8 @@
 (() => {
   const container = document.querySelector(".about");
-  const link = document.querySelector(`.about__mobile button`);
+  // const link = document.querySelector(`.about__mobile button`);
   const info = document.querySelector(`.about__container`);
-  const close = document.querySelector(`.about__close`);
+  // const close = document.querySelector(`.about__close`);
   const collapseTriggers = [].slice.call(document.querySelectorAll('.about__collapse-trigger'));
   // const block = document.querySelector(`.about__block`);
 
@@ -13,37 +13,37 @@
     info.style.opacity = 0;
   }
 
-  const openInfo = () => {
-    fixContainer();
+  // const openInfo = () => {
+  //   fixContainer();
 
-    $(info).css("opacity", 1);
-    info.classList.add(`about__container--show`);
-    $(`body`).css("overflow-y", "hidden");
-    window.bodyScrollLock.disableBodyScroll(info);
-    info.ontouchmove = function(e) {
-      e.preventDefault();
-    };
-  };
+  //   $(info).css("opacity", 1);
+  //   info.classList.add(`about__container--show`);
+  //   $(`body`).css("overflow-y", "hidden");
+  //   window.bodyScrollLock.disableBodyScroll(info);
+  //   info.ontouchmove = function(e) {
+  //     e.preventDefault();
+  //   };
+  // };
 
-  const closeInfo = () => {
-    info.classList.remove(`about__container--show`);
-    $(`body`).css("overflow-y", "visible");
-    window.bodyScrollLock.enableBodyScroll(info);
-    setTimeout(() => $(info).css("opacity", 0), 500);
+  // const closeInfo = () => {
+  //   info.classList.remove(`about__container--show`);
+  //   $(`body`).css("overflow-y", "visible");
+  //   window.bodyScrollLock.enableBodyScroll(info);
+  //   setTimeout(() => $(info).css("opacity", 0), 500);
 
-    setTimeout(() => returnContainer, 500);
-    info.ontouchmove = function(e) {
-      return true;
-    };
-  };
+  //   setTimeout(() => returnContainer, 500);
+  //   info.ontouchmove = function(e) {
+  //     return true;
+  //   };
+  // };
 
-  link.addEventListener(`click`, () => {
-    window.setTimeout(openInfo, 100);
-  });
+  // link.addEventListener(`click`, () => {
+  //   window.setTimeout(openInfo, 100);
+  // });
 
-  close.addEventListener(`click`, () => {
-    window.setTimeout(closeInfo, 100);
-  });
+  // close.addEventListener(`click`, () => {
+  //   window.setTimeout(closeInfo, 100);
+  // });
 
   collapseTriggers.forEach(collapseTrigger => {
     collapseTrigger.addEventListener('click', event => {

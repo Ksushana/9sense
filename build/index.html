@@ -13,9 +13,6 @@
   <link rel="shortcut icon" href="/favicon.ico?v=yy4QkQ8z0E">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
-  <link rel="preload" href="fonts/HelveticaRegular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/HelveticaItalic.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/HelveticaBold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -65,7 +62,7 @@
                   <li>Эстетическая стоматология</li>
                   <li>Хирургическая пародонтология</li>
                   <li>Имплантология</li>
-                  <li><a class="link-text" href="#" data-toggle="modal" data-target="#about-specializations-modal">Больше</a></li>
+                  <li><a class="link-text" href="#" data-toggle="modal" data-target="[data-about-specializations-modal]">Больше</a></li>
                 </ul>
                 <h3>Публикации</h3>
                 <ul class="about__works">
@@ -77,85 +74,11 @@
           </div>
         </div>
         <div class="about__mobile small-text">
-          <p>Омар Газаев, стоматолог</p><button>Специализации и публикации<svg width="20" height="10" aria-hidden="true">
+          <p>Омар Газаев, стоматолог</p><button data-toggle="modal" data-target="[data-about-modal]">Специализации и публикации<svg width="20" height="10" aria-hidden="true">
               <use xlink:href="img/sprite.svg#arrow-1"></use>
             </svg></button>
         </div>
       </section>
-      <div class="modal about-specializations-modal fade" id="about-specializations-modal" tabindex="-1" role="dialog" aria-labelledby="callback" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content"><button class="modal__close" type="button" data-dismiss="modal" aria-label="Закрыть"></button>
-            <div class="about-specializations-modal__content">
-              <h2>Специализации</h2>
-              <div class="about-specializations-modal__grid">
-                <div class="about-specializations-modal__grid-item">
-                  <h3>2011, Italy</h3>
-                  <ul>
-                    <li>Advanced Continuing Education</li>
-                    <li>The Esthetic Rehabilitation</li>
-                    <li>A comprehensive prosthetic approach</li>
-                    <li>Present by Mauro Fradeani</li>
-                  </ul>
-                  <h3>2013, USA</h3>
-                  <ul>
-                    <li>University of Pennsylvania department</li>
-                    <li>School of Dental Medicine Department of Endodontics</li>
-                    <li>Training Course in Microsurgical Endodontics</li>
-                    <li>Kim, D.D.S., Ph.D., MD (Hon) Grossman Professor and Chairman</li>
-                  </ul>
-                  <h3>2013, 2014, Italy</h3>
-                  <ul>
-                    <li>Societa di Aggiomamento Stomatologico</li>
-                    <li>Periodontal Surgery Bologna</li>
-                    <li>Prof. Giovanni Zucchelli</li>
-                  </ul>
-                  <h3>2014, Japan</h3>
-                  <ul>
-                    <li>The Office of Kuwata College Tokyo Japan</li>
-                    <li>Practice of occlusion and Ceramo-metal course</li>
-                    <li>By Masahiro Kuwata</li>
-                  </ul>
-                  <h3>2014, Italy</h3>
-                  <ul>
-                    <li>Micro Prosthetics course by Domenico Massironi</li>
-                    <li>Master’s session in PROSTHETICS AT MEG</li>
-                  </ul>
-                </div>
-                <div class="about-specializations-modal__grid-item">
-                  <h3>2014, 2017, Germany</h3>
-                  <ul>
-                    <li>FGP - Grundlagenkurs (Biomechanischer Transfer)</li>
-                    <li>Dr.Christian Lex</li>
-                  </ul>
-                  <h3>2015, Germany</h3>
-                  <ul>
-                    <li>Kurs "Oberflachen -und Texturkurs"</li>
-                    <li>in Munchen mit Erfolg teilgenommen</li>
-                    <li>Present by Bertrand Thievent CH</li>
-                  </ul>
-                  <h3>2017, Italy</h3>
-                  <ul>Master Educational Group<li>Adhesive partial restorations</li>
-                    <li>Master's session in Onlays, Overlays and Veneerlays</li>
-                    <li>Dr. Domenico Massironi, Dr. Alessandro Conti</li>
-                  </ul>
-                  <h3>2017, Moscow</h3>
-                  <ul>
-                    <li>Expert course</li>
-                    <li>in periodontal and periimplant microsurgery</li>
-                    <li>Speaker Dr. Rino Burkhardt</li>
-                  </ul>
-                  <h3>2018, Germany</h3>
-                  <ul>
-                    <li>Participated in the workshop</li>
-                    <li>Comprehensive treatment strategies with</li>
-                    <li>Dental implants by Prof. Markus Hurzeler</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <section class="text-block text-block--tech parallax">
         <h2 class="visually-hidden">Технологии</h2>
         <p>Технологии &ndash; инструмент в&nbsp;руках творца</p>
@@ -197,7 +120,7 @@
       <section class="slider scale scale--big" id="works">
         <div class="swiper-container slider-container">
           <div class="swiper-wrapper">
-            <div class="swiper-slide slider__slide"><a class="slider__img" href="img/olga-smile@2x.jpg"><img src="img/olga-smile@1x.jpg" srcset="img/olga-smile@2x.jpg 2x" width="1312" height="772" alt="Ольга, 28 лет" data-target-modal="#olga-smile-modal">
+            <div class="swiper-slide slider__slide"><a class="slider__img" href="img/olga-smile@2x.jpg"><img src="img/olga-smile@1x.jpg" srcset="img/olga-smile@2x.jpg 2x" width="1312" height="772" alt="Ольга, 28 лет" data-target-modal="[data-olga-smile-modal]">
                 <div class="slider__content">
                   <h3 class="slider__content-title">Лечение двух зубов<br /> Установка виниров на три зуба<br /> Оттенок винира: NOL769Z</h3>
                     <div class="slider__content-text">
@@ -206,7 +129,7 @@
                     <div class="slider__content-more"><span class="slider__content-more-link">Подробнее</span></div>
                 </div>
               </a></div>
-            <div class="swiper-slide slider__slide"><a class="slider__img" href="img/tatyana-smile@2x.jpg"><img src="img/tatyana-smile@1x.jpg" srcset="img/tatyana-smile@2x.jpg 2x" width="1312" height="772" alt="Татьяна, 34 года" data-target-modal="#tatyana-smile-modal">
+            <div class="swiper-slide slider__slide"><a class="slider__img" href="img/tatyana-smile@2x.jpg"><img src="img/tatyana-smile@1x.jpg" srcset="img/tatyana-smile@2x.jpg 2x" width="1312" height="772" alt="Татьяна, 34 года" data-target-modal="[data-tatyana-smile-modal]">
                 <div class="slider__content">
                   <h3 class="slider__content-title">Лечение зубов<br /> Установка брекетов<br /> Установка виниров<br /> Оттенок винира: LUH875P</h3>
                     <div class="slider__content-text">
@@ -219,7 +142,7 @@
           <p class="slider__caption small-text"></p><button><svg width="24" height="24" aria-hidden="true">
               <use xlink:href="img/sprite.svg#lupa"></use>
             </svg></button>
-          <div class="slider__mobile-more"><span class="slider__mobile-more-link" data-toggle="modal" data-target="#olga-smile-modal">Что сделано<svg width="20" height="10" aria-hidden="true"><use xlink:href="img/sprite.svg#arrow-1"></use></svg></span></div>
+          <div class="slider__mobile-more"><span class="slider__mobile-more-link" data-toggle="modal" data-target="[data-olga-smile-modal]">Что сделано<svg width="20" height="10" aria-hidden="true"><use xlink:href="img/sprite.svg#arrow-1"></use></svg></span></div>
           <div class="swiper-pagination small-text"></div>
           <div class="swiper-button-prev slider__button slider-prev small-text"><svg width="20" height="10" aria-hidden="true">
               <use xlink:href="img/sprite.svg#arrow-prev"></use>
@@ -229,37 +152,6 @@
             </svg></div>
         </div>
       </section>
-      <div class="modal slider-modal fade" id="olga-smile-modal" tabindex="-1" role="dialog" aria-labelledby="callback" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content"><button class="modal__close" type="button" data-dismiss="modal" aria-label="Закрыть"></button>
-            <div class="slider-modal__content">
-              <h2>Что сделано</h2>
-              <ul>
-                <li><em>Лечение двух зубов</em></li>
-                <li><em>Установка виниров на три зуба</em></li>
-                <li><em>Оттенок винира: NOL769Z</em></li>
-              </ul>
-              <p>Ольгу ко мне привела подруга, которая недавно закончила все процедуры. Ольга не могла поверить, что можно настолько сильно и незаметно преобразить улыбку. А когда убедилась, что это возможно, захотела себе такую же. Но я не делаю по шаблону — улыбка у Ольги получилась своя, естественная, живая, открытая.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal slider-modal fade" id="tatyana-smile-modal" tabindex="-1" role="dialog" aria-labelledby="callback" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content"><button class="modal__close" type="button" data-dismiss="modal" aria-label="Закрыть"></button>
-            <div class="slider-modal__content">
-              <h2>Что сделано</h2>
-              <ul>
-                <li><em>Лечение зубов</em></li>
-                <li><em>Установка брекетов</em></li>
-                <li><em>Установка виниров</em></li>
-                <li><em>Оттенок винира: LUH875P</em></li>
-              </ul>
-              <p>Татьяна обратилась ко мне по рекомендации друга — у нее была возможность устроиться на работу мечты в крупной транспортной корпорации и переехать за границу, но она поняла, что без красивой, здоровой улыбки у нее будет меньше шансов сделать карьеру. Все процедуры заняли около 6 месяцев, но результат себя оправдал на все 100 процентов.</p>
-            </div>
-          </div>
-        </div>
-      </div>
       <section class="location location--dark parallax" id="location">
         <h2 class="visually-hidden">Адрес</h2>
         <p>Приезжайте на встречу c&nbsp;Омаром Газаевым &ndash;<br> он расскажет, как сделать вашу улыбку <span class="location--italics">неповторимой</span>.<span class="location__address-row"><a class="location__desktop-address" href="https://yandex.ru/maps/-/CKan624~">Большая Садовая ул., 5с2</a><a class="location__mobile-address" href="https://yandex.ru/maps/-/CKan624~">Посмотреть на карте<svg width="20" height="10" aria-hidden="true"><use xlink:href="img/sprite.svg#arrow-1"></use></svg></a></span></p>
@@ -275,6 +167,141 @@
     </div>
     <div class="footer__right"><a class="footer__link" href="tel:+79057161451">+7 (905) 716-14-51</a><span class="footer__dot">&middot;</span><a class="footer__link footer__link--solid" href="whatsapp://send?phone=+79057161451" title="Написать в WhatsApp">Написать в WhatsApp</a></div>
   </footer>
+  <div class="modals">
+    <div class="modal info-modal about-modal fade" data-about-modal tabindex="-1" role="dialog" aria-labelledby="callback" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content"><button class="modal__close" type="button" data-dismiss="modal" aria-label="Закрыть"></button>
+          <div class="modal__content">
+            <h2>Ваш доктор<br /> Омар Газаев</h2>
+              <h3>Подход</h3>
+              <ul>
+                <li>У меня свой, особенный подход к работе &ndash; я лично отвечаю за красоту и здоровье каждой улыбки, которую создаю. <span class="about__collapse-text" data-id="about-modal-approach-text">Важно создать вокруг каждого человека доверительную среду, основной компонент которой — внимательное и бережное отношение.</span>
+
+                  <a class="link-text about__collapse-trigger" href="#" data-target-id="about-modal-approach-text">Далее</a></li>
+              </ul>
+              <h3>Специализации</h3>
+              <ul>
+                <li>Эстетическая стоматология</li>
+                <li>Хирургическая пародонтология</li>
+                <li>Имплантология</li>
+                <li><a class="link-text" href="#" data-toggle="modal" data-target="[data-about-specializations-modal]">Больше</a></li>
+              </ul>
+              <h3>Публикации</h3>
+              <ul class="about__works">
+                <li><a class="link-text" href="https://dentalmanufaktur-nuernberg.de/wordpress/wp-content/uploads/2017/08/qz_2013_03_s0280_scr-Kopie.pdf"><span>Ein Konzept der dentalen Kommunikationskultur So fern und doch so nah Alexander Miranskij, Omar Gazaev</span></a></li>
+                <li><a class="link-text" href="https://dentalmanufaktur-nuernberg.de/wordpress/wp-content/uploads/2017/08/qz_2014_09_s1164-Kopie.pdf"><span>Herstellung geschichteter Veneers bei inkongruenter Ausgangssituation Alexander Miranskij, Omar Gazaev</span></a></li>
+              </ul>
+              <div class="about__signature"><img src="img/sign2.png" width="155" height="64" alt="signature"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal info-modal about-specializations-modal fade" data-about-specializations-modal tabindex="-1" role="dialog" aria-labelledby="callback" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content"><button class="modal__close" type="button" data-dismiss="modal" aria-label="Закрыть"></button>
+          <div class="modal__content">
+            <h2>Специализации</h2>
+            <div class="about-specializations-modal__grid">
+              <div class="about-specializations-modal__grid-item">
+                <h3>2011, Italy</h3>
+                <ul>
+                  <li>Advanced Continuing Education</li>
+                  <li>The Esthetic Rehabilitation</li>
+                  <li>A comprehensive prosthetic approach</li>
+                  <li>Present by Mauro Fradeani</li>
+                </ul>
+                <h3>2013, USA</h3>
+                <ul>
+                  <li>University of Pennsylvania department</li>
+                  <li>School of Dental Medicine Department of Endodontics</li>
+                  <li>Training Course in Microsurgical Endodontics</li>
+                  <li>Kim, D.D.S., Ph.D., MD (Hon) Grossman Professor and Chairman</li>
+                </ul>
+                <h3>2013, 2014, Italy</h3>
+                <ul>
+                  <li>Societa di Aggiomamento Stomatologico</li>
+                  <li>Periodontal Surgery Bologna</li>
+                  <li>Prof. Giovanni Zucchelli</li>
+                </ul>
+                <h3>2014, Japan</h3>
+                <ul>
+                  <li>The Office of Kuwata College Tokyo Japan</li>
+                  <li>Practice of occlusion and Ceramo-metal course</li>
+                  <li>By Masahiro Kuwata</li>
+                </ul>
+                <h3>2014, Italy</h3>
+                <ul>
+                  <li>Micro Prosthetics course by Domenico Massironi</li>
+                  <li>Master’s session in PROSTHETICS AT MEG</li>
+                </ul>
+              </div>
+              <div class="about-specializations-modal__grid-item">
+                <h3>2014, 2017, Germany</h3>
+                <ul>
+                  <li>FGP - Grundlagenkurs (Biomechanischer Transfer)</li>
+                  <li>Dr.Christian Lex</li>
+                </ul>
+                <h3>2015, Germany</h3>
+                <ul>
+                  <li>Kurs "Oberflachen -und Texturkurs"</li>
+                  <li>in Munchen mit Erfolg teilgenommen</li>
+                  <li>Present by Bertrand Thievent CH</li>
+                </ul>
+                <h3>2017, Italy</h3>
+                <ul>Master Educational Group<li>Adhesive partial restorations</li>
+                  <li>Master's session in Onlays, Overlays and Veneerlays</li>
+                  <li>Dr. Domenico Massironi, Dr. Alessandro Conti</li>
+                </ul>
+                <h3>2017, Moscow</h3>
+                <ul>
+                  <li>Expert course</li>
+                  <li>in periodontal and periimplant microsurgery</li>
+                  <li>Speaker Dr. Rino Burkhardt</li>
+                </ul>
+                <h3>2018, Germany</h3>
+                <ul>
+                  <li>Participated in the workshop</li>
+                  <li>Comprehensive treatment strategies with</li>
+                  <li>Dental implants by Prof. Markus Hurzeler</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal info-modal slider-modal fade" data-olga-smile-modal tabindex="-1" role="dialog" aria-labelledby="callback" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content"><button class="modal__close" type="button" data-dismiss="modal" aria-label="Закрыть"></button>
+          <div class="modal__content">
+            <h2>Что сделано</h2>
+            <ul>
+              <li><em>Лечение двух зубов</em></li>
+              <li><em>Установка виниров на три зуба</em></li>
+              <li><em>Оттенок винира: NOL769Z</em></li>
+            </ul>
+            <p>Ольгу ко мне привела подруга, которая недавно закончила все процедуры. Ольга не могла поверить, что можно настолько сильно и незаметно преобразить улыбку. А когда убедилась, что это возможно, захотела себе такую же. Но я не делаю по шаблону — улыбка у Ольги получилась своя, естественная, живая, открытая.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal info-modal slider-modal fade" data-tatyana-smile-modal tabindex="-1" role="dialog" aria-labelledby="callback" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content"><button class="modal__close" type="button" data-dismiss="modal" aria-label="Закрыть"></button>
+          <div class="modal__content">
+            <h2>Что сделано</h2>
+            <ul>
+              <li><em>Лечение зубов</em></li>
+              <li><em>Установка брекетов</em></li>
+              <li><em>Установка виниров</em></li>
+              <li><em>Оттенок винира: LUH875P</em></li>
+            </ul>
+            <p>Татьяна обратилась ко мне по рекомендации друга — у нее была возможность устроиться на работу мечты в крупной транспортной корпорации и переехать за границу, но она поняла, что без красивой, здоровой улыбки у нее будет меньше шансов сделать карьеру. Все процедуры заняли около 6 месяцев, но результат себя оправдал на все 100 процентов.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="js/script.min.js"></script>
 </body>
 

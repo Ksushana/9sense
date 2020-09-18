@@ -49,6 +49,7 @@
 
 .about__container {
   @include mobile {
+    display: none;
     background-color: transparent;
     position: fixed;
     bottom: 0;
@@ -85,7 +86,7 @@
 
   h2 {
     color: $color-black-bigtext;
-    font-weight: 500;
+    font-weight: bold;
     font-size: size(24px);
     line-height: size(29px);
     letter-spacing: 0.01em;
@@ -100,7 +101,7 @@
   }
 
   h3 {
-    font-weight: 500;
+    font-weight: bold;
     font-size: size(16px);
     line-height: size(24px);
     margin-bottom: size(14px);
@@ -288,7 +289,7 @@
 
   h2 {
     color: $color-black-bigtext;
-    font-weight: 500;
+    font-weight: bold;
     font-size: size(24px);
     line-height: size(29px);
     letter-spacing: 0.01em;
@@ -303,7 +304,7 @@
   }
 
   h3 {
-    font-weight: 500;
+    font-weight: bold;
     font-size: size(16px);
     line-height: size(24px);
     margin-bottom: size(14px);
@@ -363,54 +364,19 @@
   }
 }
 
-
 .about-specializations-modal {
   color: $color-black-bigtext;
-  font-size: size(16px);
-  line-height: size(24px);
-  letter-spacing: 0.01em;
 
-  h2 {
-    font-weight: 500;
-    font-size: size(24px);
-    line-height: size(29px);
-    letter-spacing: 0.01em;
-    margin: 0 0 size(25px);
+  .modal-dialog {
+    max-width: size(824px);
 
     @include mobile {
-      font-size: size(28px);
-      line-height: size(34px);
+      max-width: 100%;
     }
   }
 
   h3 {
-    margin: 0;
-    font-weight: 500;
-    font-size: size(16px);
-    line-height: size(24px);
-  }
-
-  ul {
-    @include list-reset;
-    margin-bottom: size(24px);
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  li {
-    a {
-      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    }
-  }
-
-  .modal-dialog {
-    max-width: size(824px);
-  }
-
-  &__content {
-    padding: size(44px);
+    margin-bottom: 0;
   }
 
   &__grid {
@@ -420,13 +386,6 @@
   }
 
   @include mobile {
-    &__content {
-      padding: size(32px) size(16px) size(40px);
-      max-height: calc(100vh - #{size(48px)});
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch;
-    }
-
     &__grid {
       grid-template-columns: auto;
       grid-gap: size(24px);

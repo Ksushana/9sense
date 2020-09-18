@@ -167,7 +167,7 @@ $(() => {
       : elementOffset;
     const finishOffset = window.isMobile()
       ? elementOffset + elementHeight / 2 - 40
-      : elementOffset + elementHeight / 2 - 80;
+      : elementOffset + elementHeight / 2 - 40;
 
     const position = (scrollTop - startOffset) / (finishOffset - startOffset);
     const relative = Math.max(0, Math.min(1, position));
