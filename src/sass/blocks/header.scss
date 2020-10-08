@@ -100,7 +100,8 @@
   line-height: size(20px);
   letter-spacing: 0.01em;
   position: fixed;
-  right: size(60px);
+  right: size(30px);
+  top: size(30px);
   z-index: 201;
 
   ul {
@@ -273,8 +274,8 @@
 
 .header__logo {
   position: fixed;
-  top: size(64px);
-  left: size(64px);
+  top: size(32px);
+  left: size(32px);
   z-index: 205;
   width: size(120px);
   height: size(120px);
@@ -354,7 +355,7 @@
 .header__turn {
   color: $color-grey-text;
   position: fixed;
-  right: size(60px);
+  right: size(30px);
   top: 50vh;
   font-size: size(11px);
   line-height: size(22px);

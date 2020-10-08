@@ -42,9 +42,7 @@ $(() => {
     hideHeader();
     showBG();
     hideSmallText();
-    window.animateHeaderLinks(lastScroll);
     window.animateLogo(lastScroll);
-    window.animateTurn(lastScroll);
     window.animateSlider(lastScroll);
     window.animateBackground(lastScroll);
     ticking = false;

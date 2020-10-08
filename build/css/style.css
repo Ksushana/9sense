@@ -2107,7 +2107,8 @@ main,
   line-height: 0.41667rem;
   letter-spacing: 0.01em;
   position: fixed;
-  right: 1.25rem;
+  right: 0.625rem;
+  top: 0.625rem;
   z-index: 201;
 }
 
@@ -2267,8 +2268,8 @@ main,
 
 .header__logo {
   position: fixed;
-  top: 1.33333rem;
-  left: 1.33333rem;
+  top: 0.66667rem;
+  left: 0.66667rem;
   z-index: 205;
   width: 2.5rem;
   height: 2.5rem;
@@ -2354,7 +2355,7 @@ main,
 .header__turn {
   color: #ebebeb;
   position: fixed;
-  right: 1.25rem;
+  right: 0.625rem;
   top: 50vh;
   font-size: 0.22917rem;
   line-height: 0.45833rem;
