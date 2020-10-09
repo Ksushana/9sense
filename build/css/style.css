@@ -3163,7 +3163,7 @@ main,
   display: flex;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  min-height: 14.58333rem;
+  min-height: 10rem;
 }
 
 @media (max-width: 767px) {
@@ -3198,7 +3198,6 @@ main,
 
 .text-block--smile {
   padding: 1.66667rem 2.5rem 0;
-  min-height: 13.89583rem;
 }
 
 @media (max-width: 767px) {
@@ -3216,7 +3215,6 @@ main,
 
 .text-block--bright {
   padding: 1.66667rem 2.5rem 0;
-  min-height: 13.27083rem;
 }
 
 @media (max-width: 767px) {
