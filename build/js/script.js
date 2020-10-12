@@ -11311,7 +11311,7 @@ $(document).ready(function() {
   window.animateBackground = function(lastScroll) {
     const breakpoint =
       textBlockTech.offset().top +
-      textBlockTech.height() / 2 -
+      textBlockTech.outerHeight() / 2 -
       windowHeight / 2;
     const current = lastScroll;
     if (current > breakpoint) {

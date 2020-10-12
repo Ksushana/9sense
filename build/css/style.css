@@ -1807,6 +1807,22 @@ img.mfp-img {
   src: url("../fonts/NCTLarkspur-Italic.woff2") format("woff2"), url("../fonts/NCTLarkspur-Italic.woff") format("woff");
 }
 
+@font-face {
+  font-family: "Formular";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/formular-regular-webfont.woff2") format("woff2"), url("../fonts/formular-regular-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Formular";
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url("../fonts/formular-italic-webfont.woff2") format("woff2"), url("../fonts/formular-italic-webfont.woff") format("woff");
+}
+
 html {
   text-rendering: optimizeLegibility;
   -webkit-text-size-adjust: none;
@@ -2398,17 +2414,21 @@ main,
   font-size: 1rem;
   line-height: 1.16667rem;
   color: #ebebeb;
-  letter-spacing: 0.02em;
+  font-family: "Formular", Helvetica, "Arial", sans-serif;
+  letter-spacing: -2px;
   font-weight: normal;
   z-index: 5;
   width: 45%;
-  margin: auto 0 0;
+  margin: auto 0 calc(100vh / 3);
   padding-top: 2.08333rem;
+}
+
+.header__phrase p:last-child {
+  margin-bottom: 0;
 }
 
 .header__phrase--italics {
   font-style: italic;
-  font-family: "NCTLarkspur-Italic", Arial, sans-serif;
 }
 
 @media (max-width: 767px) {
@@ -3158,6 +3178,8 @@ main,
   -webkit-transition: color 2s;
   transition: color 2s;
   color: #1f1f1f;
+  font-family: "Formular", Helvetica, "Arial", sans-serif;
+  letter-spacing: -2px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3246,7 +3268,6 @@ main,
 
 .text-block--italics {
   font-style: italic;
-  font-family: "NCTLarkspur-Italic", Arial, sans-serif;
 }
 
 .lab {
@@ -3782,7 +3803,8 @@ main,
   display: flex;
   padding: 1.45833rem 2.08333rem 0;
   min-height: 13.95833rem;
-  letter-spacing: 0.02em;
+  font-family: "Formular", Helvetica, "Arial", sans-serif;
+  letter-spacing: -2px;
 }
 
 .location img,
@@ -3821,7 +3843,6 @@ main,
 
 .location--italics {
   font-style: italic;
-  font-family: "NCTLarkspur-Italic", Arial, sans-serif;
 }
 
 @media (max-width: 767px) {

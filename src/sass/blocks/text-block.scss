@@ -5,6 +5,8 @@
   text-align: center;
   transition: color 2s;
   color: $color-black-bigtext;
+  font-family: $font-family-formular;
+  letter-spacing: -2px;
   display: flex;
   box-sizing: border-box;
 
@@ -76,6 +78,5 @@
 
   &--italics {
     font-style: italic;
-    font-family: "NCTLarkspur-Italic", Arial, sans-serif;
   }
 }

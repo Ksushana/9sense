@@ -8,7 +8,8 @@
   display: flex;
   padding: size(70px) size(100px) 0;
   min-height: size(670px);
-  letter-spacing: 0.02em;
+  font-family: $font-family-formular;
+  letter-spacing: -2px;
 
   img,
   .location__mobile-address,
@@ -42,7 +43,6 @@
 
   &--italics {
     font-style: italic;
-    font-family: "NCTLarkspur-Italic", Arial, sans-serif;
   }
 
   @include mobile {
