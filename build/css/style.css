@@ -1807,6 +1807,22 @@ img.mfp-img {
   src: url("../fonts/NCTLarkspur-Italic.woff2") format("woff2"), url("../fonts/NCTLarkspur-Italic.woff") format("woff");
 }
 
+@font-face {
+  font-family: "Formular";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/formular-regular-webfont.woff2") format("woff2"), url("../fonts/formular-regular-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Formular";
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url("../fonts/formular-italic-webfont.woff2") format("woff2"), url("../fonts/formular-italic-webfont.woff") format("woff");
+}
+
 html {
   text-rendering: optimizeLegibility;
   -webkit-text-size-adjust: none;
@@ -2398,17 +2414,21 @@ main,
   font-size: 1rem;
   line-height: 1.16667rem;
   color: #ebebeb;
-  letter-spacing: 0.02em;
+  font-family: "Formular", Helvetica, "Arial", sans-serif;
+  letter-spacing: -2px;
   font-weight: normal;
   z-index: 5;
   width: 45%;
-  margin: auto 0 0;
+  margin: auto 0 calc(100vh / 3 - 1.66667rem);
   padding-top: 2.08333rem;
+}
+
+.header__phrase p:last-child {
+  margin-bottom: 0;
 }
 
 .header__phrase--italics {
   font-style: italic;
-  font-family: "NCTLarkspur-Italic", Arial, sans-serif;
 }
 
 @media (max-width: 767px) {
@@ -3158,12 +3178,14 @@ main,
   -webkit-transition: color 2s;
   transition: color 2s;
   color: #1f1f1f;
+  font-family: "Formular", Helvetica, "Arial", sans-serif;
+  letter-spacing: -2px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  min-height: 14.58333rem;
+  min-height: 10rem;
 }
 
 @media (max-width: 767px) {
@@ -3198,7 +3220,6 @@ main,
 
 .text-block--smile {
   padding: 1.66667rem 2.5rem 0;
-  min-height: 13.89583rem;
 }
 
 @media (max-width: 767px) {
@@ -3216,7 +3237,6 @@ main,
 
 .text-block--bright {
   padding: 1.66667rem 2.5rem 0;
-  min-height: 13.27083rem;
 }
 
 @media (max-width: 767px) {
@@ -3248,7 +3268,6 @@ main,
 
 .text-block--italics {
   font-style: italic;
-  font-family: "NCTLarkspur-Italic", Arial, sans-serif;
 }
 
 .lab {
@@ -3299,12 +3318,33 @@ main,
 
 @media (max-width: 767px) {
   .lab__text p {
-    display: inline;
     padding-right: 0;
   }
 }
 
-.lab__text svg {
+.lab__text-graph {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.lab__flags {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.lab__flags svg {
   margin-right: 0.16667rem;
   width: 0.35417rem;
   height: 0.25rem;
@@ -3312,10 +3352,8 @@ main,
   top: 0.02083rem;
 }
 
-@media (max-width: 767px) {
-  .lab__text svg {
-    margin: 0 0 0 0.16667rem;
-  }
+.lab__flags svg:first-child {
+  margin-left: 0.16667rem;
 }
 
 .slider {
@@ -3765,7 +3803,8 @@ main,
   display: flex;
   padding: 1.45833rem 2.08333rem 0;
   min-height: 13.95833rem;
-  letter-spacing: 0.02em;
+  font-family: "Formular", Helvetica, "Arial", sans-serif;
+  letter-spacing: -2px;
 }
 
 .location img,
@@ -3804,7 +3843,6 @@ main,
 
 .location--italics {
   font-style: italic;
-  font-family: "NCTLarkspur-Italic", Arial, sans-serif;
 }
 
 @media (max-width: 767px) {
@@ -3861,10 +3899,10 @@ main,
     display: inline;
     font-size: 0.375rem;
     line-height: 0.54167rem;
-    width: 50%;
+    width: 80%;
     text-align: center;
     top: 44.5%;
-    right: 25%;
+    right: 10%;
   }
   .location .location__address span {
     display: inline;
@@ -3888,10 +3926,15 @@ main,
   }
 }
 
+.location__address {
+  font-family: "Helvetica Neue", Helvetica, "Arial", sans-serif;
+}
+
 .location__address-row {
   margin-top: 0.41667rem;
   display: block;
   font-size: 0.33333rem;
   line-height: 0.33333rem;
   letter-spacing: 0.01em;
+  font-family: "Helvetica Neue", Helvetica, "Arial", sans-serif;
 }

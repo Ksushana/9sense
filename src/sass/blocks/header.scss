@@ -397,18 +397,24 @@
   font-size: size(48px);
   line-height: size(56px);
   color: $color-grey-text;
-  letter-spacing: 0.02em;
+  font-family: $font-family-formular;
+  letter-spacing: -2px;
   font-weight: normal;
   z-index: 5;
 
   width: 45%;
 
-  margin: auto 0 0;
+  margin: auto 0 calc(100vh / 3 - #{size(80px)});
   padding-top: size(100px);
+
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 
   &--italics {
     font-style: italic;
-    font-family: "NCTLarkspur-Italic", Arial, sans-serif;
   }
 
   @include mobile {

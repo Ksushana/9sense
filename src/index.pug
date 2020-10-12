@@ -96,9 +96,7 @@ html.page-loading( lang="ru" )
           h2.visually-hidden
           img( src="img/lab@1x.jpg" srcset="img/lab@2x.jpg 2x" width="1312" height="772" alt="lab" )
           .lab__text.small-text
-            p Партнерство с немецкими и швейцарскими лабораториями.
-            +svg( "swiss", 17, 12 )
-            +svg( "german", 17, 12 )
+            p.lab__text-graph Партнерство с европейскими #[span.lab__flags #[+svg( "swiss", 17, 12 )] #[+svg( "german", 17, 12 )]] лабораториями.
 
         section.text-block.text-block--dark.text-block--smile.parallax
           h2.visually-hidden Улыбайся
@@ -177,7 +175,7 @@ html.page-loading( lang="ru" )
           .location__img-cover
             img( src="img/map.svg" width="378" height="425" alt="map" loading="lazy" )
             .location__address
-              span.location__address-mobile Большая#[br] Садовая ул., 5с2
+              span.location__address-mobile Бол. Садовая ул., 5с2
               //- a.location__mobile-whatsapp( title="WhatsApp" href="whatsapp://send?phone=+79057161451") +7 905 716-14-51
               //-   +svg( "whatsapp", 18, 18 )
 

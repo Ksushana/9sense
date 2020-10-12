@@ -8,7 +8,8 @@
   display: flex;
   padding: size(70px) size(100px) 0;
   min-height: size(670px);
-  letter-spacing: 0.02em;
+  font-family: $font-family-formular;
+  letter-spacing: -2px;
 
   img,
   .location__mobile-address,
@@ -42,7 +43,6 @@
 
   &--italics {
     font-style: italic;
-    font-family: "NCTLarkspur-Italic", Arial, sans-serif;
   }
 
   @include mobile {
@@ -97,10 +97,10 @@
       display: inline;
       font-size: size(18px);
       line-height: size(26px);
-      width: 50%;
+      width: 80%;
       text-align: center;
       top: 44.5%;
-      right: 25%;
+      right: 10%;
 
       span {
         display: inline;
@@ -127,10 +127,15 @@
   }
 }
 
+.location__address {
+  font-family: $font-family;
+}
+
 .location__address-row {
   margin-top: size(20px);
   display: block;
   font-size: size(16px);
   line-height: size(16px);
   letter-spacing: 0.01em;
+  font-family: $font-family;
 }

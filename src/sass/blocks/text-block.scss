@@ -5,10 +5,12 @@
   text-align: center;
   transition: color 2s;
   color: $color-black-bigtext;
+  font-family: $font-family-formular;
+  letter-spacing: -2px;
   display: flex;
   box-sizing: border-box;
 
-  min-height: size(700px);
+  min-height: size(480px);
 
   @include mobile {
     font-size: size(24px);
@@ -36,7 +38,7 @@
 
   &--smile {
     padding: size(80px) size(120px) 0;
-    min-height: size(667px);
+    // min-height: size(667px);
 
     @include mobile {
       padding: size(18px) size(16px) 0;
@@ -51,7 +53,7 @@
 
   &--bright {
     padding: size(80px) size(120px) 0;
-    min-height: size(637px);
+    // min-height: size(637px);
 
     @include mobile {
       padding: size(18px) size(16px) 0;
@@ -76,6 +78,5 @@
 
   &--italics {
     font-style: italic;
-    font-family: "NCTLarkspur-Italic", Arial, sans-serif;
   }
 }

@@ -37,10 +37,21 @@
     padding-right: size(12px);
 
     @include mobile {
-      display: inline;
       padding-right: 0;
     }
   }
+}
+
+.lab__text-graph {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.lab__flags {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
 
   svg {
     margin-right: size(8px);
@@ -49,8 +60,8 @@
     position: relative;
     top: size(1px);
 
-    @include mobile {
-      margin: 0 0 0 size(8px);
+    &:first-child {
+      margin-left: size(8px);
     }
   }
 }
