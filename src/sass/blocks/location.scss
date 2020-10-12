@@ -127,10 +127,15 @@
   }
 }
 
+.location__address {
+  font-family: $font-family;
+}
+
 .location__address-row {
   margin-top: size(20px);
   display: block;
   font-size: size(16px);
   line-height: size(16px);
   letter-spacing: 0.01em;
+  font-family: $font-family;
 }

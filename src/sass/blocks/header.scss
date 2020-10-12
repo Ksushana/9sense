@@ -404,7 +404,7 @@
 
   width: 45%;
 
-  margin: auto 0 calc(100vh / 3);
+  margin: auto 0 calc(100vh / 3 - #{size(80px)});
   padding-top: size(100px);
 
   p {

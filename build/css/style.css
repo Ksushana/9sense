@@ -2419,7 +2419,7 @@ main,
   font-weight: normal;
   z-index: 5;
   width: 45%;
-  margin: auto 0 calc(100vh / 3);
+  margin: auto 0 calc(100vh / 3 - 1.66667rem);
   padding-top: 2.08333rem;
 }
 
@@ -3926,10 +3926,15 @@ main,
   }
 }
 
+.location__address {
+  font-family: "Helvetica Neue", Helvetica, "Arial", sans-serif;
+}
+
 .location__address-row {
   margin-top: 0.41667rem;
   display: block;
   font-size: 0.33333rem;
   line-height: 0.33333rem;
   letter-spacing: 0.01em;
+  font-family: "Helvetica Neue", Helvetica, "Arial", sans-serif;
 }
