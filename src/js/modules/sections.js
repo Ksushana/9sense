@@ -70,9 +70,7 @@ $(() => {
     const logoOffset = parseInt($logo.css('top'));
     const logoHeight = $logo.height();
 
-    console.log(logoOffset, logoHeight)
-
-    const startOffset = elementOffset - elementHeight;
+    const startOffset = elementOffset - windowHeight;
     const finishOffset = elementOffset - (logoOffset + logoHeight);
     // const startOffset = elementOffset - windowHeight;
     // const finishOffset = elementOffset - windowHeight + elementHeight;

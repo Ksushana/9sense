@@ -2769,7 +2769,7 @@ main,
 
 .about {
   padding: 1.25rem 2.02083rem 0;
-  background-image: url("../img/omar@1x.jpg");
+  background-image: url("../img/omar-new@1x.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   -webkit-transform: scale(0.9);
@@ -2778,7 +2778,7 @@ main,
 
 @media (-webkit-min-device-pixel-ratio: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
   .about {
-    background-image: url("../img/omar@2x.jpg");
+    background-image: url("../img/omar-new@2x.jpg");
   }
 }
 
@@ -2787,7 +2787,7 @@ main,
     padding: 0.20833rem 0.33333rem 0;
     background-size: 176%;
     background-position-y: top;
-    background-position-x: 66%;
+    background-position-x: 76%;
     z-index: 101;
     height: 11.875rem;
     display: -webkit-box;
