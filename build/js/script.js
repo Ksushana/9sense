@@ -11543,6 +11543,7 @@ $(() => {
   const menu = $(`.header__links`);
   let header = $(`.header__gradient`);
   let smallTexts = $(`.small-text`);
+  const $logo = $('.header__logo');
 
   const windowHeight = $(window).height();
 
@@ -11598,8 +11599,13 @@ $(() => {
     const elementOffset = element.offset().top;
     const elementHeight = element.height();
 
+    const logoOffset = parseInt($logo.css('top'));
+    const logoHeight = $logo.height();
+
+    console.log(logoOffset, logoHeight)
+
     const startOffset = elementOffset - elementHeight;
-    const finishOffset = elementOffset;
+    const finishOffset = elementOffset - (logoOffset + logoHeight);
     // const startOffset = elementOffset - windowHeight;
     // const finishOffset = elementOffset - windowHeight + elementHeight;
 
