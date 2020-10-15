@@ -49,7 +49,7 @@ html.page-loading( lang="ru" )
         p Природа начинает, #[span.header__phrase--italics искусство] направляет, опыт совершенствует
 
     main
-      .container
+      .container.container--main
         h1.visually-hidden #{mainTitle}
         .shadow
 
@@ -89,18 +89,21 @@ html.page-loading( lang="ru" )
               +svg( "arrow-1", 20, 10 )
 
         section.text-block.text-block--tech.parallax
-          h2.visually-hidden Технологии
-          p Технологии &ndash; инструмент в&nbsp;руках мастера
+          .container.container--content
+            h2.visually-hidden Технологии
+            p Технологии &ndash; инструмент в&nbsp;руках мастера
 
         section.lab.scale.scale--big( id="lab" )
           h2.visually-hidden
           img( src="img/lab@1x.jpg" srcset="img/lab@2x.jpg 2x" width="1312" height="772" alt="lab" )
-          .lab__text.small-text
-            p.lab__text-graph Партнерство с европейскими #[span.lab__flags #[+svg( "swiss", 17, 12 )] #[+svg( "german", 17, 12 )]] лабораториями.
+          .container.container--content
+            .lab__text.small-text
+              p.lab__text-graph Партнерство с европейскими #[span.lab__flags #[+svg( "swiss", 17, 12 )] #[+svg( "german", 17, 12 )]] лабораториями.
 
         section.text-block.text-block--dark.text-block--smile.parallax
-          h2.visually-hidden Улыбайся
-          p Улыбка, которая #[span.text-block--italics меняет всё].
+          .container.container--content
+            h2.visually-hidden Улыбайся
+            p Улыбка, которая #[span.text-block--italics меняет всё].
 
         section.slider.smile.scale.scale--big
           //- picture
@@ -114,19 +117,22 @@ html.page-loading( lang="ru" )
                 img( src="img/face@1x.jpg"  srcset="img/face@2x.jpg 2x" width="1312" height="772" alt="Дарит уверенность" )
               .swiper-slide.slider__slide
                 img( src="img/face2@1x.jpg"  srcset="img/face2@2x.jpg 2x" width="1312" height="772" alt="Дает свободу быть собой" )
-            p.slider__caption.small-text
+            .container.container--content
+              .slider__bottom
+                p.slider__caption.small-text
 
-            .swiper-pagination.small-text
+                .swiper-pagination.small-text
 
-            .swiper-button-prev.slider__button.slider-prev.small-text
-              +svg( "arrow-prev", 20, 10 )
+                .swiper-button-prev.slider__button.slider-prev.small-text
+                  +svg( "arrow-prev", 20, 10 )
 
-            .swiper-button-next.slider__button.slider-next.small-text
-              +svg( "arrow-1", 20, 10 )
+                .swiper-button-next.slider__button.slider-next.small-text
+                  +svg( "arrow-1", 20, 10 )
 
         section.text-block.text-block--dark.text-block--bright.parallax
-          h2.visually-hidden Ярко
-          p Истинная красота &ndash;#[br] #[span.text-block--italics идеальное сочетание нюансов].
+          .container.container--content
+            h2.visually-hidden Ярко
+            p Истинная красота &ndash;#[br] #[span.text-block--italics идеальное сочетание нюансов].
 
         section.slider.scale.scale--big( id="works" )
           .swiper-container.slider-container
@@ -149,35 +155,38 @@ html.page-loading( lang="ru" )
                       p Татьяна обратилась ко мне по рекомендации друга — у нее была возможность устроиться на работу мечты в крупной транспортной корпорации и переехать за границу, но она поняла, что без красивой, здоровой улыбки у нее будет меньше шансов сделать карьеру. Все процедуры заняли около 6 месяцев, но результат себя оправдал на все 100 процентов.
                     .slider__content-more
                       span.slider__content-more-link Подробнее
-            p.slider__caption.small-text
             button: +svg( "lupa", 24, 24 )
+            .container.container--content
+              .slider__bottom
+                p.slider__caption.small-text
 
-            .slider__mobile-more
-              span.slider__mobile-more-link(data-toggle="modal" data-target="[data-olga-smile-modal]")
-                | Что сделано
-                +svg( "arrow-1", 20, 10 )
+                .slider__mobile-more
+                  span.slider__mobile-more-link(data-toggle="modal" data-target="[data-olga-smile-modal]")
+                    | Что сделано
+                    +svg( "arrow-1", 20, 10 )
 
-            .swiper-pagination.small-text
+                .swiper-pagination.small-text
 
-            .swiper-button-prev.slider__button.slider-prev.small-text
-              +svg( "arrow-prev", 20, 10 )
+                .swiper-button-prev.slider__button.slider-prev.small-text
+                  +svg( "arrow-prev", 20, 10 )
 
-            .swiper-button-next.slider__button.slider-next.small-text
-              +svg( "arrow-1", 20, 10 )
+                .swiper-button-next.slider__button.slider-next.small-text
+                  +svg( "arrow-1", 20, 10 )
 
         section.location.location--dark( id="location" ).parallax
-          h2.visually-hidden Адрес
-          p Приезжайте на встречу c&nbsp;Омаром Газаевым &ndash;#[br] он расскажет, как сделать вашу улыбку #[span.location--italics неповторимой].
-            span.location__address-row
-              a.location__desktop-address( href="https://yandex.ru/maps/-/CKan624~") Большая Садовая ул., 5с2
-              a.location__mobile-address(href="https://yandex.ru/maps/-/CKan624~") Посмотреть на карте
-                +svg( "arrow-1", 20, 10 )
-          .location__img-cover
-            img( src="img/map.svg" width="378" height="425" alt="map" loading="lazy" )
-            .location__address
-              span.location__address-mobile Бол. Садовая ул., 5с2
-              //- a.location__mobile-whatsapp( title="WhatsApp" href="whatsapp://send?phone=+79057161451") +7 905 716-14-51
-              //-   +svg( "whatsapp", 18, 18 )
+          .container.container--content
+            h2.visually-hidden Адрес
+            p Приезжайте на встречу c&nbsp;Омаром Газаевым &ndash;#[br] он расскажет, как сделать вашу улыбку #[span.location--italics неповторимой].
+              span.location__address-row
+                a.location__desktop-address( href="https://yandex.ru/maps/-/CKan624~") Большая Садовая ул., 5с2
+                a.location__mobile-address(href="https://yandex.ru/maps/-/CKan624~") Посмотреть на карте
+                  +svg( "arrow-1", 20, 10 )
+            .location__img-cover
+              img( src="img/map.svg" width="378" height="425" alt="map" loading="lazy" )
+              .location__address
+                span.location__address-mobile Бол. Садовая ул., 5с2
+                //- a.location__mobile-whatsapp( title="WhatsApp" href="whatsapp://send?phone=+79057161451") +7 905 716-14-51
+                //-   +svg( "whatsapp", 18, 18 )
 
     footer.footer
       .footer__left

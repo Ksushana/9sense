@@ -6,7 +6,6 @@
   transition: color 2s;
   color: $color-black-bigtext;
   font-family: $font-family-formular;
-  letter-spacing: -2px;
   display: flex;
   box-sizing: border-box;
 
@@ -69,6 +68,7 @@
   p {
     height: fit-content;
     margin: auto;
+    letter-spacing: size(-2px);
 
     @include mobile {
       margin: 0;

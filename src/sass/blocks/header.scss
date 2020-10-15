@@ -398,7 +398,6 @@
   line-height: size(56px);
   color: $color-grey-text;
   font-family: $font-family-formular;
-  letter-spacing: -2px;
   font-weight: normal;
   z-index: 5;
 
@@ -408,8 +407,14 @@
   padding-top: size(100px);
 
   p {
+    letter-spacing: size(-2px);
+
     &:last-child {
       margin-bottom: 0;
+    }
+
+    @include mobile {
+      letter-spacing: 0.02em;
     }
   }
 

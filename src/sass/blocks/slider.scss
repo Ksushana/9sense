@@ -24,16 +24,16 @@
   }
 
   .swiper-pagination {
-    bottom: size(51px);
+    width: 100%;
     display: flex;
-    bottom: 0.8%;
+    bottom: size(8px);
     left: 0;
 
     outline: none;
 
     @include mobile {
       left: size(-13px);
-      bottom: 2%;
+      bottom: size(6px);
     }
 
     span {
@@ -51,8 +51,10 @@
     opacity: 1;
   }
 
+
   .swiper-container-horizontal
     > .swiper-pagination-bullets
+    .swiper-pagination-bullet,
     .swiper-pagination-bullet {
     margin: 0 3px;
     width: size(8px);
@@ -145,11 +147,19 @@
 
 .slider__slide {
   position: relative;
+
+  & > img {
+    width: 100%;
+  }
 }
 
 .slider__img {
   img {
     vertical-align: top;
+  }
+
+  & > img {
+    width: 100%;
   }
 
   &:hover {
@@ -161,7 +171,8 @@
   max-width: size(328px);
   position: absolute;
   bottom: size(32px);
-  left: size(32px);
+  // left: size(32px);
+  left: size(64px);
   color: $color-white;
   font-size: size(16px);
   line-height: size(24px);
@@ -272,4 +283,8 @@
       max-width: 100%;
     }
   }
+}
+
+.slider__bottom {
+  position: relative;
 }

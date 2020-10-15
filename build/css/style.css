@@ -1933,6 +1933,25 @@ a:not([href]) {
   }
 }
 
+.container--main {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.container--content {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0 1.33333rem;
+  margin: auto;
+}
+
+@media (max-width: 767px) {
+  .container--content {
+    padding: 0;
+  }
+}
+
 .small-text {
   opacity: 1;
 }
@@ -2415,7 +2434,6 @@ main,
   line-height: 1.16667rem;
   color: #ebebeb;
   font-family: "Formular", Helvetica, "Arial", sans-serif;
-  letter-spacing: -2px;
   font-weight: normal;
   z-index: 5;
   width: 45%;
@@ -2423,8 +2441,18 @@ main,
   padding-top: 2.08333rem;
 }
 
+.header__phrase p {
+  letter-spacing: -0.04167rem;
+}
+
 .header__phrase p:last-child {
   margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .header__phrase p {
+    letter-spacing: 0.02em;
+  }
 }
 
 .header__phrase--italics {
@@ -2742,7 +2770,7 @@ main,
 .about {
   padding: 1.25rem 2.02083rem 0;
   background-image: url("../img/omar@1x.jpg");
-  background-size: 97%;
+  background-size: cover;
   background-repeat: no-repeat;
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
@@ -3179,7 +3207,6 @@ main,
   transition: color 2s;
   color: #1f1f1f;
   font-family: "Formular", Helvetica, "Arial", sans-serif;
-  letter-spacing: -2px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3257,6 +3284,7 @@ main,
   height: -moz-fit-content;
   height: fit-content;
   margin: auto;
+  letter-spacing: -0.04167rem;
 }
 
 @media (max-width: 767px) {
@@ -3270,13 +3298,12 @@ main,
   font-style: italic;
 }
 
-.lab {
-  padding-top: 0.70833rem;
-}
-
 .lab img {
   width: 27.33333rem;
   height: 16.08333rem;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media (max-width: 767px) {
@@ -3394,11 +3421,11 @@ main,
 }
 
 .slider .swiper-pagination {
-  bottom: 1.0625rem;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  bottom: 0.8%;
+  bottom: 0.16667rem;
   left: 0;
   outline: none;
 }
@@ -3406,7 +3433,7 @@ main,
 @media (max-width: 767px) {
   .slider .swiper-pagination {
     left: -0.27083rem;
-    bottom: 2%;
+    bottom: 0.125rem;
   }
 }
 
@@ -3426,7 +3453,8 @@ main,
 
 .slider .swiper-container-horizontal
 > .swiper-pagination-bullets
-.swiper-pagination-bullet {
+.swiper-pagination-bullet,
+.slider .swiper-pagination-bullet {
   margin: 0 3px;
   width: 0.16667rem;
   height: 0.16667rem;
@@ -3435,14 +3463,16 @@ main,
 
 .slider .swiper-container-horizontal
 > .swiper-pagination-bullets
-.swiper-pagination-bullet:first-child {
+.swiper-pagination-bullet:first-child,
+.slider .swiper-pagination-bullet:first-child {
   margin-left: auto;
 }
 
 @media (max-width: 767px) {
   .slider .swiper-container-horizontal
 > .swiper-pagination-bullets
-.swiper-pagination-bullet {
+.swiper-pagination-bullet,
+  .slider .swiper-pagination-bullet {
     width: 0.125rem;
     height: 0.125rem;
   }
@@ -3531,8 +3561,16 @@ main,
   position: relative;
 }
 
+.slider__slide > img {
+  width: 100%;
+}
+
 .slider__img img {
   vertical-align: top;
+}
+
+.slider__img > img {
+  width: 100%;
 }
 
 .slider__img:hover {
@@ -3543,7 +3581,7 @@ main,
   max-width: 6.83333rem;
   position: absolute;
   bottom: 0.66667rem;
-  left: 0.66667rem;
+  left: 1.33333rem;
   color: #ffffff;
   font-size: 0.33333rem;
   line-height: 0.5rem;
@@ -3663,6 +3701,10 @@ main,
   }
 }
 
+.slider__bottom {
+  position: relative;
+}
+
 .footer {
   font-size: 0.375rem;
   line-height: 0.5rem;
@@ -3766,6 +3808,10 @@ main,
   }
 }
 
+.smile .slider__slide > img {
+  width: 100%;
+}
+
 .smile__text {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3804,7 +3850,6 @@ main,
   padding: 1.45833rem 2.08333rem 0;
   min-height: 13.95833rem;
   font-family: "Formular", Helvetica, "Arial", sans-serif;
-  letter-spacing: -2px;
 }
 
 .location img,
@@ -3819,6 +3864,13 @@ main,
   height: -moz-fit-content;
   height: fit-content;
   margin: auto;
+  letter-spacing: -0.04167rem;
+}
+
+@media (max-width: 767px) {
+  .location p {
+    letter-spacing: 0.02em;
+  }
 }
 
 .location .location__desktop-address {
@@ -3928,6 +3980,7 @@ main,
 
 .location__address {
   font-family: "Helvetica Neue", Helvetica, "Arial", sans-serif;
+  letter-spacing: 0;
 }
 
 .location__address-row {

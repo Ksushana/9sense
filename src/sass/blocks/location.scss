@@ -9,7 +9,6 @@
   padding: size(70px) size(100px) 0;
   min-height: size(670px);
   font-family: $font-family-formular;
-  letter-spacing: -2px;
 
   img,
   .location__mobile-address,
@@ -21,6 +20,11 @@
   p {
     height: fit-content;
     margin: auto;
+    letter-spacing: size(-2px);
+
+    @include mobile {
+      letter-spacing: 0.02em;
+    }
   }
 
   .location__desktop-address {
@@ -129,6 +133,7 @@
 
 .location__address {
   font-family: $font-family;
+  letter-spacing: 0;
 }
 
 .location__address-row {

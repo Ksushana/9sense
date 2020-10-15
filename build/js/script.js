@@ -11598,8 +11598,10 @@ $(() => {
     const elementOffset = element.offset().top;
     const elementHeight = element.height();
 
-    const startOffset = elementOffset - windowHeight;
-    const finishOffset = elementOffset - windowHeight + elementHeight;
+    const startOffset = elementOffset - elementHeight;
+    const finishOffset = elementOffset;
+    // const startOffset = elementOffset - windowHeight;
+    // const finishOffset = elementOffset - windowHeight + elementHeight;
 
     const position = (scrollTop - startOffset) / (finishOffset - startOffset);
     const relative = Math.max(0, Math.min(1, position));

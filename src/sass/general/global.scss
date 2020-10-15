@@ -110,6 +110,21 @@ a {
   @include mobile {
     padding: 0;
   }
+
+  &--main {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  &--content {
+    height: fit-content;
+    padding: 0 size(64px);
+    margin: auto;
+
+    @include mobile {
+      padding: 0;
+    }
+  }
 }
 
 .small-text {

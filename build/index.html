@@ -43,7 +43,7 @@
     </div>
   </header>
   <main>
-    <div class="container">
+    <div class="container container--main">
       <h1 class="visually-hidden">Nine Sense Clinic</h1>
       <div class="shadow"></div>
       <section class="about scale scale--big" id="about">
@@ -80,18 +80,24 @@
         </div>
       </section>
       <section class="text-block text-block--tech parallax">
-        <h2 class="visually-hidden">Технологии</h2>
-        <p>Технологии &ndash; инструмент в&nbsp;руках мастера</p>
+        <div class="container container--content">
+          <h2 class="visually-hidden">Технологии</h2>
+          <p>Технологии &ndash; инструмент в&nbsp;руках мастера</p>
+        </div>
       </section>
       <section class="lab scale scale--big" id="lab">
         <h2 class="visually-hidden"></h2><img src="img/lab@1x.jpg" srcset="img/lab@2x.jpg 2x" width="1312" height="772" alt="lab">
-        <div class="lab__text small-text">
-          <p class="lab__text-graph">Партнерство с европейскими <span class="lab__flags"><svg width="17" height="12" aria-hidden="true"><use xlink:href="img/sprite.svg#swiss"></use></svg> <svg width="17" height="12" aria-hidden="true"><use xlink:href="img/sprite.svg#german"></use></svg></span> лабораториями.</p>
+        <div class="container container--content">
+          <div class="lab__text small-text">
+            <p class="lab__text-graph">Партнерство с европейскими <span class="lab__flags"><svg width="17" height="12" aria-hidden="true"><use xlink:href="img/sprite.svg#swiss"></use></svg> <svg width="17" height="12" aria-hidden="true"><use xlink:href="img/sprite.svg#german"></use></svg></span> лабораториями.</p>
+          </div>
         </div>
       </section>
       <section class="text-block text-block--dark text-block--smile parallax">
-        <h2 class="visually-hidden">Улыбайся</h2>
-        <p>Улыбка, которая <span class="text-block--italics">меняет всё</span>.</p>
+        <div class="container container--content">
+          <h2 class="visually-hidden">Улыбайся</h2>
+          <p>Улыбка, которая <span class="text-block--italics">меняет всё</span>.</p>
+        </div>
       </section>
       <section class="slider smile scale scale--big">
         <div class="swiper-container slider-container">
@@ -99,19 +105,25 @@
             <div class="swiper-slide slider__slide"><img src="img/face@1x.jpg" srcset="img/face@2x.jpg 2x" width="1312" height="772" alt="Дарит уверенность"></div>
             <div class="swiper-slide slider__slide"><img src="img/face2@1x.jpg" srcset="img/face2@2x.jpg 2x" width="1312" height="772" alt="Дает свободу быть собой"></div>
           </div>
-          <p class="slider__caption small-text"></p>
-          <div class="swiper-pagination small-text"></div>
-          <div class="swiper-button-prev slider__button slider-prev small-text"><svg width="20" height="10" aria-hidden="true">
-              <use xlink:href="img/sprite.svg#arrow-prev"></use>
-            </svg></div>
-          <div class="swiper-button-next slider__button slider-next small-text"><svg width="20" height="10" aria-hidden="true">
-              <use xlink:href="img/sprite.svg#arrow-1"></use>
-            </svg></div>
+          <div class="container container--content">
+            <div class="slider__bottom">
+              <p class="slider__caption small-text"></p>
+              <div class="swiper-pagination small-text"></div>
+              <div class="swiper-button-prev slider__button slider-prev small-text"><svg width="20" height="10" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#arrow-prev"></use>
+                </svg></div>
+              <div class="swiper-button-next slider__button slider-next small-text"><svg width="20" height="10" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#arrow-1"></use>
+                </svg></div>
+            </div>
+          </div>
         </div>
       </section>
       <section class="text-block text-block--dark text-block--bright parallax">
-        <h2 class="visually-hidden">Ярко</h2>
-        <p>Истинная красота &ndash;<br> <span class="text-block--italics">идеальное сочетание нюансов</span>.</p>
+        <div class="container container--content">
+          <h2 class="visually-hidden">Ярко</h2>
+          <p>Истинная красота &ndash;<br> <span class="text-block--italics">идеальное сочетание нюансов</span>.</p>
+        </div>
       </section>
       <section class="slider scale scale--big" id="works">
         <div class="swiper-container slider-container">
@@ -134,25 +146,31 @@
                     <div class="slider__content-more"><span class="slider__content-more-link">Подробнее</span></div>
                 </div>
               </a></div>
-          </div>
-          <p class="slider__caption small-text"></p><button><svg width="24" height="24" aria-hidden="true">
+          </div><button><svg width="24" height="24" aria-hidden="true">
               <use xlink:href="img/sprite.svg#lupa"></use>
             </svg></button>
-          <div class="slider__mobile-more"><span class="slider__mobile-more-link" data-toggle="modal" data-target="[data-olga-smile-modal]">Что сделано<svg width="20" height="10" aria-hidden="true"><use xlink:href="img/sprite.svg#arrow-1"></use></svg></span></div>
-          <div class="swiper-pagination small-text"></div>
-          <div class="swiper-button-prev slider__button slider-prev small-text"><svg width="20" height="10" aria-hidden="true">
-              <use xlink:href="img/sprite.svg#arrow-prev"></use>
-            </svg></div>
-          <div class="swiper-button-next slider__button slider-next small-text"><svg width="20" height="10" aria-hidden="true">
-              <use xlink:href="img/sprite.svg#arrow-1"></use>
-            </svg></div>
+          <div class="container container--content">
+            <div class="slider__bottom">
+              <p class="slider__caption small-text"></p>
+              <div class="slider__mobile-more"><span class="slider__mobile-more-link" data-toggle="modal" data-target="[data-olga-smile-modal]">Что сделано<svg width="20" height="10" aria-hidden="true"><use xlink:href="img/sprite.svg#arrow-1"></use></svg></span></div>
+              <div class="swiper-pagination small-text"></div>
+              <div class="swiper-button-prev slider__button slider-prev small-text"><svg width="20" height="10" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#arrow-prev"></use>
+                </svg></div>
+              <div class="swiper-button-next slider__button slider-next small-text"><svg width="20" height="10" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#arrow-1"></use>
+                </svg></div>
+            </div>
+          </div>
         </div>
       </section>
       <section class="location location--dark parallax" id="location">
-        <h2 class="visually-hidden">Адрес</h2>
-        <p>Приезжайте на встречу c&nbsp;Омаром Газаевым &ndash;<br> он расскажет, как сделать вашу улыбку <span class="location--italics">неповторимой</span>.<span class="location__address-row"><a class="location__desktop-address" href="https://yandex.ru/maps/-/CKan624~">Большая Садовая ул., 5с2</a><a class="location__mobile-address" href="https://yandex.ru/maps/-/CKan624~">Посмотреть на карте<svg width="20" height="10" aria-hidden="true"><use xlink:href="img/sprite.svg#arrow-1"></use></svg></a></span></p>
-        <div class="location__img-cover"><img src="img/map.svg" width="378" height="425" alt="map" loading="lazy">
-          <div class="location__address"><span class="location__address-mobile">Бол. Садовая ул., 5с2</span></div>
+        <div class="container container--content">
+          <h2 class="visually-hidden">Адрес</h2>
+          <p>Приезжайте на встречу c&nbsp;Омаром Газаевым &ndash;<br> он расскажет, как сделать вашу улыбку <span class="location--italics">неповторимой</span>.<span class="location__address-row"><a class="location__desktop-address" href="https://yandex.ru/maps/-/CKan624~">Большая Садовая ул., 5с2</a><a class="location__mobile-address" href="https://yandex.ru/maps/-/CKan624~">Посмотреть на карте<svg width="20" height="10" aria-hidden="true"><use xlink:href="img/sprite.svg#arrow-1"></use></svg></a></span></p>
+          <div class="location__img-cover"><img src="img/map.svg" width="378" height="425" alt="map" loading="lazy">
+            <div class="location__address"><span class="location__address-mobile">Бол. Садовая ул., 5с2</span></div>
+          </div>
         </div>
       </section>
     </div>

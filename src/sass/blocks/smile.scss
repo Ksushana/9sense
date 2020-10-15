@@ -16,6 +16,10 @@
       object-fit: cover;
     }
   }
+
+  .slider__slide > img {
+    width: 100%;
+  }
 }
 
 .smile__text {
