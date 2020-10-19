@@ -21,6 +21,15 @@
           clickable: true
         },
         on: {
+          // init: function() {
+          //   if (caption) {
+          //     changeCaption(this, caption);
+          //   }
+
+          //   if (mobileMoreLink) {
+          //     changeMoreLinkTarget(this, mobileMoreLink);
+          //   }
+          // },
           slideChange: function() {
             if (caption) {
               changeCaption(this, caption);
@@ -38,10 +47,47 @@
   if (!window.isMobile()) {
     [].slice.call(document.querySelectorAll('.slider__content')).forEach(contentElement => {
       const moreLink = contentElement.querySelector('.slider__content-more-link');
+      const imageToggleLink = contentElement.querySelector('.slider__image-toggle-link');
 
       if (moreLink) {
+        const defaultText = moreLink.dataset.textDefault || '';
+        const activeText = moreLink.dataset.textActive || '';
+
         moreLink.addEventListener('click', () => {
-          contentElement.classList.add('is-full');
+          contentElement.classList.toggle('is-full');
+
+          if (contentElement.classList.contains('is-full')) {
+            moreLink.textContent = activeText;
+          } else {
+            moreLink.textContent = defaultText;
+          }
+        });
+      }
+
+      if (imageToggleLink) {
+        const beforeText = imageToggleLink.dataset.textBefore || '';
+        const afterText = imageToggleLink.dataset.textAfter || '';
+        let isToggling = false;
+
+        imageToggleLink.addEventListener('click', () => {
+          if (isToggling) {
+            return;
+          }
+
+          isToggling = true;
+
+          const sliderSlide = imageToggleLink.closest('.slider__slide');
+
+          if (sliderSlide.classList.contains('is-before')) {
+            imageToggleLink.textContent = beforeText;
+          } else {
+            imageToggleLink.textContent = afterText;
+          }
+
+          $(sliderSlide).find('.slider__img--before').fadeToggle(200, function(){
+            sliderSlide.classList.toggle('is-before');
+            isToggling = false;
+          });
         });
       }
     });

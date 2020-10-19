@@ -11322,6 +11322,25 @@ $(document).ready(function() {
   };
 })();
 
+$(function() {
+  const collapsibleImages = [].slice.call(document.querySelectorAll('.info-modal__collapsible-image'));
+
+  collapsibleImages.forEach(collapsibleImage => {
+    const toggleLink = collapsibleImage.querySelector('.info-modal__collapsible-image-toggle-link');
+    const closeButton = collapsibleImage.querySelector('.info-modal__collapsible-image-close');
+    const imageContent = collapsibleImage.querySelector('.info-modal__collapsible-image-content');
+
+    toggleLink.addEventListener('click', () => {
+      collapsibleImage.classList.add('is-expanded');
+      $(imageContent).slideDown(200);
+    });
+
+    closeButton.addEventListener('click', () => {
+      collapsibleImage.classList.remove('is-expanded');
+      $(imageContent).slideUp(200);
+    });
+  });
+});
 let logo = document.querySelector(`.header__logo`);
 let links = document.querySelector(`.header__links`);
 
@@ -11487,13 +11506,13 @@ $(function() {
 
 $(document).ready(function() {
   if (!window.isMobile()) {
-    const photos = $(`.slider__img`);
-    $(`.slider__img`).click(function(event) {
+    const $photos = $(`.slider__image`);
+    $photos.on('click', function(event) {
       event.preventDefault();
     });
     return;
   }
-  $(".slider__img").magnificPopup({
+  $(".slider__image").magnificPopup({
     type: "image",
     closeOnContentClick: true,
     closeBtnInside: false,
@@ -11597,7 +11616,7 @@ $(() => {
     const scrollTop = lastScroll;
 
     const elementOffset = element.offset().top;
-    const elementHeight = element.height();
+    // const elementHeight = element.height();
 
     const logoOffset = parseInt($logo.css('top'));
     const logoHeight = $logo.height();
@@ -11829,6 +11848,15 @@ $(() => {
           clickable: true
         },
         on: {
+          // init: function() {
+          //   if (caption) {
+          //     changeCaption(this, caption);
+          //   }
+
+          //   if (mobileMoreLink) {
+          //     changeMoreLinkTarget(this, mobileMoreLink);
+          //   }
+          // },
           slideChange: function() {
             if (caption) {
               changeCaption(this, caption);
@@ -11846,10 +11874,47 @@ $(() => {
   if (!window.isMobile()) {
     [].slice.call(document.querySelectorAll('.slider__content')).forEach(contentElement => {
       const moreLink = contentElement.querySelector('.slider__content-more-link');
+      const imageToggleLink = contentElement.querySelector('.slider__image-toggle-link');
 
       if (moreLink) {
+        const defaultText = moreLink.dataset.textDefault || '';
+        const activeText = moreLink.dataset.textActive || '';
+
         moreLink.addEventListener('click', () => {
-          contentElement.classList.add('is-full');
+          contentElement.classList.toggle('is-full');
+
+          if (contentElement.classList.contains('is-full')) {
+            moreLink.textContent = activeText;
+          } else {
+            moreLink.textContent = defaultText;
+          }
+        });
+      }
+
+      if (imageToggleLink) {
+        const beforeText = imageToggleLink.dataset.textBefore || '';
+        const afterText = imageToggleLink.dataset.textAfter || '';
+        let isToggling = false;
+
+        imageToggleLink.addEventListener('click', () => {
+          if (isToggling) {
+            return;
+          }
+
+          isToggling = true;
+
+          const sliderSlide = imageToggleLink.closest('.slider__slide');
+
+          if (sliderSlide.classList.contains('is-before')) {
+            imageToggleLink.textContent = beforeText;
+          } else {
+            imageToggleLink.textContent = afterText;
+          }
+
+          $(sliderSlide).find('.slider__img--before').fadeToggle(200, function(){
+            sliderSlide.classList.toggle('is-before');
+            isToggling = false;
+          });
         });
       }
     });

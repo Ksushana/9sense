@@ -1,12 +1,12 @@
 $(document).ready(function() {
   if (!window.isMobile()) {
-    const photos = $(`.slider__img`);
-    $(`.slider__img`).click(function(event) {
+    const $photos = $(`.slider__image`);
+    $photos.on('click', function(event) {
       event.preventDefault();
     });
     return;
   }
-  $(".slider__img").magnificPopup({
+  $(".slider__image").magnificPopup({
     type: "image",
     closeOnContentClick: true,
     closeBtnInside: false,

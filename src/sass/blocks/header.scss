@@ -340,15 +340,26 @@
 
 .header__insta {
   padding: 0;
-  margin: size(-3px) 0 0 size(58px);
+  color: $color-white;
+  margin: size(-2px) 0 0 size(58px);
+  transition: opacity 0.4s, color 0.3s;
 
   svg {
+    fill: none;
     vertical-align: middle;
+  }
+
+  .dark & {
+    color: $color-black-font;
   }
 
   @include mobile {
     margin: auto auto size(120px);
     opacity: 0;
+
+    .dark & {
+      color: $color-white;
+    }
   }
 }
 

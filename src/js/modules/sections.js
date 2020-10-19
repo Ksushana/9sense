@@ -65,7 +65,7 @@ $(() => {
     const scrollTop = lastScroll;
 
     const elementOffset = element.offset().top;
-    const elementHeight = element.height();
+    // const elementHeight = element.height();
 
     const logoOffset = parseInt($logo.css('top'));
     const logoHeight = $logo.height();

@@ -114,9 +114,9 @@ html.page-loading( lang="ru" )
           .swiper-container.slider-container
             .swiper-wrapper
               .swiper-slide.slider__slide
-                img( src="img/face@1x.jpg"  srcset="img/face@2x.jpg 2x" width="1312" height="772" alt="Дарит уверенность" )
+                img.slider__img( src="img/face@1x.jpg"  srcset="img/face@2x.jpg 2x" width="1312" height="772" alt="Дарит уверенность" )
               .swiper-slide.slider__slide
-                img( src="img/face2@1x.jpg"  srcset="img/face2@2x.jpg 2x" width="1312" height="772" alt="Дает свободу быть собой" )
+                img.slider__img( src="img/face2@1x.jpg"  srcset="img/face2@2x.jpg 2x" width="1312" height="772" alt="Дает свободу быть собой" )
             .container.container--content
               .slider__bottom
                 p.slider__caption.small-text
@@ -138,30 +138,45 @@ html.page-loading( lang="ru" )
           .swiper-container.slider-container
             .swiper-wrapper
               .swiper-slide.slider__slide
-                a.slider__img( href="img/olga-smile@2x.jpg")
-                  img( src="img/olga-smile@1x.jpg"  srcset="img/olga-smile@2x.jpg 2x" width="1312" height="772" alt="Ольга, 28 лет" data-target-modal="[data-olga-smile-modal]" loading="lazy" )
+                a.slider__image( href="img/smile-1-after@2x.jpg")
+                  img.slider__img.slider__img--after( src="img/smile-1-after@1x.jpg"  srcset="img/smile-1-after@2x.jpg 2x" width="1312" height="772" alt="Ольга, 28 лет" data-target-modal="[data-smile-modal-1]" loading="lazy" )
+                  img.slider__img.slider__img--before( src="img/smile-1-before@1x.jpg"  srcset="img/smile-1-before@2x.jpg 2x" width="1312" height="772" alt="Ольга, 28 лет" data-target-modal="[data-smile-modal-1]" loading="lazy" )
                   .slider__content
                     h3.slider__content-title Лечение двух зубов<br /> Установка виниров на три зуба<br /> Оттенок винира: NOL769Z
                     .slider__content-text
+                      span.slider__image-toggle-link(data-text-before="Показать как было" data-text-after="Показать как стало") Показать как было
                       p Ольгу ко мне привела подруга, которая недавно закончила все процедуры. Ольга не могла поверить, что можно настолько сильно и незаметно преобразить улыбку. А когда убедилась, что это возможно, захотела себе такую же. Но я не делаю по шаблону — улыбка у Ольги получилась своя, естественная, живая, открытая.
                     .slider__content-more
-                      span.slider__content-more-link Подробнее
+                      span.slider__content-more-link(data-text-default="Подробнее" data-text-active="Скрыть описание") Подробнее
               .swiper-slide.slider__slide
-                a.slider__img( href="img/tatyana-smile@2x.jpg")
-                  img( src="img/tatyana-smile@1x.jpg"  srcset="img/tatyana-smile@2x.jpg 2x" width="1312" height="772" alt="Татьяна, 34 года" data-target-modal="[data-tatyana-smile-modal]" loading="lazy" )
+                a.slider__image( href="img/smile-2-after@2x.jpg")
+                  img.slider__img.slider__img--after( src="img/smile-2-after@1x.jpg"  srcset="img/smile-2-after@2x.jpg 2x" width="1312" height="772" alt="Татьяна, 34 года" data-target-modal="[data-smile-modal-2]" loading="lazy" )
+                  img.slider__img.slider__img--before( src="img/smile-2-before@1x.jpg"  srcset="img/smile-2-before@2x.jpg 2x" width="1312" height="772" alt="Татьяна, 34 года" data-target-modal="[data-smile-modal-2]" loading="lazy" )
                   .slider__content
                     h3.slider__content-title Лечение зубов<br /> Установка брекетов<br /> Установка виниров<br /> Оттенок винира: LUH875P
                     .slider__content-text
+                      span.slider__image-toggle-link(data-text-before="Показать как было" data-text-after="Показать как стало") Показать как было
                       p Татьяна обратилась ко мне по рекомендации друга — у нее была возможность устроиться на работу мечты в крупной транспортной корпорации и переехать за границу, но она поняла, что без красивой, здоровой улыбки у нее будет меньше шансов сделать карьеру. Все процедуры заняли около 6 месяцев, но результат себя оправдал на все 100 процентов.
                     .slider__content-more
-                      span.slider__content-more-link Подробнее
+                      span.slider__content-more-link(data-text-default="Подробнее" data-text-active="Скрыть описание") Подробнее
+              .swiper-slide.slider__slide
+                a.slider__image( href="img/smile-3-after@2x.jpg")
+                  img.slider__img.slider__img--after( src="img/smile-3-after@1x.jpg"  srcset="img/smile-3-after@2x.jpg 2x" width="1312" height="772" alt="Татьяна, 34 года" data-target-modal="[data-smile-modal-3]" loading="lazy" )
+                  img.slider__img.slider__img--before( src="img/smile-3-before@1x.jpg"  srcset="img/smile-3-before@2x.jpg 2x" width="1312" height="772" alt="Татьяна, 34 года" data-target-modal="[data-smile-modal-3]" loading="lazy" )
+                  .slider__content
+                    h3.slider__content-title Лечение зубов<br /> Установка брекетов<br /> Установка виниров<br /> Оттенок винира: LUH875P
+                    .slider__content-text
+                      span.slider__image-toggle-link(data-text-before="Показать как было" data-text-after="Показать как стало") Показать как было
+                      p Татьяна обратилась ко мне по рекомендации друга — у нее была возможность устроиться на работу мечты в крупной транспортной корпорации и переехать за границу, но она поняла, что без красивой, здоровой улыбки у нее будет меньше шансов сделать карьеру. Все процедуры заняли около 6 месяцев, но результат себя оправдал на все 100 процентов.
+                    .slider__content-more
+                      span.slider__content-more-link(data-text-default="Подробнее" data-text-active="Скрыть описание") Подробнее
             button: +svg( "lupa", 24, 24 )
             .container.container--content
               .slider__bottom
                 p.slider__caption.small-text
 
                 .slider__mobile-more
-                  span.slider__mobile-more-link(data-toggle="modal" data-target="[data-olga-smile-modal]")
+                  span.slider__mobile-more-link(data-toggle="modal" data-target="[data-smile-modal-1]")
                     | Что сделано
                     +svg( "arrow-1", 20, 10 )
 
@@ -299,7 +314,7 @@ html.page-loading( lang="ru" )
                     li Comprehensive treatment strategies with
                     li Dental implants by Prof. Markus Hurzeler
 
-      .modal.info-modal.slider-modal.fade(data-olga-smile-modal tabindex="-1" role="dialog" aria-labelledby="callback" aria-hidden="true")
+      .modal.info-modal.slider-modal.fade(data-smile-modal-1 tabindex="-1" role="dialog" aria-labelledby="callback" aria-hidden="true")
         .modal-dialog.modal-dialog-centered
           .modal-content
             button.modal__close(type="button" data-dismiss="modal" aria-label="Закрыть")
@@ -312,9 +327,16 @@ html.page-loading( lang="ru" )
                   em Установка виниров на три зуба
                 li
                   em Оттенок винира: NOL769Z
+                li
+                  .info-modal__collapsible-image
+                    .info-modal__collapsible-image-toggle
+                      span.info-modal__collapsible-image-toggle-link Показать как было
+                    .info-modal__collapsible-image-content
+                      img(src="img/smile-1-before-mobile@1x.png" srcset="img/smile-1-before-mobile@1x.png 1x, img/smile-1-before-mobile@2x.png 2x" alt="")
+                      button.info-modal__collapsible-image-close
               p Ольгу ко мне привела подруга, которая недавно закончила все процедуры. Ольга не могла поверить, что можно настолько сильно и незаметно преобразить улыбку. А когда убедилась, что это возможно, захотела себе такую же. Но я не делаю по шаблону — улыбка у Ольги получилась своя, естественная, живая, открытая.
 
-      .modal.info-modal.slider-modal.fade(data-tatyana-smile-modal tabindex="-1" role="dialog" aria-labelledby="callback" aria-hidden="true")
+      .modal.info-modal.slider-modal.fade(data-smile-modal-2 tabindex="-1" role="dialog" aria-labelledby="callback" aria-hidden="true")
         .modal-dialog.modal-dialog-centered
           .modal-content
             button.modal__close(type="button" data-dismiss="modal" aria-label="Закрыть")
@@ -329,6 +351,37 @@ html.page-loading( lang="ru" )
                   em Установка виниров
                 li
                   em Оттенок винира: LUH875P
+                li
+                  .info-modal__collapsible-image
+                    .info-modal__collapsible-image-toggle
+                      span.info-modal__collapsible-image-toggle-link Показать как было
+                    .info-modal__collapsible-image-content
+                      img(src="img/smile-2-before-mobile@1x.png" srcset="img/smile-2-before-mobile@1x.png 1x, img/smile-2-before-mobile@2x.png 2x" alt="")
+                      button.info-modal__collapsible-image-close
+              p Татьяна обратилась ко мне по рекомендации друга — у нее была возможность устроиться на работу мечты в крупной транспортной корпорации и переехать за границу, но она поняла, что без красивой, здоровой улыбки у нее будет меньше шансов сделать карьеру. Все процедуры заняли около 6 месяцев, но результат себя оправдал на все 100 процентов.
+
+      .modal.info-modal.slider-modal.fade(data-smile-modal-3 tabindex="-1" role="dialog" aria-labelledby="callback" aria-hidden="true")
+        .modal-dialog.modal-dialog-centered
+          .modal-content
+            button.modal__close(type="button" data-dismiss="modal" aria-label="Закрыть")
+            .modal__content
+              h2 Что сделано
+              ul
+                li
+                  em Лечение зубов
+                li
+                  em Установка брекетов
+                li
+                  em Установка виниров
+                li
+                  em Оттенок винира: LUH875P
+                li
+                  .info-modal__collapsible-image
+                    .info-modal__collapsible-image-toggle
+                      span.info-modal__collapsible-image-toggle-link Показать как было
+                    .info-modal__collapsible-image-content
+                      img(src="img/smile-3-before-mobile@1x.png" srcset="img/smile-3-before-mobile@1x.png 1x, img/smile-3-before-mobile@2x.png 2x" alt="")
+                      button.info-modal__collapsible-image-close
               p Татьяна обратилась ко мне по рекомендации друга — у нее была возможность устроиться на работу мечты в крупной транспортной корпорации и переехать за границу, но она поняла, что без красивой, здоровой улыбки у нее будет меньше шансов сделать карьеру. Все процедуры заняли около 6 месяцев, но результат себя оправдал на все 100 процентов.
 
     block scripts
