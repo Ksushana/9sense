@@ -197,6 +197,7 @@
     font-weight: bold;
     font-size: size(16px);
     line-height: size(24px);
+    font-family: $font-family-formular;
   }
 
   p {
@@ -282,6 +283,8 @@
 
 .slider-modal {
   h2 {
+    font-family: $font-family-formular;
+
     @include mobile {
       margin-bottom: size(28px);
     }
