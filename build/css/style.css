@@ -1823,6 +1823,38 @@ img.mfp-img {
   src: url("../fonts/formular-italic-webfont.woff2") format("woff2"), url("../fonts/formular-italic-webfont.woff") format("woff");
 }
 
+@font-face {
+  font-family: "Formular";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/formular-medium-webfont.woff2") format("woff2"), url("../fonts/formular-medium-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Formular";
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+  src: url("../fonts/formular-mediumitalic-webfont.woff2") format("woff2"), url("../fonts/formular-mediumitalic-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Formular";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/formular-bold-webfont.woff2") format("woff2"), url("../fonts/formular-bold-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Formular";
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+  src: url("../fonts/formular-bolditalic-webfont.woff2") format("woff2"), url("../fonts/formular-bolditalic-webfont.woff") format("woff");
+}
+
 html {
   text-rendering: optimizeLegibility;
   -webkit-text-size-adjust: none;
@@ -1852,7 +1884,7 @@ body {
   padding: 0;
   font-size: 0.41667rem;
   line-height: 1.8;
-  font-family: "Helvetica Neue", Helvetica, "Arial", sans-serif;
+  font-family: "Formular", Helvetica, "Arial", sans-serif;
   font-weight: 400;
   color: #1f1f1f;
   background-color: #141414;
@@ -2729,7 +2761,7 @@ main,
   font-size: 0.33333rem;
   line-height: 0.5rem;
   letter-spacing: 0.01em;
-  font-family: "Helvetica Neue", Helvetica, "Arial", sans-serif;
+  font-family: "Formular", Helvetica, "Arial", sans-serif;
 }
 
 .info-modal h2 {
@@ -4130,7 +4162,7 @@ main,
 }
 
 .location__address {
-  font-family: "Helvetica Neue", Helvetica, "Arial", sans-serif;
+  font-family: "Formular", Helvetica, "Arial", sans-serif;
   letter-spacing: 0;
 }
 
@@ -4140,5 +4172,5 @@ main,
   font-size: 0.33333rem;
   line-height: 0.33333rem;
   letter-spacing: 0.01em;
-  font-family: "Helvetica Neue", Helvetica, "Arial", sans-serif;
+  font-family: "Formular", Helvetica, "Arial", sans-serif;
 }

@@ -6,8 +6,9 @@ $width-min: 320px;
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
 
-$font-family: "Helvetica Neue", Helvetica, "Arial", sans-serif;
+$font-family-helvetica: "Helvetica Neue", Helvetica, "Arial", sans-serif;
 $font-family-formular: "Formular", Helvetica, "Arial", sans-serif;
+$font-family: $font-family-formular;
 $font-base: 48px;
 
 $color-white: #ffffff;
