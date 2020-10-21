@@ -231,9 +231,19 @@
 }
 
 .slider__content-more-link {
+  position: relative;
   border-bottom: 1px solid rgba($color-white, 0.2);
   color: rgba($color-white, 0.5);
   transition: border-color 0.2s, color 0.2s;
+
+  &::after {
+    content: "";
+    top: -15px;
+    right: -25px;
+    bottom: -15px;
+    left: -25px;
+    position: absolute;
+  }
 
   &:hover {
     border-bottom-color: rgba($color-white, 0.5);
@@ -242,9 +252,19 @@
 }
 
 .slider__image-toggle-link {
+  position: relative;
   border-bottom: 1px solid rgba($color-white, 0.2);
   color: rgba($color-white, 0.5);
   transition: border-color 0.2s, color 0.2s;
+
+  &::after {
+    content: "";
+    top: -15px;
+    right: -25px;
+    bottom: -15px;
+    left: -25px;
+    position: absolute;
+  }
 
   &:hover {
     border-bottom-color: rgba($color-white, 0.5);
