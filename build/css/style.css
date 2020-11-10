@@ -1988,6 +1988,22 @@ a:not([href]) {
   opacity: 1;
 }
 
+.link-text--grey {
+  opacity: 1;
+  color: rgba(31, 31, 31, 0.5);
+  -webkit-transition: border-color 0.4s, color 0.4s;
+  transition: border-color 0.4s, color 0.4s;
+}
+
+.link-text--grey:hover {
+  opacity: 1;
+  color: rgba(31, 31, 31, 0.88);
+}
+
+.link-text--solid {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
 /* Blocks */
 .header,
 main,

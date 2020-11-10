@@ -130,3 +130,18 @@ a {
 .small-text {
   opacity: 1;
 }
+
+.link-text--grey {
+  opacity: 1;
+  color: rgba($color-black-bigtext, 0.5);
+  transition: border-color $transition-duration, color $transition-duration;
+
+  &:hover {
+    opacity: 1;
+    color: rgba($color-black-bigtext, 0.88);
+  }
+}
+
+.link-text--solid {
+  border-bottom: 1px solid rgba(#000, 0.08);
+}
