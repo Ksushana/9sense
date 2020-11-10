@@ -40,8 +40,11 @@ html.page-loading( lang="ru" )
           li: +link-text( "Лаборатория", "#lab", "header__link header__link--anchor" )
           li: +link-text( "Виниры", "#works", "header__link header__link--anchor" )
           li: +link-text( "Локация", "#location", "header__link header__link--loc" )
-        a.header__insta(href="https://instagram.com/omargazaev?igshid=n52008pgrhzo" target="_blank" rel="noopener noreferrer")
-          +svg( "instagram", 24, 24 )
+        .header__icons
+          a.header__icon.header__icon--whatsapp(href="whatsapp://send?phone=+79057161451" title="WhatsApp")
+            +svg( "whatsapp-2", 24, 24 )
+          a.header__icon.header__icon--instagram(href="https://instagram.com/omargazaev?igshid=n52008pgrhzo" target="_blank" rel="noopener noreferrer")
+            +svg( "instagram-2", 24, 24 )
 
       p.header__turn
         span Клиника эстетической стоматологии в Москве
@@ -193,9 +196,12 @@ html.page-loading( lang="ru" )
             h2.visually-hidden Адрес
             p Приезжайте на встречу c&nbsp;Омаром Газаевым &ndash;#[br] он расскажет, как сделать вашу улыбку #[span.location--italics неповторимой].
               span.location__address-row
-                a.location__desktop-address( href="https://yandex.ru/maps/-/CKan624~") Большая Садовая ул., 5с2
-                a.location__mobile-address(href="https://yandex.ru/maps/-/CKan624~") Посмотреть на карте
-                  +svg( "arrow-1", 20, 10 )
+                span.location__desktop-address
+                  a.location__desktop-address-link(href="https://yandex.ru/maps/-/CKan624~") Большая Садовая ул., 5с2
+                  | . Есть бесплатная парковка.
+                span.location__mobile-address
+                  a.location__mobile-address-link(href="https://yandex.ru/maps/-/CKan624~") Посмотреть на карте
+                    +svg( "arrow-1", 20, 10 )
             .location__img-cover
               img( src="img/map.svg" width="378" height="425" alt="map" loading="lazy" )
               .location__address

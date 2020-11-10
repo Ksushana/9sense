@@ -119,7 +119,7 @@
     padding: 0 size(15px);
   }
 
-  .header__insta {
+  .header__icon {
     padding-right: 0;
     padding-left: 0;
   }
@@ -227,7 +227,7 @@
       }
 
       .header__lang,
-      .header__insta {
+      .header__icon {
         opacity: 1;
         transition: opacity 0.2s;
         transition-delay: 0.3s;
@@ -338,11 +338,25 @@
   }
 }
 
-.header__insta {
+.header__icons {
+  margin: size(-1px) 0 0 size(58px);
+
+  @include mobile {
+    margin: auto auto size(150px);
+  }
+}
+
+.header__icon {
   padding: 0;
+  margin-left: 25px;
+  display: inline-block;
+  vertical-align: middle;
   color: $color-white;
-  margin: size(-2px) 0 0 size(58px);
   transition: opacity 0.4s, color 0.3s;
+
+  &:first-child {
+    margin-left: 0;
+  }
 
   svg {
     fill: none;
@@ -354,7 +368,6 @@
   }
 
   @include mobile {
-    margin: auto auto size(120px);
     opacity: 0;
 
     .dark & {

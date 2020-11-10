@@ -208,6 +208,10 @@
     line-height: size(24px);
   }
 
+  .slider__content-title {
+    font-weight: normal;
+  }
+
   @include mobile {
     display: none;
   }

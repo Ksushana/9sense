@@ -2199,7 +2199,7 @@ main,
   padding: 0 0.3125rem;
 }
 
-.header__links .header__insta {
+.header__links .header__icon {
   padding-right: 0;
   padding-left: 0;
 }
@@ -2324,7 +2324,7 @@ main,
             transition-delay: 0.12s;
   }
   .header__links--show .header__lang,
-  .header__links--show .header__insta {
+  .header__links--show .header__icon {
     opacity: 1;
     -webkit-transition: opacity 0.2s;
     transition: opacity 0.2s;
@@ -2403,29 +2403,44 @@ main,
   }
 }
 
-.header__insta {
+.header__icons {
+  margin: -0.02083rem 0 0 1.20833rem;
+}
+
+@media (max-width: 767px) {
+  .header__icons {
+    margin: auto auto 3.125rem;
+  }
+}
+
+.header__icon {
   padding: 0;
+  margin-left: 25px;
+  display: inline-block;
+  vertical-align: middle;
   color: #ffffff;
-  margin: -0.04167rem 0 0 1.20833rem;
   -webkit-transition: opacity 0.4s, color 0.3s;
   transition: opacity 0.4s, color 0.3s;
 }
 
-.header__insta svg {
+.header__icon:first-child {
+  margin-left: 0;
+}
+
+.header__icon svg {
   fill: none;
   vertical-align: middle;
 }
 
-.dark .header__insta {
+.dark .header__icon {
   color: #141414;
 }
 
 @media (max-width: 767px) {
-  .header__insta {
-    margin: auto auto 2.5rem;
+  .header__icon {
     opacity: 0;
   }
-  .dark .header__insta {
+  .dark .header__icon {
     color: #ffffff;
   }
 }
@@ -3771,6 +3786,10 @@ main,
   line-height: 0.5rem;
 }
 
+.slider__content .slider__content-title {
+  font-weight: normal;
+}
+
 @media (max-width: 767px) {
   .slider__content {
     display: none;
@@ -4077,19 +4096,23 @@ main,
 }
 
 .location .location__desktop-address {
-  display: inline-block;
-  font-size: 0.33333rem;
-  line-height: 0.33333rem;
-  letter-spacing: 0.01em;
-  position: relative;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-  padding-bottom: 0.04167rem;
+  display: block;
 }
 
 @media (max-width: 767px) {
   .location .location__desktop-address {
     display: none;
   }
+}
+
+.location .location__desktop-address-link {
+  padding-bottom: 0.04167rem;
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  font-size: 0.33333rem;
+  line-height: 0.33333rem;
+  letter-spacing: 0.01em;
 }
 
 .location--dark {
@@ -4123,14 +4146,17 @@ main,
     margin: 0 0 0.3125rem;
     padding-top: 0.64583rem;
   }
-  .location a.location__mobile-address {
+  .location .location__mobile-address {
+    display: block;
+    text-align: left;
+  }
+  .location .location__mobile-address-link {
     display: inline-block;
     font-size: 0.33333rem;
     line-height: 0.41667rem;
-    text-align: left;
     letter-spacing: 0.02em;
   }
-  .location a.location__mobile-address svg {
+  .location .location__mobile-address-link svg {
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
     width: 0.3125rem;
