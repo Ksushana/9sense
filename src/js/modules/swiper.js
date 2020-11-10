@@ -20,6 +20,7 @@
           type: `bullets`,
           clickable: true
         },
+        effect: 'fade',
         on: {
           // init: function() {
           //   if (caption) {
