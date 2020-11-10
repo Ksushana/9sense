@@ -4080,7 +4080,8 @@ main,
 .location img,
 .location .location__mobile-address,
 .location .location__mobile-whatsapp,
-.location span.location__address-mobile {
+.location span.location__address-mobile,
+.location .location__address-parking {
   display: none;
 }
 
@@ -4191,6 +4192,9 @@ main,
   .location .location__address span {
     display: inline;
   }
+  .location .location__address .location__address-parking {
+    display: block;
+  }
   .location .location__address a {
     display: inline-block;
     position: relative;
@@ -4222,4 +4226,11 @@ main,
   line-height: 0.33333rem;
   letter-spacing: 0.01em;
   font-family: "Formular", Helvetica, "Arial", sans-serif;
+}
+
+.location__address-parking {
+  color: #ABA3AD;
+  font-size: 0.375rem;
+  line-height: 0.54167rem;
+  letter-spacing: 1%;
 }

@@ -13,7 +13,8 @@
   img,
   .location__mobile-address,
   .location__mobile-whatsapp,
-  span.location__address-mobile {
+  span.location__address-mobile,
+  .location__address-parking {
     display: none;
   }
 
@@ -118,6 +119,10 @@
         display: inline;
       }
 
+      .location__address-parking {
+        display: block;
+      }
+
       a {
         display: inline-block;
         position: relative;
@@ -151,4 +156,11 @@
   line-height: size(16px);
   letter-spacing: 0.01em;
   font-family: $font-family;
+}
+
+.location__address-parking {
+  color: #ABA3AD;
+  font-size: size(18px);
+  line-height: size(26px);
+  letter-spacing: 1%;
 }
