@@ -169,17 +169,6 @@
   }
 }
 
-.about__signature {
-  margin-top: size(50px);
-  position: relative;
-  left: size(-35px);
-
-  @include mobile {
-    left: size(-5px);
-    margin-top: size(12px);
-  }
-}
-
 .about__mobile {
   display: none;
 
