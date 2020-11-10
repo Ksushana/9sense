@@ -25,7 +25,7 @@
 
     @include mobile {
       padding: size(85px) size(16px) 0;
-      min-height: size(393px);
+      min-height: size(300px);
       text-align: start;
       align-items: center;
     }
@@ -41,7 +41,7 @@
 
     @include mobile {
       padding: size(18px) size(16px) 0;
-      min-height: size(380px);
+      min-height: size(300px);
       align-items: center;
 
       p {
@@ -56,7 +56,7 @@
 
     @include mobile {
       padding: size(18px) size(16px) 0;
-      min-height: size(380px);
+      min-height: size(300px);
       align-items: center;
 
       p {
