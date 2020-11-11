@@ -122,6 +122,13 @@
   .header__icon {
     padding-right: 0;
     padding-left: 0;
+    width: size(24px);
+    height: size(24px);
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   @include mobile {
