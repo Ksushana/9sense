@@ -14,7 +14,7 @@
     object-position: center;
 
     &.color {
-      filter: none;
+      // filter: none;
     }
 
     @include mobile {
@@ -122,6 +122,7 @@
   outline: none;
   background-size: size(27px) size(44px);
   height: size(44px);
+  width: fit-content;
 
   @include mobile {
     display: none;
@@ -133,6 +134,8 @@
 
   &.slider-next {
     right: size(618px);
+
+
   }
 
   &:hover {
@@ -148,8 +151,9 @@
 .slider__slide {
   position: relative;
 
-  & > img {
+  & > .image-cover > img {
     width: 100%;
+
   }
 }
 
@@ -158,8 +162,9 @@
     vertical-align: top;
   }
 
-  & > img {
+  & > .image-cover > img {
     width: 100%;
+    filter: grayscale(1);
   }
 
   &:hover {

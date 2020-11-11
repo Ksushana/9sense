@@ -96,7 +96,8 @@ html.page-loading( lang="ru" )
 
         section.lab.scale.scale--big( id="lab" )
           h2.visually-hidden
-          img( src="img/lab@1x.jpg" srcset="img/lab@2x.jpg 2x" width="1312" height="772" alt="lab" )
+          .image-cover
+            img( src="img/lab@1x.jpg" srcset="img/lab@2x.jpg 2x" width="1312" height="772" alt="lab" )
           .container.container--content
             .lab__text.small-text
               p.lab__text-graph Партнерство с европейскими #[span.lab__flags #[+svg( "swiss", 17, 12 )] #[+svg( "german", 17, 12 )]] лабораториями.
@@ -115,9 +116,11 @@ html.page-loading( lang="ru" )
           .swiper-container.slider-container
             .swiper-wrapper
               .swiper-slide.slider__slide
-                img.slider__img( src="img/face@1x.jpg"  srcset="img/face@2x.jpg 2x" width="1312" height="772" alt="Дарит уверенность" )
+                .image-cover
+                  img.slider__img( src="img/face@1x.jpg"  srcset="img/face@2x.jpg 2x" width="1312" height="772" alt="Дарит уверенность" )
               .swiper-slide.slider__slide
-                img.slider__img( src="img/face2@1x.jpg"  srcset="img/face2@2x.jpg 2x" width="1312" height="772" alt="Дает свободу быть собой" )
+                .image-cover
+                  img.slider__img( src="img/face2@1x.jpg"  srcset="img/face2@2x.jpg 2x" width="1312" height="772" alt="Дает свободу быть собой" )
             .container.container--content
               .slider__bottom
                 p.slider__caption.small-text
@@ -140,8 +143,9 @@ html.page-loading( lang="ru" )
             .swiper-wrapper
               .swiper-slide.slider__slide
                 a.slider__image( href="img/smile-2-after@2x.jpg")
-                  img.slider__img.slider__img--after( src="img/smile-2-after@1x.jpg"  srcset="img/smile-2-after@2x.jpg 2x" width="1312" height="772" alt="Татьяна, 34 года" data-target-modal="[data-smile-modal-2]" loading="lazy" )
-                  img.slider__img.slider__img--before( src="img/smile-2-before@1x.jpg"  srcset="img/smile-2-before@2x.jpg 2x" width="1312" height="772" alt="Татьяна, 34 года" data-target-modal="[data-smile-modal-2]" loading="lazy" )
+                  .image-cover
+                    img.slider__img.slider__img--after( src="img/smile-2-after@1x.jpg"  srcset="img/smile-2-after@2x.jpg 2x" width="1312" height="772" alt="Татьяна, 34 года" data-target-modal="[data-smile-modal-2]" loading="lazy" )
+                    img.slider__img.slider__img--before( src="img/smile-2-before@1x.jpg"  srcset="img/smile-2-before@2x.jpg 2x" width="1312" height="772" alt="Татьяна, 34 года" data-target-modal="[data-smile-modal-2]" loading="lazy" )
                   .slider__content
                     h3.slider__content-title Лечение зубов<br /> Установка брекетов<br /> Установка виниров<br /> Оттенок винира: LUH875P
                     .slider__content-text
@@ -151,8 +155,9 @@ html.page-loading( lang="ru" )
                       span.slider__content-more-link(data-text-default="Подробнее" data-text-active="Скрыть описание") Подробнее
               .swiper-slide.slider__slide
                 a.slider__image( href="img/smile-3-after@2x.jpg")
-                  img.slider__img.slider__img--after( src="img/smile-3-after@1x.jpg"  srcset="img/smile-3-after@2x.jpg 2x" width="1312" height="772" alt="Татьяна, 34 года" data-target-modal="[data-smile-modal-3]" loading="lazy" )
-                  img.slider__img.slider__img--before( src="img/smile-3-before@1x.jpg"  srcset="img/smile-3-before@2x.jpg 2x" width="1312" height="772" alt="Татьяна, 34 года" data-target-modal="[data-smile-modal-3]" loading="lazy" )
+                  .image-cover
+                    img.slider__img.slider__img--after( src="img/smile-3-after@1x.jpg"  srcset="img/smile-3-after@2x.jpg 2x" width="1312" height="772" alt="Татьяна, 34 года" data-target-modal="[data-smile-modal-3]" loading="lazy" )
+                    img.slider__img.slider__img--before( src="img/smile-3-before@1x.jpg"  srcset="img/smile-3-before@2x.jpg 2x" width="1312" height="772" alt="Татьяна, 34 года" data-target-modal="[data-smile-modal-3]" loading="lazy" )
                   .slider__content
                     h3.slider__content-title Лечение зубов<br /> Установка брекетов<br /> Установка виниров<br /> Оттенок винира: LUH875P
                     .slider__content-text
@@ -162,8 +167,9 @@ html.page-loading( lang="ru" )
                       span.slider__content-more-link(data-text-default="Подробнее" data-text-active="Скрыть описание") Подробнее
               .swiper-slide.slider__slide
                 a.slider__image( href="img/smile-1-after@2x.jpg")
-                  img.slider__img.slider__img--after( src="img/smile-1-after@1x.jpg"  srcset="img/smile-1-after@2x.jpg 2x" width="1312" height="772" alt="Ольга, 28 лет" data-target-modal="[data-smile-modal-1]" loading="lazy" )
-                  img.slider__img.slider__img--before( src="img/smile-1-before@1x.jpg"  srcset="img/smile-1-before@2x.jpg 2x" width="1312" height="772" alt="Ольга, 28 лет" data-target-modal="[data-smile-modal-1]" loading="lazy" )
+                  .image-cover
+                    img.slider__img.slider__img--after( src="img/smile-1-after@1x.jpg"  srcset="img/smile-1-after@2x.jpg 2x" width="1312" height="772" alt="Ольга, 28 лет" data-target-modal="[data-smile-modal-1]" loading="lazy" )
+                    img.slider__img.slider__img--before( src="img/smile-1-before@1x.jpg"  srcset="img/smile-1-before@2x.jpg 2x" width="1312" height="772" alt="Ольга, 28 лет" data-target-modal="[data-smile-modal-1]" loading="lazy" )
                   .slider__content
                     h3.slider__content-title Лечение двух зубов<br /> Установка виниров на три зуба<br /> Оттенок винира: NOL769Z
                     .slider__content-text
@@ -201,7 +207,8 @@ html.page-loading( lang="ru" )
                   a.location__mobile-address-link(href="https://yandex.ru/maps/-/CKan624~") Посмотреть на карте
                     +svg( "arrow-1", 20, 10 )
             .location__img-cover
-              img( src="img/map.svg" width="378" height="425" alt="map" loading="lazy" )
+              .image-cover
+                img( src="img/map.svg" width="378" height="425" alt="map" loading="lazy" )
               .location__address
                 span.location__address-mobile Бол. Садовая ул., 5с2
                 span.location__address-parking Есть бесплатная парковка
@@ -334,7 +341,8 @@ html.page-loading( lang="ru" )
                     .info-modal__collapsible-image-toggle
                       span.info-modal__collapsible-image-toggle-link Показать как было
                     .info-modal__collapsible-image-content
-                      img(src="img/smile-1-before-mobile@1x.png" srcset="img/smile-1-before-mobile@1x.png 1x, img/smile-1-before-mobile@2x.png 2x" alt="")
+                      .image-cover
+                        img(src="img/smile-1-before-mobile@1x.png" srcset="img/smile-1-before-mobile@1x.png 1x, img/smile-1-before-mobile@2x.png 2x" alt="")
                       button.info-modal__collapsible-image-close
               p Ольгу ко мне привела подруга, которая недавно закончила все процедуры. Ольга не могла поверить, что можно настолько сильно и незаметно преобразить улыбку. А когда убедилась, что это возможно, захотела себе такую же. Но я не делаю по шаблону — улыбка у Ольги получилась своя, естественная, живая, открытая.
 
@@ -358,7 +366,8 @@ html.page-loading( lang="ru" )
                     .info-modal__collapsible-image-toggle
                       span.info-modal__collapsible-image-toggle-link Показать как было
                     .info-modal__collapsible-image-content
-                      img(src="img/smile-2-before-mobile@1x.png" srcset="img/smile-2-before-mobile@1x.png 1x, img/smile-2-before-mobile@2x.png 2x" alt="")
+                      .image-cover
+                        img(src="img/smile-2-before-mobile@1x.png" srcset="img/smile-2-before-mobile@1x.png 1x, img/smile-2-before-mobile@2x.png 2x" alt="")
                       button.info-modal__collapsible-image-close
               p Татьяна обратилась ко мне по рекомендации друга — у нее была возможность устроиться на работу мечты в крупной транспортной корпорации и переехать за границу, но она поняла, что без красивой, здоровой улыбки у нее будет меньше шансов сделать карьеру. Все процедуры заняли около 6 месяцев, но результат себя оправдал на все 100 процентов.
 
@@ -382,7 +391,8 @@ html.page-loading( lang="ru" )
                     .info-modal__collapsible-image-toggle
                       span.info-modal__collapsible-image-toggle-link Показать как было
                     .info-modal__collapsible-image-content
-                      img(src="img/smile-3-before-mobile@1x.png" srcset="img/smile-3-before-mobile@1x.png 1x, img/smile-3-before-mobile@2x.png 2x" alt="")
+                      .image-cover
+                        img(src="img/smile-3-before-mobile@1x.png" srcset="img/smile-3-before-mobile@1x.png 1x, img/smile-3-before-mobile@2x.png 2x" alt="")
                       button.info-modal__collapsible-image-close
               p Татьяна обратилась ко мне по рекомендации друга — у нее была возможность устроиться на работу мечты в крупной транспортной корпорации и переехать за границу, но она поняла, что без красивой, здоровой улыбки у нее будет меньше шансов сделать карьеру. Все процедуры заняли около 6 месяцев, но результат себя оправдал на все 100 процентов.
 
