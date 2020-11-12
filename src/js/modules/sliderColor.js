@@ -10,12 +10,12 @@
     if (current > breakpoint) {
       for (let i = 0; i < imgs.length; i++) {
         const img = imgs[i];
-        img.classList.add(`color`);
+        img.classList.add(`color-animated`);
       }
     } else {
       for (let i = 0; i < imgs.length; i++) {
         const img = imgs[i];
-        img.classList.remove(`color`);
+        img.classList.remove(`color-animated`);
       }
     }
   };

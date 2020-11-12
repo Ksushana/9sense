@@ -11323,6 +11323,14 @@ $(document).ready(function() {
 })();
 
 $(function() {
+  $("#works .image-cover").click(function(event) {
+   const clickedElement = $(event.target);
+   console.log(clickedElement)
+
+   clickedElement.children().toggleClass("color");
+  });
+});
+$(function() {
   const collapsibleImages = [].slice.call(document.querySelectorAll('.info-modal__collapsible-image'));
 
   collapsibleImages.forEach(collapsibleImage => {
@@ -11814,12 +11822,12 @@ $(() => {
     if (current > breakpoint) {
       for (let i = 0; i < imgs.length; i++) {
         const img = imgs[i];
-        img.classList.add(`color`);
+        img.classList.add(`color-animated`);
       }
     } else {
       for (let i = 0; i < imgs.length; i++) {
         const img = imgs[i];
-        img.classList.remove(`color`);
+        img.classList.remove(`color-animated`);
       }
     }
   };

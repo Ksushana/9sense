@@ -14,7 +14,7 @@
     object-position: center;
 
     &.color {
-      // filter: none;
+      filter: none;
     }
 
     @include mobile {
@@ -165,6 +165,10 @@
   & > .image-cover > img {
     width: 100%;
     filter: grayscale(1);
+
+    &.color {
+      filter: grayscale(0);
+    }
   }
 
   &:hover {
@@ -343,3 +347,5 @@
 .slider__bottom {
   position: relative;
 }
+
+

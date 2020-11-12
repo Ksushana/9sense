@@ -3584,6 +3584,11 @@ main,
      object-position: center;
 }
 
+.slider img.color {
+  -webkit-filter: none;
+          filter: none;
+}
+
 @media (max-width: 767px) {
   .slider img {
     width: 100%;
@@ -3747,6 +3752,11 @@ main,
   width: 100%;
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
+}
+
+.slider__image > .image-cover > img.color {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 
 .slider__image:hover {
@@ -4255,8 +4265,4 @@ main,
   right: 0;
   width: 100%;
   height: 100%;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
 }
