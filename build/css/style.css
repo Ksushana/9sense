@@ -1990,7 +1990,7 @@ a:not([href]) {
 
 .link-text--grey {
   opacity: 1;
-  color: rgba(31, 31, 31, 0.5);
+  color: rgba(31, 31, 31, 0.6);
   -webkit-transition: border-color 0.4s, color 0.4s;
   transition: border-color 0.4s, color 0.4s;
 }
