@@ -27,6 +27,8 @@
 
   &__content {
     padding: size(44px);
+
+
   }
 
   @include mobile {
@@ -43,6 +45,12 @@
       max-height: calc(100vh - #{size(48px)});
       border-bottom-right-radius: 0;
       border-bottom-left-radius: 0;
+
+      h2 {
+        font-weight: normal;
+
+      }
+
     }
 
     .modal-open & {
@@ -88,6 +96,14 @@
       max-height: calc(100vh - #{size(48px)});
       overflow-y: auto;
       -webkit-overflow-scrolling: touch;
+
+      &-text {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.01em;
+        color: rgba(31, 31, 31, 0.88);
+      }
     }
 
     &.fade .modal-dialog {

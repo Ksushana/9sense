@@ -67,6 +67,15 @@
       }
     }
 
+    &__link {
+      display: inline-block;
+
+      &--solid {
+       margin-top: 16px;
+       border-bottom: none;
+      }
+    }
+
     &__left {
       order: 2;
     }
@@ -79,6 +88,10 @@
     &__dev {
       padding: 0;
       margin: 0;
+    }
+
+    &__dot:last-of-type {
+      display: none;
     }
   }
 }

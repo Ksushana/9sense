@@ -2738,6 +2738,9 @@ main,
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
   }
+  .modal .modal-content h2 {
+    font-weight: normal;
+  }
   .modal-open .modal {
     overflow: visible;
   }
@@ -2779,6 +2782,13 @@ main,
     max-height: calc(100vh - 1rem);
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+  }
+  .modal__content-text {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    color: rgba(31, 31, 31, 0.88);
   }
   .modal.fade .modal-dialog {
     -webkit-transform: translate(0, 100%);
@@ -2952,7 +2962,7 @@ main,
 }
 
 .about {
-  padding: 1.25rem 2.02083rem 0;
+  padding: 1.66667rem 2.02083rem 0;
   background-image: url("../img/omar@1x.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -3040,7 +3050,7 @@ main,
 
 .about__block {
   width: 6.83333rem;
-  height: 14.125rem;
+  height: 13.08333rem;
   color: rgba(31, 31, 31, 0.88);
 }
 
@@ -4002,6 +4012,13 @@ main,
   .footer p:first-child {
     margin-top: 0;
   }
+  .footer__link {
+    display: inline-block;
+  }
+  .footer__link--solid {
+    margin-top: 16px;
+    border-bottom: none;
+  }
   .footer__left {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
@@ -4016,6 +4033,9 @@ main,
   .footer__dev {
     padding: 0;
     margin: 0;
+  }
+  .footer__dot:last-of-type {
+    display: none;
   }
 }
 
