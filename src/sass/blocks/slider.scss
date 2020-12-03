@@ -227,13 +227,21 @@
 }
 
 .slider__content-text {
-  overflow: hidden;
-  max-height: 0;
-  opacity: 0;
-  transition: max-height 0.5s, opacity 0.5s ease;
+  // overflow: hidden;
+  // max-height: 0;
+  // opacity: 0;
+  // transition: max-height 0.5s, opacity 0.5s ease;
+
+  span {
+    letter-spacing: 0.01em;
+    color: #A2A2A2;
+  }
 
   p {
     margin-top: size(15px);
+    letter-spacing: 0.01em;
+
+    color: #A2A2A2;
   }
 
   .slider__content.is-full & {

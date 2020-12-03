@@ -2923,6 +2923,8 @@ main,
 .info-modal__collapsible-image-toggle-link {
   color: #A2A0A3;
   cursor: pointer;
+  font-size: 0.33333rem;
+  line-height: 0.5rem;
 }
 
 @-webkit-keyframes fadeIn {
@@ -3826,16 +3828,15 @@ main,
   }
 }
 
-.slider__content-text {
-  overflow: hidden;
-  max-height: 0;
-  opacity: 0;
-  -webkit-transition: max-height 0.5s, opacity 0.5s ease;
-  transition: max-height 0.5s, opacity 0.5s ease;
+.slider__content-text span {
+  letter-spacing: 0.01em;
+  color: #A2A2A2;
 }
 
 .slider__content-text p {
   margin-top: 0.3125rem;
+  letter-spacing: 0.01em;
+  color: #A2A2A2;
 }
 
 .slider__content.is-full .slider__content-text {
