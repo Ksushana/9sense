@@ -33,7 +33,7 @@ gulp.task("copy", function() {
     .src(
       [
         "src/fonts/**/*.{woff,woff2}",
-        "src/pdf/**/*.pdf",
+        "src/**/*.pdf",
         "src/json/**/*.json",
         "src/*.{png,ico,svg}",
         "src/*.webmanifest",
