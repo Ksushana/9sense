@@ -462,13 +462,15 @@
   }
 
 
-
+  // iPhone 11 Pro Max
   @media only screen
   and (device-width: 414px)
   and (device-height: 896px)
   and (-webkit-device-pixel-ratio: 2) {
     margin: auto 0 35%;
   }
+
+  // iPhone 11
 
   @media only screen
     and (device-width: 414px)
@@ -477,12 +479,25 @@
       margin: auto 0 35%;
     }
 
+  // iPhone 11 Pro
+
+  @media only screen
+  and (device-width: 375px)
+  and (device-height: 812px)
+  and (-webkit-device-pixel-ratio: 3) {
+    margin: auto 0 35%;
+   }
+
+    // iPhone 12 Pro Max
+
   @media only screen
   and (device-width: 428px)
   and (device-height: 926px)
   and (-webkit-device-pixel-ratio: 3) {
     margin: auto 0 35%;
    }
+
+  //  iPhone 12 and iPhone 12 Pro
 
   @media only screen
   and (device-width: 390px)

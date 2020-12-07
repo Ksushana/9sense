@@ -2562,6 +2562,12 @@ main,
   }
 }
 
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .header__phrase {
+    margin: auto 0 35%;
+  }
+}
+
 @media only screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) {
   .header__phrase {
     margin: auto 0 35%;
