@@ -292,15 +292,23 @@ button::-moz-focus-inner {
 img.mfp-img {
   // width: auto;
   width: 200% !important;
-  height: auto;
+  // height: auto;
   display: block;
   line-height: 0;
   box-sizing: border-box;
   padding: 40px 0 40px;
   margin: 0 auto;
   // transform: scale(2);
-  overflow-x: scroll;
+  // overflow-x: scroll;
+  max-height: unset!important;
 }
+
+@media all and (orientation:landscape) {
+  img.mfp-img {
+    width: 100% !important;
+  }
+}
+
 
 /* The shadow behind the image */
 .mfp-figure {

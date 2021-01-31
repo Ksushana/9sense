@@ -55,6 +55,7 @@
     "bootstrap": "^4.5.2",
     "classlist-polyfill": "^1.2.0",
     "imask": "^5.2.1",
+    "jquery-touchswipe": "^1.6.19",
     "vanilla-js-dropdown": "^2.2.0"
   }
 }
