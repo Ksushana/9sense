@@ -1646,14 +1646,19 @@ button::-moz-focus-inner {
 /* Main image in popup */
 img.mfp-img {
   width: 200% !important;
-  height: auto;
   display: block;
   line-height: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 40px 0 40px;
   margin: 0 auto;
-  overflow-x: scroll;
+  max-height: unset !important;
+}
+
+@media all and (orientation: landscape) {
+  img.mfp-img {
+    width: 100% !important;
+  }
 }
 
 /* The shadow behind the image */
