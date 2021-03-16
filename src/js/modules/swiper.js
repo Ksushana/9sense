@@ -97,7 +97,7 @@
   function changeCaption(swiper, sliderCaption) {
     const currentSlide = swiper.slides[swiper.activeIndex];
     const image = currentSlide.querySelector("img");
-    const captionText = image.alt;
+    const captionText = image.title;
     sliderCaption.textContent = captionText;
   }
 
